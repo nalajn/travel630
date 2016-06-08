@@ -1,0 +1,13 @@
+@charset "utf-8";
+@import "lib/common";
+
+.wrap{
+    overflow: hidden;
+    background: #f8f8f8;
+    .box-title{
+    	.date{
+	    	display: inline-block;
+	    	margin-top: 45px;
+	    }
+    }
+}

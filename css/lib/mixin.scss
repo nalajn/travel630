@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+@mixin box-sizing{
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box; 
+			box-sizing:border-box;
+}
+
+@mixin tag-tit{
+	font-size: 0.7rem;
+  	color: $textcolor002;
+}
+@mixin tag{
+	line-height: 0.8rem;
+	padding: 0.2rem 0.4rem;
+	border: solid 0.5px $bgcolor33;
+	border-radius: 0.1rem;
+	background: $bgcolor40;
+	font-size: $textsize002;
+	color: $textcolor004;
+}
+
+@mixin active-tag{
+	border: solid 0.5px #2878db;
+	color: $textcolor010;
+}
+
+@mixin linear-gradient{
+	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0) 0%, #333 100%);
+	background-image:    -moz-linear-gradient(rgba(255, 255, 255, 0) 0%, #333 100%);
+	background-image:         linear-gradient(rgba(255, 255, 255, 0) 0%, #333 100%);
+}
+
+/*night*/
+@mixin tag-tit-night{
+	font-size: 0.7rem;
+  	color: $textcolor002-night;
+}
+@mixin tag-night{
+	line-height: 0.8rem;
+	padding: 0.2rem 0.4rem;
+	border: solid 0.5px $bgcolor33-night;
+	border-radius: 0.1rem;
+	background: $bgcolor40-night;
+	font-size: $textsize002;
+	color: $textcolor004-night;
+}
+
+@mixin active-tag-night{
+	border: solid 0.5px #2878db;
+	background: $textcolor010;
+	opacity: 1;
+	color: $textcolor008;
+}

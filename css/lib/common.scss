@@ -1,0 +1,600 @@
+@charset "utf-8";
+@import "lib/reset";
+@import "mixin";
+$light-blue: #1ab2ea;
+$orange: #ffb523;
+$green: #45c186;
+$red: #ff545a;
+$deep-blue: #4680d1;
+$border-gray: #e6e7e9;
+$tit-gray: #666666;
+$con-gray: #999999;
+$bac-gray: #f8f8f8;
+$deep-bac-gray: #e4e4e4;
+$border-gray: #dddddd;
+
+$textsize001: 0.6rem;
+$textsize002: 0.65rem;
+$textsize003: 0.7rem;
+$textsize004: 0.75rem;
+$textsize005: 0.8rem;
+$textsize006: 0.85rem;
+$textsize012: 0.45rem;
+
+/*day*/
+$textcolor001: #000000;
+$textcolor002: #333333;
+$textcolor003: #4a4a4a;
+$textcolor004: #666666;
+$textcolor005: #999999;
+$textcolor006: #b5b5b5;
+$textcolor007: #cccccc;
+$textcolor008: #ffffff;
+$textcolor010: #4680d1;
+
+/*night*/
+$textcolor001-night: #eeeeee;
+$textcolor002-night: #848484;
+$textcolor003-night: #848484;
+$textcolor005-night: #555555;
+$textcolor006-night: #444444;
+$textcolor007-night: #333333;
+$textcolor008-night: #999999;
+
+
+/*back*/
+$bgcolor01: #f8f8f8;
+$bgcolor02: #d9d9d9;
+$bgcolor04: #e9e9e9;
+$bgcolor05: #f6f6f6;
+$bgcolor06: #e3e4e6;
+$bgcolor07: #d7d7d7;
+$bgcolor10: #f1f1f1;
+$bgcolor11: #e6e6e6;
+$bgcolor12: #ffb52b;
+$bgcolor18: #d7d7d7;
+$bgcolor28: #e4e4e4;
+$bgcolor29: #fcfcfc;
+$bgcolor30: #cccccc;
+$bgcolor31: #f4f4f4;
+$bgcolor32: #f0f0f0;
+$bgcolor33: #dddddd;
+$bgcolor34: #fbfbfb;
+$bgcolor35: #eeeeee;
+$bgcolor40: #ffffff;
+
+/*bac night*/
+$bgcolor01-night: #2f2f2f;
+$bgcolor02-night: #1f1f1f;
+$bgcolor04-night: #252525;
+$bgcolor05-night: #2d2d2d;
+$bgcolor06-night: #434343;
+$bgcolor07-night: #777777;
+$bgcolor10-night: #2b2b2b;
+$bgcolor11-night: #2a2a2a;
+$bgcolor12-night: #ffb52b;
+$bgcolor18-night: #5c5c5c;
+$bgcolor28-night: #252525;
+$bgcolor29-night: #2f2f2f;
+$bgcolor30-night: #1e1e1e;
+$bgcolor31-night: #2b2b2b;
+$bgcolor32-night: #484848;
+$bgcolor33-night: #252525;
+$bgcolor34-night: #2d2d2d;
+$bgcolor35-night: #282828;
+$bgcolor40-night: #363636;
+
+.wrap{
+	font-size: 10px;
+    @include box-sizing;
+    /*头部*/
+    .head{
+    	overflow: hidden;
+    	width: 100%;
+    	height: 33px;
+    	line-height: 33px;
+    	background: #2182cf;
+    	color: #fff;
+    	.container{
+    		width: 990px;
+    		margin: 0 auto;
+    	}
+    	.left,.right{
+    		li{
+				float: left;
+				margin-right: 20px;
+			}
+    	}
+    	.left{
+			float: left;
+			width: 50%;
+			margin-left: 55px;
+			font-size: 12px;
+			.title{
+				margin-right: 32px;
+				font-size: 16px;
+				font-weight: bold;
+			}
+    	}
+    	.right{
+    		float: right;
+    		width: 15%;
+    		margin-right: 45px;
+    		li{
+    			&:last-child{
+	    			margin-right: 0;
+	    		}
+    		}
+    	}
+    }
+    .main{
+		.min-width{
+			width: 990px;
+			margin: 0 auto;
+		}
+		/*标签选择器*/
+		.tags-search{
+	    	border: solid 1px #ccc;
+	    	@include box-sizing;
+	    	.tags-list{
+	    		overflow: hidden;
+				background: #f4f4f4;
+	    		&:last-child{
+					.tags-con{
+						border: 0;
+					}
+				}
+				.tit{
+					float: left;
+				    width: 10%;
+				    line-height: 53px;
+				    padding: 0;
+				    padding-left: 15px;
+					margin: 0;
+				    @include box-sizing;
+					font-size: 14px;
+				}
+				.tag-box{
+					float: left;
+					width: 90%;
+					background: #fff;
+				}
+				.tags-con{
+					overflow: hidden;
+					margin-left: 20px;
+					border-bottom: solid 1px #ccc;
+				}
+	    		li{
+	    			float: left;
+	    			margin: 14px 0 14px 20px;
+					height: 24px;
+					line-height: 24px;
+					padding: 0 10px;
+					@include box-sizing;
+					cursor: pointer;
+	    		}
+				.active{
+					border: solid 1px #ccc;
+					text-align: center;
+				}
+	    	}
+	    	.selected{
+				border-bottom: solid 1px #ccc;
+				.tags-con{
+					border: 0;
+					li{
+						width: 70px;
+						height: 30px;
+						line-height: 30px;
+						padding-right: 20px;
+						@include box-sizing;
+						background: #000;
+						color: #fff;
+						text-align: center;
+					}
+				}
+	    	}
+	    }
+
+		/*玩转周边*/
+		.circum-box{
+			padding-bottom: 15px;
+			.tabs{
+				position: relative;
+				.tabs-tit{
+					width: 118px;
+					box-shadow: -1px -1px 4px #aaa,-1px 1px 4px #aaa;
+					li{
+						position: relative;
+						height: 206px;
+						width: 102%;
+						border-bottom: solid 1px #ccc;
+						background: #fafafa;
+						box-shadow: 1px 1px 4px #aaa;
+						.big{
+	    					display: inline-block;
+							margin: 30px 0 0 25px;
+							font-size: 40px;
+						}
+						.small{    
+							position: absolute;
+	    					top: 40%;
+							display: inline-block;
+							width: 20px;
+							font-size: 20px;
+							color: #595959;
+						}
+					}
+					.active{
+						border-right: 0;
+						box-shadow: none;
+						background: #fff;
+					}
+				}
+				.tabs-con{
+					position: absolute;
+					right: 0;
+					top: 0;
+					width: 87%;
+				}
+			}
+		}
+
+		/*玩转世界*/
+		.world-box{
+			
+			.grid{
+				overflow: hidden;
+				padding-bottom: 10px;
+				.grid-item{
+					float: left;	
+					width: 31.98%;
+					margin: 0 20px 20px 0;
+					background: #fff;
+					&:nth-child(3n){
+						margin-right: 0;
+					}
+					dt{
+						overflow: hidden;
+						width: 100%;
+						height: 237px;
+						img{
+							width: 100%;
+							height: 100%;
+						}
+					}
+					dd{
+						overflow: hidden;
+						h4{
+							line-height: 40px;
+							font-size: 16px;
+						}
+						.time-nums{
+							overflow: hidden;
+							line-height: 24px;
+							padding: 0 6px 10px;
+							border-bottom: solid 1px #ccc;
+							.time{
+								float: left;
+								font-size: 12px;
+							}
+							.scan-comment{
+								float: right;
+								font-size: 14px;
+								.comment{
+									margin-left: 16px;
+								}
+							}
+						}
+						.tag-list{
+							padding: 0 6px;
+						}
+					}
+				}
+			}
+		}
+
+		/*精彩游记*/
+		.best-box{
+			.list{
+				.list-item{
+					overflow: hidden;
+					@include box-sizing;
+					padding: 30px 0 15px 0;
+					&:first-child{
+						padding-top: 0;
+					}
+					dt,dd{
+						float: left;
+					}
+					dt{
+						overflow: hidden;	
+						width: 155px;
+						height: 120px;
+						margin-right: 14px;
+						border: solid 1px #aaa;
+						img{
+							width: 100%;
+							height: 100%;
+							padding: 1px;
+						}
+					}
+					dd{
+						width: 82.5%;
+						font-size: 14px;
+						.tit-time{
+							overflow: hidden;
+							line-height: 30px;
+							h4{
+								float: left;
+								width: 85%;
+								font-size: 18px;
+							}
+							.time{
+								float: right;
+							}
+						}
+						.tag-list{
+							overflow: hidden;
+							float: none;
+						}
+						.con-txt{
+							line-height: 20px;
+							overflow : hidden;
+							text-overflow: ellipsis;
+							display: -webkit-box;
+							-webkit-line-clamp: 2;
+							-webkit-box-orient: vertical;
+						}
+						.tags-nums{
+							overflow: hidden;
+							line-height: 50px;
+						}
+						.user{
+							float: left;
+							width: 60%;
+							img{
+								width: 20px;
+								height: 20px;
+								margin-right: 14px;
+								border-radius: 50%;
+							}
+						}
+						.scan-comment{
+							float: right;
+							width: 40%;
+							span{
+								float: right;
+							}
+							.scan,.comment{
+								margin-left: 19px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		/*最热最新*/
+		.best-new{
+	    	.title{
+	    		overflow: hidden;
+	    		font-size: 24px;
+	    		li{
+	    			float: left;
+	    			margin: 50px 14px 21px 0;
+	    		}
+	    	}
+	    	.list{
+	    		// width: 90%;
+	    		border-top: solid 1px #ccc;
+	    		.list-item{
+	    			padding: 15px 0;
+	    		}
+	    	}
+	    }
+
+
+		/*列表 标签在下边*/
+		.list{
+			border-bottom: solid 1px #ccc;
+		}
+		.list-item{
+			overflow: hidden;
+			@include box-sizing;
+			padding: 15px 0;
+			border-bottom: solid 1px #ccc;
+			&:first-child{
+				padding-top: 0;
+			}
+			dt,dd{
+				float: left;
+			}
+			dt{
+				overflow: hidden;	
+				width: 155px;
+				height: 120px;
+				margin-right: 14px;
+				border: solid 1px #aaa;
+				img{
+					width: 100%;
+					height: 100%;
+					padding: 1px;
+				}
+			}
+			dd{
+				width: 82.7%;
+				font-size: 14px;
+				h4{
+					font-size: 18px;
+				}
+				.con-txt{
+					line-height: 20px;
+					overflow : hidden;
+					text-overflow: ellipsis;
+					display: -webkit-box;
+					-webkit-line-clamp: 2;
+					-webkit-box-orient: vertical;
+				}
+				.tags-nums{
+					overflow: hidden;
+					line-height: 50px;
+				}
+				.scan-comment{
+					float: right;
+					width: 15%;
+					.comment{
+						margin-left: 16px;
+					}
+				}
+			}
+		}
+
+
+		/*带logo的搜索框*/
+		.logo_search{
+			overflow: hidden;
+			border-bottom: solid 1px #ccc;
+			.logo{
+				float: left;
+				margin: 70px 0 0 160px;
+				font-size: 18px;
+			}
+			.search-box{
+				overflow: hidden;
+			    float: right;
+			    width: 55%;
+			    @include box-sizing;
+				.search-main{
+					float: left;
+					width: 100%;
+					.search-input-btn{
+						overflow: hidden;
+					    width: 100%;
+					    line-height: 49px;
+					    margin-top: 10px;
+						.search-input{
+							float: left;
+							width: 85%;
+		    				height: 47px;
+							border: solid 1px #1a8ced;
+							border-right: 0;
+							border-radius: 4px 0 0 4px;
+							color: #ccc;
+							font-size: 20px;	
+						}
+						.search-btn{
+							float: left;
+							width: 70px;
+							border-radius: 0 4px 4px 0;
+							background: #1a8ced;
+							text-align: center;
+							font-size: 18px;
+							color: #fff;
+						}
+					}
+					.tags{
+						overflow: hidden;
+						height: 66px;
+						line-height: 66px;
+						font-size: 16px;
+						li{
+							float: left;
+							margin-right: 20px;
+						}
+						.active{
+							color: #1a8ced;
+						}
+					}
+				}
+				.btns{
+					float: left;
+					font-size: 18px;
+					color: #fff;
+					.publish,.opinion{
+						width: 140px;
+						line-height: 50px;
+						margin-bottom: 10px;
+						border-radius: 4px;
+						text-align: center;
+					}
+					.publish{
+						background: #f1762c;
+					}
+					.opinion{
+						background: #999999;
+					}
+				}
+			}
+		}
+
+		/*白色背景的面包屑导航*/
+		.crumbs-white{
+			overflow: hidden;
+			height: 44px;
+			line-height: 44px;
+			font-size: 16px;
+			color: #666666;
+			li{
+				float: left;
+			}
+			a{
+				color: #666666;
+			}
+		}
+
+		/*模块标题 更多*/
+		.box-title{
+			overflow: hidden;
+			h4{
+				float: left;
+				width: 12%;
+				line-height: 90px;
+				margin-right:16px;
+				font-size: 28px;
+			}
+			.choice-address{
+				float: left;
+				margin-top: 40px;
+				font-size: 14px;
+				color: #8c8c8c;
+			}
+			.more{
+				float: right;
+				margin-top: 40px;
+				font-size: 16px;
+				color: #797979;
+			}
+		}
+
+		/*横向排列标签*/
+		.tag-list{
+			float: left;
+			width: 85%;
+			margin: 13px 0;
+			font-size: 12px;
+			li{
+				float: left;
+				line-height: 24px;
+			    height: 24px;
+			    padding: 0 5px;
+				@include box-sizing;
+				border-radius: 2px;
+				margin-right: 10px;
+				border: solid 1px #1a8ced;
+				text-align: center;
+				color: #1a8ced;
+			}
+		}
+		
+		/*查看更多按钮*/
+		.list-btn{
+			margin-top: 16px;
+		    line-height: 60px;
+		    border: solid 1px #ccc;
+			text-align: center;
+		    font-size: 16px;
+		}
+    }
+}
+

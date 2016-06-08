@@ -1,0 +1,141 @@
+@charset "utf-8";
+@import "lib/common";
+
+.wrap{
+    overflow: hidden;
+
+    /*意见反馈*/
+	.opinion-box{
+		padding-top: 50px;
+		.opinion-tit{
+			line-height: 44px;
+			font-size: 30px;
+			color: #333;
+		}
+		.opinion-sec{
+			line-height: 38px;
+			font-size: 18px;
+			color: #666;
+		}
+		textarea{
+			width: 100%;
+			height: 115px;
+			margin: 35px 0 14px;
+			border: solid 1px #1a8ced;
+			@include box-sizing;
+			box-shadow: -1px -1px 4px #aaa,1px 1px 4px #aaa;
+		}
+		.emoji-btn{
+			overflow: hidden;
+			padding-left: 14px;
+			font-size: 14px;
+			.emoji{
+				float: left;
+				margin: 10px 0 0 23px;
+				color: #1a8ced;
+			}
+			.btn{
+				float: right;
+				width: 100px;
+				height: 40px;
+				line-height: 40px;
+				background: #1a8ced;
+				text-align: center;
+				color: #fff;
+			}
+		}
+	}
+
+	/*回复列表*/
+	.comment-list{
+		padding: 52px 0 78px;
+		.comment-tit{
+			overflow: hidden;
+			font-size: 24px;
+			li{
+				float: left;
+				padding: 0 16px 25px 0;
+				margin-right: 16px;
+			}
+			.active{
+				&:after{
+					content: '';
+			        background: url('../images/icon/border-bottom.png') no-repeat;
+			        background-size: 100%;
+				    position: absolute;
+				    bottom: 0;
+				    left: 0;
+				}
+			}
+		}
+		.comment-content{
+			overflow: hidden;
+			width: 654px;
+			padding: 30px 0 20px 18px;
+			border-bottom: solid 1px #ccc;
+			dt,dd{
+				float: left;
+			}
+			dt{
+				width: 48px;
+				height: 48px;
+				margin-right: 12px;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+			dd{
+				width: 590px;
+				.title,.time-floor{
+					float: left;
+				}
+				.title{
+					width: 78%;
+					margin-bottom: 18px;
+					font-size: 16px;
+				}
+				.time-floor{
+					font-size: 12px;
+					color: #999999;
+				}
+				.content{
+					margin-top: 23px;
+					background: #f4f4f4;
+					.user,.article{
+						overflow: hidden;
+						padding: 10px 13px;
+					}
+					.user{
+						.user-tit{
+							em{
+								margin-right: 12px;
+							}
+						}
+						.user-txt{
+							margin-top: 10px;
+							line-height: 25px;
+						}
+					}
+				}
+			}
+			.comment-box{
+				width: 634px;
+			}
+			.reply{
+				width: 634px;
+				margin-top: 20px;
+				text-align: right;
+				span{
+					&:first-child{
+						padding-right: 10px;
+						border-right: solid 1px #ccc;
+					}
+					&:last-child{
+						padding-left: 10px; 
+					}
+				}
+			}
+		}
+	}
+}

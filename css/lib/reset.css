@@ -1,0 +1,30 @@
+@charset "utf-8";
+html {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-tap-highlight: rgba(0, 0, 0, 0);-webkit-text-size-adjust: none;overflow-y:scroll;-webkit-font-smoothing:antialiased;
+ font-family: "Microsoft YaHei", Arial, "Hiragino Sans GB W3", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;}
+/*body {font-size: 0.75em;}*/
+label {cursor: pointer;}
+a:link,a:visited {text-decoration: none;}
+input:focus {outline: none;}
+input,button,select,textarea {outline: none; /*-webkit-appearance:none;*/  /*强制去除表单自带的样式*/}
+textarea {resize: none; /*-webkit-appearance:none;*/  /*强制去除textarea自带的样式*/}
+input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px #fff inset;}
+/*利用阴影来填充掉input自动填充色*/
+textarea,input,select {background: none;border: none;margin: 0;padding: 0;}
+a,abbr,acronym,address,applet,article,aside,audio,b,blockquote,big,body,center,canvas,caption,cite,code,command,datalist,dd,del,details,dfn,dl,div,dt,em,embed,fieldset,figcaption,figure,font,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,keygen,label,legend,li,meter,nav,menu,object,ol,output,p,pre,progress,q,s,samp,section,small,span,source,strike,strong,sub,sup,table,tbody,tfoot,thead,th,tr,tdvideo,tt,u,ul,var {margin: 0;padding: 0;}
+article,aside,footer,header,hgroup,nav,section,figure,figcaption {display: block;}
+/*html5设置*/
+h1,h2,h3,h4,h5,h6,th,td,table,input,button,select,textarea,sub{font-size: 1em;}
+body,input,button,select,textarea,sub {font-family: Arial, sans-serif;}
+em,cite,address,optgroup{font-style: normal;}
+kbd,samp,code{font-family: monospace;}
+img,input,button,select,textarea {vertical-align: middle;outline: none; }
+ul,ol {list-style: none;}
+img,fieldset {border: 0;}
+abbr,acronym {cursor: help;border-bottom: 1px dotted #000;}
+table {width: 100%;border-spacing: 0;border: 0;}
+table th,table td {border: 0;}
+legend,hr {overflow: hidden;position: absolute;top: 0;left: 0;}
+/*legend,hr,caption {visibility: hidden;font-size: 0;width: 0;height: 0;line-height: 0;}*/
+.hidden{display: none;}
+.clearfix:after { content: ''; display: block; overflow: hidden; visibility: hidden; clear: both; }
+a{outline:none;}

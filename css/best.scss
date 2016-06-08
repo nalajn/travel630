@@ -1,0 +1,16 @@
+@charset "utf-8";
+@import "lib/common";
+
+.wrap{
+    overflow: hidden;
+	.hide{
+		display: none;
+	}
+	.main{
+		.best-new{
+			.list{
+				width: 100%;
+			}
+		}
+	}
+}
