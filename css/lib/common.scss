@@ -1,95 +1,25 @@
 @charset "utf-8";
 @import "lib/reset";
 @import "mixin";
-$light-blue: #1ab2ea;
-$orange: #ffb523;
-$green: #45c186;
-$red: #ff545a;
-$deep-blue: #4680d1;
-$border-gray: #e6e7e9;
-$tit-gray: #666666;
-$con-gray: #999999;
-$bac-gray: #f8f8f8;
-$deep-bac-gray: #e4e4e4;
-$border-gray: #dddddd;
+$black: #000000;
+$white: #ffffff;
+$orange: #f1762b;
+$blue: #1a8ced;
 
-$textsize001: 0.6rem;
-$textsize002: 0.65rem;
-$textsize003: 0.7rem;
-$textsize004: 0.75rem;
-$textsize005: 0.8rem;
-$textsize006: 0.85rem;
-$textsize012: 0.45rem;
+$line: #e7e7e7;
 
-/*day*/
-$textcolor001: #000000;
-$textcolor002: #333333;
-$textcolor003: #4a4a4a;
-$textcolor004: #666666;
-$textcolor005: #999999;
-$textcolor006: #b5b5b5;
-$textcolor007: #cccccc;
-$textcolor008: #ffffff;
-$textcolor010: #4680d1;
+$aa: #aaaaaa;
+$f8: #f8f8f8;
+$b3: #333333;
+$b6: #666666;
+$b9: #999999;
 
-/*night*/
-$textcolor001-night: #eeeeee;
-$textcolor002-night: #848484;
-$textcolor003-night: #848484;
-$textcolor005-night: #555555;
-$textcolor006-night: #444444;
-$textcolor007-night: #333333;
-$textcolor008-night: #999999;
-
-
-/*back*/
-$bgcolor01: #f8f8f8;
-$bgcolor02: #d9d9d9;
-$bgcolor04: #e9e9e9;
-$bgcolor05: #f6f6f6;
-$bgcolor06: #e3e4e6;
-$bgcolor07: #d7d7d7;
-$bgcolor10: #f1f1f1;
-$bgcolor11: #e6e6e6;
-$bgcolor12: #ffb52b;
-$bgcolor18: #d7d7d7;
-$bgcolor28: #e4e4e4;
-$bgcolor29: #fcfcfc;
-$bgcolor30: #cccccc;
-$bgcolor31: #f4f4f4;
-$bgcolor32: #f0f0f0;
-$bgcolor33: #dddddd;
-$bgcolor34: #fbfbfb;
-$bgcolor35: #eeeeee;
-$bgcolor40: #ffffff;
-
-/*bac night*/
-$bgcolor01-night: #2f2f2f;
-$bgcolor02-night: #1f1f1f;
-$bgcolor04-night: #252525;
-$bgcolor05-night: #2d2d2d;
-$bgcolor06-night: #434343;
-$bgcolor07-night: #777777;
-$bgcolor10-night: #2b2b2b;
-$bgcolor11-night: #2a2a2a;
-$bgcolor12-night: #ffb52b;
-$bgcolor18-night: #5c5c5c;
-$bgcolor28-night: #252525;
-$bgcolor29-night: #2f2f2f;
-$bgcolor30-night: #1e1e1e;
-$bgcolor31-night: #2b2b2b;
-$bgcolor32-night: #484848;
-$bgcolor33-night: #252525;
-$bgcolor34-night: #2d2d2d;
-$bgcolor35-night: #282828;
-$bgcolor40-night: #363636;
 
 .wrap{
 	font-size: 10px;
     @include box-sizing;
     /*头部*/
     .head{
-    	overflow: hidden;
     	width: 100%;
     	height: 33px;
     	line-height: 33px;
@@ -99,33 +29,54 @@ $bgcolor40-night: #363636;
     		width: 990px;
     		margin: 0 auto;
     	}
-    	.left,.right{
-    		li{
-				float: left;
-				margin-right: 20px;
-			}
-    	}
-    	.left{
-			float: left;
-			width: 50%;
-			margin-left: 55px;
-			font-size: 12px;
-			.title{
-				margin-right: 32px;
-				font-size: 16px;
-				font-weight: bold;
-			}
-    	}
-    	.right{
-    		float: right;
-    		width: 15%;
-    		margin-right: 45px;
-    		li{
-    			&:last-child{
-	    			margin-right: 0;
-	    		}
-    		}
-    	}
+   		.login-register{
+   			position: relative;
+   			float: right;
+   			width: 45%;
+   			li{
+   				float: left;
+   				color: #aaa;
+   				a{
+    				display: inline-block;
+   					width: 30px;
+    				text-align: center;
+   					color: #fff;
+   				}
+   			}
+   			.msg{
+   				margin-left: 10px;
+   				cursor: pointer;
+   				cursor: hand;
+   				&:hover{
+   					background: #fff;
+   					span{
+   						color: #f1762c
+   					}
+   				}
+			    span{
+			    	padding: 0 30px 0 15px;
+			    	border-left: solid 1px #fff;
+			    }
+			    .msg-con{
+			    	position: absolute;
+			    	left: 0;
+			    	z-index: 999;
+			    	width: 200px;
+			    	padding: 5px 0;
+			    	@include box-sizing;
+			    	background: #fff;
+			    	li{
+			    		width: 100%;
+			    		padding: 0 10px;
+			    		@include box-sizing;
+			    		color: #1a8ced;
+			    		&:hover{
+			    			background: #f8f8f8;
+			    		}
+			    	}
+			    }
+   			}
+   		}
     }
     .main{
 		.min-width{
@@ -202,15 +153,18 @@ $bgcolor40-night: #363636;
 			.tabs{
 				position: relative;
 				.tabs-tit{
-					width: 118px;
-					box-shadow: -1px -1px 4px #aaa,-1px 1px 4px #aaa;
+					width: 115px;
+					box-shadow: -1px -1px 4px #aaa, -1px 1px 4px #aaa, 0px 1px 4px #aaa;
 					li{
 						position: relative;
-						height: 206px;
-						width: 102%;
-						border-bottom: solid 1px #ccc;
+						height: 205px;
+						padding: 0 10px;
+						@include box-sizing;
 						background: #fafafa;
-						box-shadow: 1px 1px 4px #aaa;
+						// p{
+						// 	height: 99.5%;
+						// 	border-bottom: solid 1px #ccc;
+						// }
 						.big{
 	    					display: inline-block;
 							margin: 30px 0 0 25px;
@@ -226,9 +180,14 @@ $bgcolor40-night: #363636;
 						}
 					}
 					.active{
+						border-top: solid 1px #ccc;
+						border-bottom: solid 1px #ccc;
 						border-right: 0;
-						box-shadow: none;
+						box-shadow: 0px 1px 4px #fff;
 						background: #fff;
+						// p{
+						// 	border: 0;
+						// }
 					}
 				}
 				.tabs-con{
@@ -550,14 +509,25 @@ $bgcolor40-night: #363636;
 				float: left;
 				width: 12%;
 				line-height: 90px;
-				margin-right:16px;
+				margin-right:18px;
 				font-size: 28px;
 			}
 			.choice-address{
+				position: relative;
 				float: left;
 				margin-top: 40px;
 				font-size: 14px;
-				color: #8c8c8c;
+				color: $b9;
+				&:before{
+			        content: '';
+			        background: url('../images/icon/down.png') no-repeat;
+			        background-size: 100%;
+				    position: absolute;
+				    top: 24%;
+				    left: 31px;
+				    width: 10px;
+				    height: 8px;
+			    }
 			}
 			.more{
 				float: right;

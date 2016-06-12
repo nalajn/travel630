@@ -1,2 +1,3 @@
+/*slider*/
+$(".flexslider").flexslider();
 
-  $(".flexslider").flexslider();

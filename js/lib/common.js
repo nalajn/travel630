@@ -1,4 +1,12 @@
 
+  /*head 消息*/
+  $('.login-register .msg').hover(function(){
+    $('.msg-con').removeClass('hide');
+  },function(){
+    $('.msg-con').addClass('hide');
+  })
+
+
   //标签选择
   var tag_txt;
   $('.tags-search').on('click','li',function(){

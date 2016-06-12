@@ -1,5 +1,12 @@
 
-  $(".flexslider").flexslider();
+
+
+/*slider*/
+$(".flexslider").flexslider();
+
+
+
+
 
 
   	//标签选择
