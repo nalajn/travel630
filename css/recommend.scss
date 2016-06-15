@@ -4,6 +4,9 @@
 .wrap{
     overflow: hidden;
     background: #f8f8f8;
+    .hide{
+    	display: none;
+    }
     .box-title{
     	.date{
 	    	display: inline-block;

@@ -106,6 +106,9 @@ a {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   /*头部*/ }
+  .wrap .cursor {
+    cursor: pointer;
+    cursor: hand; }
   .wrap .head {
     width: 100%;
     height: 33px;
@@ -142,12 +145,13 @@ a {
           position: absolute;
           left: 0;
           z-index: 999;
-          width: 200px;
+          width: 259px;
           padding: 5px 0;
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
           box-sizing: border-box;
-          background: #fff; }
+          background: #fff;
+          border: solid 1px #e7e7e7; }
           .wrap .head .login-register .msg .msg-con li {
             width: 100%;
             padding: 0 10px;
@@ -173,7 +177,7 @@ a {
       width: 990px;
       margin: 0 auto; }
     .wrap .main .tags-search {
-      border: solid 1px #ccc;
+      border: solid 1px #e4e4e4;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box; }
@@ -185,40 +189,45 @@ a {
         .wrap .main .tags-search .tags-list .tit {
           float: left;
           width: 10%;
-          line-height: 53px;
+          line-height: 50px;
           padding: 0;
           padding-left: 15px;
           margin: 0;
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
           box-sizing: border-box;
-          font-size: 14px; }
+          font-size: 14px;
+          font-weight: bold; }
         .wrap .main .tags-search .tags-list .tag-box {
           float: left;
           width: 90%;
           background: #fff; }
         .wrap .main .tags-search .tags-list .tags-con {
           overflow: hidden;
-          margin-left: 20px;
-          border-bottom: solid 1px #ccc; }
+          margin-left: 18px;
+          border-bottom: solid 1px #e4e4e4; }
         .wrap .main .tags-search .tags-list li {
           float: left;
-          margin: 14px 0 14px 20px;
+          margin: 13px 0 12px 20px;
           height: 24px;
           line-height: 24px;
           padding: 0 10px;
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
           box-sizing: border-box;
-          cursor: pointer; }
+          cursor: pointer;
+          font-size: 14px;
+          color: #666666; }
         .wrap .main .tags-search .tags-list .active {
-          border: solid 1px #ccc;
+          border: solid 1px #1a8ced;
           text-align: center; }
       .wrap .main .tags-search .selected {
-        border-bottom: solid 1px #ccc; }
+        height: 55px;
+        border-bottom: solid 1px #e4e4e4; }
         .wrap .main .tags-search .selected .tags-con {
           border: 0; }
           .wrap .main .tags-search .selected .tags-con li {
+            position: relative;
             width: 70px;
             height: 30px;
             line-height: 30px;
@@ -226,54 +235,94 @@ a {
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
-            background: #000;
-            color: #fff;
+            background: #1a8ced;
+            color: #ffffff;
+            font-size: 14px;
             text-align: center; }
+            .wrap .main .tags-search .selected .tags-con li:before {
+              content: 'x';
+              background: url("../images/icon/close.png") no-repeat;
+              background-size: 100%;
+              position: absolute;
+              top: 0;
+              right: 10px; }
     .wrap .main .circum-box {
+      position: relative;
       padding-bottom: 15px; }
+      .wrap .main .circum-box .pop {
+        top: 68px;
+        left: 102px; }
       .wrap .main .circum-box .tabs {
         position: relative; }
         .wrap .main .circum-box .tabs .tabs-tit {
           width: 115px;
-          box-shadow: -1px -1px 4px #aaa, -1px 1px 4px #aaa, 0px 1px 4px #aaa; }
+          box-shadow: -1px -1px 4px #aaa, -1px 1px 4px #aaa; }
           .wrap .main .circum-box .tabs .tabs-tit li {
             position: relative;
-            height: 205px;
-            padding: 0 10px;
+            height: 204px;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
-            background: #fafafa; }
+            background: #f8f8f8; }
+            .wrap .main .circum-box .tabs .tabs-tit li p {
+              height: 100%;
+              margin: 0 10px;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              border-bottom: solid 1px #e7e7e7; }
             .wrap .main .circum-box .tabs .tabs-tit li .big {
+              position: relative;
               display: inline-block;
-              margin: 30px 0 0 25px;
-              font-size: 40px; }
+              margin: 30px 0 0 15px;
+              font-size: 40px;
+              color: #000000; }
+              .wrap .main .circum-box .tabs .tabs-tit li .big:before {
+                content: '';
+                background: url("../images/icon/line.png") no-repeat;
+                background-size: 100%;
+                position: absolute;
+                top: 0;
+                right: -21px;
+                width: 40px;
+                height: 72px; }
             .wrap .main .circum-box .tabs .tabs-tit li .small {
               position: absolute;
               top: 40%;
               display: inline-block;
               width: 20px;
               font-size: 20px;
-              color: #595959; }
+              color: #333333; }
+            .wrap .main .circum-box .tabs .tabs-tit li:last-child p {
+              border: 0; }
           .wrap .main .circum-box .tabs .tabs-tit .active {
-            border-top: solid 1px #ccc;
-            border-bottom: solid 1px #ccc;
             border-right: 0;
-            box-shadow: 0px 1px 4px #fff;
+            box-shadow: 4px 0px 0px #fff;
             background: #fff; }
+            .wrap .main .circum-box .tabs .tabs-tit .active p {
+              width: 100%;
+              margin: 0; }
+            .wrap .main .circum-box .tabs .tabs-tit .active .big {
+              margin: 30px 0 0 25px; }
         .wrap .main .circum-box .tabs .tabs-con {
           position: absolute;
           right: 0;
           top: 0;
-          width: 87%; }
+          width: 865px; }
     .wrap .main .world-box .grid {
-      overflow: hidden;
+      float: left;
       padding-bottom: 10px; }
       .wrap .main .world-box .grid .grid-item {
         float: left;
-        width: 31.98%;
-        margin: 0 20px 20px 0;
+        width: 316.6px;
+        margin: 0 10px 20px;
         background: #fff; }
+        .wrap .main .world-box .grid .grid-item:hover {
+          box-shadow: 3px 3px 4px #CCC,-2px 2px 4px #ccc; }
+        .wrap .main .world-box .grid .grid-item:first-child {
+          margin-left: 0; }
+        .wrap .main .world-box .grid .grid-item:nth-child(4n) {
+          margin-left: 0; }
         .wrap .main .world-box .grid .grid-item:nth-child(3n) {
           margin-right: 0; }
         .wrap .main .world-box .grid .grid-item dt {
@@ -286,81 +335,147 @@ a {
         .wrap .main .world-box .grid .grid-item dd {
           overflow: hidden; }
           .wrap .main .world-box .grid .grid-item dd h4 {
-            line-height: 40px;
-            font-size: 16px; }
+            padding: 16px 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 16px;
+            color: #333333; }
           .wrap .main .world-box .grid .grid-item dd .time-nums {
             overflow: hidden;
-            line-height: 24px;
-            padding: 0 6px 10px;
-            border-bottom: solid 1px #ccc; }
+            padding: 0 10px 20px;
+            border-bottom: solid 1px #e7e7e7;
+            font-size: 12px;
+            color: #999999; }
             .wrap .main .world-box .grid .grid-item dd .time-nums .time {
-              float: left;
-              font-size: 12px; }
+              float: left; }
             .wrap .main .world-box .grid .grid-item dd .time-nums .scan-comment {
-              float: right;
-              font-size: 14px; }
+              float: right; }
+              .wrap .main .world-box .grid .grid-item dd .time-nums .scan-comment span {
+                padding-left: 18px;
+                position: relative; }
+              .wrap .main .world-box .grid .grid-item dd .time-nums .scan-comment .scan:before {
+                content: '';
+                background: url("../images/icon/list-zan.png") no-repeat;
+                background-size: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 12px;
+                height: 13px; }
               .wrap .main .world-box .grid .grid-item dd .time-nums .scan-comment .comment {
-                margin-left: 16px; }
+                margin-left: 18px; }
+                .wrap .main .world-box .grid .grid-item dd .time-nums .scan-comment .comment:before {
+                  content: '';
+                  background: url("../images/icon/list-comment.png") no-repeat;
+                  background-size: 100%;
+                  position: absolute;
+                  top: 14%;
+                  left: 0;
+                  width: 13px;
+                  height: 12px; }
           .wrap .main .world-box .grid .grid-item dd .tag-list {
-            padding: 0 6px; }
+            padding: 10px;
+            height: 55px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            margin-top: 0; }
     .wrap .main .best-box .list .list-item {
       overflow: hidden;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
-      padding: 30px 0 15px 0; }
+      padding: 30px 0; }
       .wrap .main .best-box .list .list-item:first-child {
         padding-top: 0; }
       .wrap .main .best-box .list .list-item dt, .wrap .main .best-box .list .list-item dd {
         float: left; }
       .wrap .main .best-box .list .list-item dt {
         overflow: hidden;
-        width: 155px;
-        height: 120px;
-        margin-right: 14px;
+        width: 180px;
+        height: 135px;
+        margin-right: 16px;
         border: solid 1px #aaa; }
         .wrap .main .best-box .list .list-item dt img {
           width: 100%;
           height: 100%;
           padding: 1px; }
       .wrap .main .best-box .list .list-item dd {
-        width: 82.5%;
+        width: 80%;
         font-size: 14px; }
         .wrap .main .best-box .list .list-item dd .tit-time {
-          overflow: hidden;
-          line-height: 30px; }
+          overflow: hidden; }
           .wrap .main .best-box .list .list-item dd .tit-time h4 {
             float: left;
             width: 85%;
-            font-size: 18px; }
+            margin: 0;
+            line-height: normal; }
+            .wrap .main .best-box .list .list-item dd .tit-time h4:hover {
+              font-weight: bold;
+              color: #1a8ced; }
           .wrap .main .best-box .list .list-item dd .tit-time .time {
-            float: right; }
+            float: right;
+            font-size: 12px;
+            color: #999; }
         .wrap .main .best-box .list .list-item dd .tag-list {
           overflow: hidden;
-          float: none; }
+          float: none;
+          padding: 10px 0;
+          margin: 0; }
         .wrap .main .best-box .list .list-item dd .con-txt {
           line-height: 20px;
           overflow: hidden;
           text-overflow: ellipsis;
           display: -webkit-box;
           -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical; }
+          -webkit-box-orient: vertical;
+          font-size: 14px;
+          color: #666666; }
         .wrap .main .best-box .list .list-item dd .tags-nums {
-          overflow: hidden;
-          line-height: 50px; }
+          margin-top: 10px; }
         .wrap .main .best-box .list .list-item dd .user {
           float: left;
           width: 60%; }
           .wrap .main .best-box .list .list-item dd .user img {
             width: 20px;
             height: 20px;
-            margin-right: 14px;
+            margin-right: 12px;
             border-radius: 50%; }
         .wrap .main .best-box .list .list-item dd .scan-comment {
           float: right;
-          width: 40%; }
+          width: 40%;
+          padding-top: 6px; }
           .wrap .main .best-box .list .list-item dd .scan-comment span {
-            float: right; }
+            float: right;
+            position: relative; }
+          .wrap .main .best-box .list .list-item dd .scan-comment .time:before {
+            content: '';
+            background: url("../images/icon/list-time.png") no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: 6%;
+            left: 0;
+            width: 12px;
+            height: 13px; }
+          .wrap .main .best-box .list .list-item dd .scan-comment .scan:before {
+            content: '';
+            background: url("../images/icon/list-zan.png") no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 12px;
+            height: 13px; }
+          .wrap .main .best-box .list .list-item dd .scan-comment .comment:before {
+            content: '';
+            background: url("../images/icon/list-comment.png") no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: 17%;
+            left: 0;
+            width: 13px;
+            height: 13px; }
           .wrap .main .best-box .list .list-item dd .scan-comment .scan, .wrap .main .best-box .list .list-item dd .scan-comment .comment {
             margin-left: 19px; }
     .wrap .main .best-new .title {
@@ -368,39 +483,52 @@ a {
       font-size: 24px; }
       .wrap .main .best-new .title li {
         float: left;
-        margin: 50px 14px 21px 0; }
+        margin: 20px 14px 20px 0; }
     .wrap .main .best-new .list {
       border-top: solid 1px #ccc; }
       .wrap .main .best-new .list .list-item {
         padding: 15px 0; }
-    .wrap .main .list {
-      border-bottom: solid 1px #ccc; }
     .wrap .main .list-item {
       overflow: hidden;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       padding: 15px 0;
-      border-bottom: solid 1px #ccc; }
+      border-bottom: solid 1px #e7e7e7; }
       .wrap .main .list-item:first-child {
         padding-top: 0; }
+      .wrap .main .list-item a {
+        color: #333333; }
       .wrap .main .list-item dt, .wrap .main .list-item dd {
         float: left; }
       .wrap .main .list-item dt {
         overflow: hidden;
-        width: 155px;
+        width: 160px;
         height: 120px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
         margin-right: 14px;
         border: solid 1px #aaa; }
         .wrap .main .list-item dt img {
           width: 100%;
           height: 100%;
-          padding: 1px; }
+          padding: 1px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box; }
       .wrap .main .list-item dd {
-        width: 82.7%;
+        width: 82%;
         font-size: 14px; }
         .wrap .main .list-item dd h4 {
-          font-size: 18px; }
+          margin: 6px 0 10px;
+          font-size: 18px;
+          font-weight: 200;
+          cursor: pointer;
+          cursor: hand; }
+          .wrap .main .list-item dd h4:hover {
+            color: #1a8ced;
+            font-weight: bold; }
         .wrap .main .list-item dd .con-txt {
           line-height: 20px;
           overflow: hidden;
@@ -409,20 +537,56 @@ a {
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical; }
         .wrap .main .list-item dd .tags-nums {
-          overflow: hidden;
-          line-height: 50px; }
+          overflow: hidden; }
         .wrap .main .list-item dd .scan-comment {
           float: right;
-          width: 15%; }
+          width: 18%;
+          padding-top: 21px;
+          font-size: 12px;
+          color: #999999; }
+          .wrap .main .list-item dd .scan-comment span {
+            position: relative;
+            float: right;
+            padding-left: 16px; }
           .wrap .main .list-item dd .scan-comment .comment {
-            margin-left: 16px; }
+            margin-left: 18px; }
+          .wrap .main .list-item dd .scan-comment .scan:before {
+            content: '';
+            background: url("../images/icon/list-zan.png") no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 12px;
+            height: 13px; }
+          .wrap .main .list-item dd .scan-comment .comment {
+            margin-left: 18px; }
+            .wrap .main .list-item dd .scan-comment .comment:before {
+              content: '';
+              background: url("../images/icon/list-comment.png") no-repeat;
+              background-size: 100%;
+              position: absolute;
+              top: 14%;
+              left: 0;
+              width: 13px;
+              height: 12px; }
     .wrap .main .logo_search {
       overflow: hidden;
-      border-bottom: solid 1px #ccc; }
+      border-bottom: solid 1px #e7e7e7; }
       .wrap .main .logo_search .logo {
+        position: relative;
         float: left;
-        margin: 70px 0 0 160px;
-        font-size: 18px; }
+        font-size: 18px;
+        width: 40%;
+        height: 125px; }
+        .wrap .main .logo_search .logo:before {
+          content: '';
+          background: url("../images/icon/logo.png") no-repeat;
+          position: absolute;
+          top: 25px;
+          left: 0;
+          width: 100%;
+          height: 112px; }
       .wrap .main .logo_search .search-box {
         overflow: hidden;
         float: right;
@@ -463,6 +627,10 @@ a {
             .wrap .main .logo_search .search-box .search-main .tags li {
               float: left;
               margin-right: 20px; }
+              .wrap .main .logo_search .search-box .search-main .tags li a {
+                color: #333333; }
+                .wrap .main .logo_search .search-box .search-main .tags li a:hover {
+                  color: #1a8ced; }
             .wrap .main .logo_search .search-box .search-main .tags .active {
               color: #1a8ced; }
         .wrap .main .logo_search .search-box .btns {
@@ -484,11 +652,13 @@ a {
       height: 44px;
       line-height: 44px;
       font-size: 16px;
-      color: #666666; }
+      color: #999999; }
       .wrap .main .crumbs-white li {
         float: left; }
+        .wrap .main .crumbs-white li:first-child {
+          color: #666666; }
       .wrap .main .crumbs-white a {
-        color: #666666; }
+        color: #999999; }
     .wrap .main .box-title {
       overflow: hidden; }
       .wrap .main .box-title h4 {
@@ -505,7 +675,6 @@ a {
         color: #999999; }
         .wrap .main .box-title .choice-address:before {
           content: '';
-          background: url("../images/icon/down.png") no-repeat;
           background-size: 100%;
           position: absolute;
           top: 24%;
@@ -513,20 +682,31 @@ a {
           width: 10px;
           height: 8px; }
       .wrap .main .box-title .more {
+        position: relative;
         float: right;
         margin-top: 40px;
+        padding-right: 15px;
         font-size: 16px;
-        color: #797979; }
+        color: #666666; }
+        .wrap .main .box-title .more:before {
+          content: '';
+          background: url("../images/icon/more.png") no-repeat;
+          background-size: 100%;
+          position: absolute;
+          top: 8%;
+          right: 0;
+          width: 9px;
+          height: 17px; }
     .wrap .main .tag-list {
       float: left;
-      width: 85%;
-      margin: 13px 0;
+      width: 80%;
+      margin-top: 12px;
       font-size: 12px; }
       .wrap .main .tag-list li {
         float: left;
-        line-height: 24px;
-        height: 24px;
-        padding: 0 5px;
+        line-height: 25px;
+        height: 25px;
+        padding: 0 8px;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -536,75 +716,120 @@ a {
         text-align: center;
         color: #1a8ced; }
     .wrap .main .list-btn {
+      display: block;
+      position: relative;
       margin-top: 16px;
       line-height: 60px;
-      border: solid 1px #ccc;
+      border: solid 1px #e7e7e7;
       text-align: center;
-      font-size: 16px; }
+      font-size: 16px;
+      color: #333333; }
+      .wrap .main .list-btn:before {
+        content: '';
+        background: url("../images/icon/more.png") no-repeat;
+        background-size: 100%;
+        position: absolute;
+        top: 38%;
+        left: 62%;
+        width: 9px;
+        height: 17px; }
+      .wrap .main .list-btn:hover {
+        background: #f8f8f8; }
+  .wrap .foot {
+    width: 990px;
+    margin: 10px auto 0 auto;
+    padding: 7px 0 10px 0;
+    border-top: 3px solid #3b5998;
+    text-align: center;
+    color: #7c7c7c;
+    font-size: 12px; }
+    .wrap .foot p {
+      line-height: 24px;
+      margin: 0;
+      padding: 0; }
+      .wrap .foot p a {
+        display: inline-block;
+        margin: 0 9px; }
+        .wrap .foot p a:visited {
+          color: #7c7c7c;
+          text-decoration: none; }
+      .wrap .foot p .footios, .wrap .foot p .footand, .wrap .foot p .footwp, .wrap .foot p .footphone, .wrap .foot p .footauto {
+        display: inline-block;
+        padding-left: 19px;
+        background: url("../images/icon/footicon.png") no-repeat; }
+      .wrap .foot p .footios {
+        background-position: 0 3px; }
+      .wrap .foot p .footand {
+        background-position: 0 -27px; }
+      .wrap .foot p .footwp {
+        background-position: 0 -57px; }
+      .wrap .foot p .footphone {
+        background-position: 0 -87px; }
+      .wrap .foot p .footauto {
+        padding: 0 22px 0 21px;
+        background-position: 0 -117px; }
 
 .wrap {
   overflow: hidden; }
   .wrap .hide {
     display: none; }
-  .wrap .banner {
+  .wrap .main .banner {
     height: 200px;
     padding: 12px 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background-image: -webkit-linear-gradient(160deg, #0ec2a5, #498af1);
-    background-image: linear-gradient(160deg, #0ec2a5, #498af1);
+    background: url("../images/weather.jpg") no-repeat;
+    background-size: 100% 100%;
     color: #fff; }
-    .wrap .banner .crumbs {
+    .wrap .main .banner .crumbs {
       overflow: hidden;
       font-size: 16px; }
-      .wrap .banner .crumbs li {
+      .wrap .main .banner .crumbs li {
         float: left; }
-      .wrap .banner .crumbs a {
+      .wrap .main .banner .crumbs a {
         color: #fff; }
-    .wrap .banner .weather-address {
+    .wrap .main .banner .weather-address {
       overflow: hidden;
       margin: 0 55px 0 25px; }
-      .wrap .banner .weather-address .weather {
+      .wrap .main .banner .weather-address .weather {
         position: relative;
         float: left;
         padding-top: 30px; }
-        .wrap .banner .weather-address .weather .temp {
+        .wrap .main .banner .weather-address .weather .temp {
           margin-bottom: 15px;
           font-size: 26px; }
-        .wrap .banner .weather-address .weather .temp-box {
+        .wrap .main .banner .weather-address .weather .temp-box {
           position: absolute;
           top: 30px;
           width: 70%;
           line-height: 25px;
           background: #aaa;
           text-align: center; }
-        .wrap .banner .weather-address .weather .wind {
+        .wrap .main .banner .weather-address .weather .wind {
           margin-right: 18px;
           font-size: 20px; }
-        .wrap .banner .weather-address .weather .time {
+        .wrap .main .banner .weather-address .weather .time {
           font-size: 12px; }
-      .wrap .banner .weather-address .address {
+      .wrap .main .banner .weather-address .address {
         float: right;
         margin-top: 15px;
         text-align: center; }
-        .wrap .banner .weather-address .address .city {
+        .wrap .main .banner .weather-address .address .city {
           font-size: 60px; }
-        .wrap .banner .weather-address .address .e-city {
+        .wrap .main .banner .weather-address .address .e-city {
           font-size: 30px; }
-  .wrap .best-box {
+  .wrap .main .best-box {
     margin-top: 60px; }
-    .wrap .best-box .box-title {
+    .wrap .main .best-box .box-title {
       line-height: normal; }
-      .wrap .best-box .box-title h4, .wrap .best-box .box-title .more {
+      .wrap .main .best-box .box-title h4, .wrap .main .best-box .box-title .more {
         line-height: 90px; }
-      .wrap .best-box .box-title .more {
-        float: left; }
-      .wrap .best-box .box-title .best-new-btns {
+      .wrap .main .best-box .box-title .best-new-btns {
         float: right;
         margin-top: 24px;
         text-align: center; }
-        .wrap .best-box .box-title .best-new-btns li {
+        .wrap .main .best-box .box-title .best-new-btns li {
           float: left;
           width: 120px;
           height: 40px;
@@ -614,9 +839,17 @@ a {
           border-radius: 4px;
           background: #fff;
           font-size: 18px; }
-          .wrap .best-box .box-title .best-new-btns li:first-child {
+          .wrap .main .best-box .box-title .best-new-btns li:first-child {
             margin-left: 0; }
-        .wrap .best-box .box-title .best-new-btns .active {
+        .wrap .main .best-box .box-title .best-new-btns .active {
           border: solid 1px #1a8ced;
           background: #1a8ced;
           color: #fff; }
+  .wrap .main .circum-box .box-title .more {
+    float: right;
+    margin-top: 40px; }
+  .wrap .main .box-title .more {
+    float: none;
+    margin: 0; }
+  .wrap .main .list-item dd {
+    width: 79.8%; }

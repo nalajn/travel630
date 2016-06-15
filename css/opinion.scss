@@ -3,36 +3,50 @@
 
 .wrap{
     overflow: hidden;
-
+	.hide{
+		display: none;
+	}
     /*意见反馈*/
 	.opinion-box{
-		padding-top: 50px;
+		padding-top: 60px;
 		.opinion-tit{
 			line-height: 44px;
 			font-size: 30px;
-			color: #333;
+			color: $black;
 		}
 		.opinion-sec{
 			line-height: 38px;
 			font-size: 18px;
-			color: #666;
+			color: $b6;
 		}
 		textarea{
 			width: 100%;
-			height: 115px;
-			margin: 35px 0 14px;
+			height: 300px;
+			margin: 20px 0;
 			border: solid 1px #1a8ced;
 			@include box-sizing;
 			box-shadow: -1px -1px 4px #aaa,1px 1px 4px #aaa;
 		}
 		.emoji-btn{
 			overflow: hidden;
-			padding-left: 14px;
+			padding-left: 10px;
 			font-size: 14px;
 			.emoji{
+				position: relative;
 				float: left;
-				margin: 10px 0 0 23px;
+				margin-top: 4px;
+				padding-left: 20px;
 				color: #1a8ced;
+				&:before{
+			        content: '';
+			        background: url('../images/icon/opinion-emoji.png') no-repeat;
+			        background-size: 100%;
+				    position: absolute;
+				    top: 12%;
+				    left: 0;
+				    width: 14px;
+				    height: 14px;
+			    }
 			}
 			.btn{
 				float: right;
@@ -48,13 +62,14 @@
 
 	/*回复列表*/
 	.comment-list{
-		padding: 52px 0 78px;
+		padding-top: 80px;
 		.comment-tit{
 			overflow: hidden;
+			padding-bottom: 20px;
+			border-bottom: solid 1px $line;
 			font-size: 24px;
 			li{
 				float: left;
-				padding: 0 16px 25px 0;
 				margin-right: 16px;
 			}
 			.active{

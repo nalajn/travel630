@@ -6,96 +6,116 @@
 	.hide{
 		display: none;
 	}
-	.banner{
-		height: 200px;
-		padding: 12px 0;
-		@include box-sizing;
-		background-image:-webkit-linear-gradient(160deg, #0ec2a5, #498af1);
-        background-image:linear-gradient(160deg, #0ec2a5, #498af1); 
-		color: #fff;
-		.crumbs{
-			overflow: hidden;
-			font-size: 16px;
-			li{
-				float: left;
-			}
-			a{
-				color: #fff;
-			}
-		}
-		.weather-address{
-			overflow: hidden;
-			margin: 0 55px 0 25px;
-			.weather{
-				position: relative;
-				float: left;
-				padding-top: 30px;
-				.temp{
-					margin-bottom: 15px;
-					font-size: 26px;
-				}
-				.temp-box{
-					position: absolute;
-				    top: 30px;
-				    width: 70%;
-				    line-height: 25px;
-				    background: #aaa;
-				    text-align: center;
-				}
-				.wind{
-					margin-right: 18px;
-					font-size: 20px;
-				}
-				.time{
-					font-size: 12px;
-				}
-			}
-			.address{
-				float: right;
-				margin-top: 15px;
-				text-align: center;
-				.city{
-					font-size: 60px;
-				}
-				.e-city{
-					font-size: 30px;
-				}
-			}
-		}
-	}
-	.best-box{
-		margin-top: 60px;
-		.box-title{
-			line-height: normal;
-			h4,.more{
-				line-height: 90px;
-			}
-			.more{
-				float: left;
-			}
-			.best-new-btns{
-				float: right;
-			    margin-top: 24px;
-				text-align: center;
+	.main{
+		.banner{
+			height: 200px;
+			padding: 12px 0;
+			@include box-sizing;
+			// background-image:-webkit-linear-gradient(160deg, #0ec2a5, #498af1);
+	  //       background-image:linear-gradient(160deg, #0ec2a5, #498af1); 
+	  		background: url('../images/weather.jpg') no-repeat;
+	  		background-size: 100% 100%; 
+			color: #fff;
+			.crumbs{
+				overflow: hidden;
+				font-size: 16px;
 				li{
 					float: left;
-					width: 120px;
-					height: 40px;
-					line-height: 40px;
-					margin-left: 10px;
-					border: solid 1px #ccc;
-					border-radius: 4px;
-					background: #fff;
-					font-size: 18px;
-					&:first-child{
-						margin-left: 0;
-					}
 				}
-				.active{
-					border: solid 1px #1a8ced;
-					background: #1a8ced;
+				a{
 					color: #fff;
 				}
+			}
+			.weather-address{
+				overflow: hidden;
+				margin: 0 55px 0 25px;
+				.weather{
+					position: relative;
+					float: left;
+					padding-top: 30px;
+					.temp{
+						margin-bottom: 15px;
+						font-size: 26px;
+					}
+					.temp-box{
+						position: absolute;
+					    top: 30px;
+					    width: 70%;
+					    line-height: 25px;
+					    background: #aaa;
+					    text-align: center;
+					}
+					.wind{
+						margin-right: 18px;
+						font-size: 20px;
+					}
+					.time{
+						font-size: 12px;
+					}
+				}
+				.address{
+					float: right;
+					margin-top: 15px;
+					text-align: center;
+					.city{
+						font-size: 60px;
+					}
+					.e-city{
+						font-size: 30px;
+					}
+				}
+			}
+		}
+		.best-box{
+			margin-top: 60px;
+			.box-title{
+				line-height: normal;
+				h4,.more{
+					line-height: 90px;
+				}
+				.best-new-btns{
+					float: right;
+				    margin-top: 24px;
+					text-align: center;
+					li{
+						float: left;
+						width: 120px;
+						height: 40px;
+						line-height: 40px;
+						margin-left: 10px;
+						border: solid 1px #ccc;
+						border-radius: 4px;
+						background: #fff;
+						font-size: 18px;
+						&:first-child{
+							margin-left: 0;
+						}
+					}
+					.active{
+						border: solid 1px #1a8ced;
+						background: #1a8ced;
+						color: #fff;
+					}
+				}
+			}
+		}
+		.circum-box{
+			.box-title{
+				.more{
+					float: right;
+					margin-top: 40px;
+				}
+			}
+		}
+		.box-title{
+			.more{
+				float: none;
+				margin: 0;
+			}
+		}
+		.list-item{
+			dd{
+				width: 79.8%;
 			}
 		}
 	}

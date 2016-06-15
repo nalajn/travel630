@@ -13,6 +13,7 @@
     <script src="../js/lib/jquery-2.1.4.js"></script>
     <script src="../js/lib/jquery.flexslider-min.js"></script>
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="http://s.autoimg.cn/com/co.ashx?path=|as|css-3.1.0|global|autoshow.css,|as|css-3.1.0|public|icon.css,|as|css-3.1.0|public|pop.css,|as|css-3.1.0|public|citypop.css">
   </head>
   <body>
   	<div class="wrap">
@@ -50,31 +51,37 @@
   	    <div class="flexslider min-width">
           <ul class="slides">
             <li>
-              <img src="../images/1.jpg" alt="" />
-              <div class="slider-title">
-                <p class="num">
-                  <span>1</span>/3
-                </p>
-                <p class="slider-txt">游西点军校/大都会博物馆 纽约两日游记</p>
-              </div>
+              <a href="detail.html">
+                <img src="../images/1.jpg" alt="游西点军校/大都会博物馆 纽约两日游记" />
+                <div class="slider-title">
+                  <p class="num">
+                    <span title="第1张图片">1</span>/3
+                  </p>
+                  <p class="slider-txt" title="游西点军校/大都会博物馆 纽约两日游记">游西点军校/大都会博物馆 纽约两日游记</p>
+                </div>
+              </a>
             </li>
             <li>
-              <img src="../images/1.jpg" alt="" />
-              <div class="slider-title">
-                <p class="num">
-                  <span>2</span>/3
-                </p>
-                <p class="slider-txt">游西点军校/大都会博物馆 纽约两日游记</p>
-              </div>
+              <a href="detail.html">
+                <img src="../images/1.jpg" alt="游西点军校/大都会博物馆 纽约两日游记" />
+                <div class="slider-title">
+                  <p class="num">
+                    <span title="第2张图片">2</span>/3
+                  </p>
+                  <p class="slider-txt" title="游西点军校/大都会博物馆 纽约两日游记">游西点军校/大都会博物馆 纽约两日游记</p>
+                </div>
+              </a>
             </li>
             <li>
-              <img src="../images/1.jpg" alt="" />
-              <div class="slider-title">
-                <p class="num">
-                  <span>3</span>/3
-                </p>
-                <p class="slider-txt">游西点军校/大都会博物馆 纽约两日游记</p>
-              </div>
+              <a href="detail.html">
+                <img src="../images/1.jpg" alt="游西点军校/大都会博物馆 纽约两日游记" />
+                <div class="slider-title">
+                  <p class="num">
+                    <span title="第3张图片">3</span>/3
+                  </p>
+                  <p class="slider-txt" title="游西点军校/大都会博物馆 纽约两日游记">游西点军校/大都会博物馆 纽约两日游记</p>
+                </div>
+              </a>
             </li>
           </ul>
         </div>
@@ -83,170 +90,235 @@
           <div class="search-main">
             <div class="search-input-btn">
               <input class="search-input" type="text" placehold="请输入游记名/目的地">
-              <span class="search-btn">搜索</span>
+              <span class="search-btn cursor" title="搜索">搜索</span>
             </div>
             <ul class="tags">
-              <li>户外</li>
-              <li>蜜月</li>
-              <li>境外</li>
-              <li>潜水</li>
-              <li>滑雪</li>
-              <li>自然风光</li>
-              <li>户外</li>
-              <li>蜜月</li>
-              <li>境外</li>
-              <li>潜水</li>
-              <li>更多</li>
+              <li><a href="search_result.html" title="户外">户外</a></li>
+              <li><a href="search_result.html" title="蜜月">蜜月</a></li>
+              <li><a href="search_result.html" title="境外">境外</a></li>
+              <li><a href="search_result.html" title="潜水">潜水</a></li>
+              <li><a href="search_result.html" title="滑雪">滑雪</a></li>
+              <li><a href="search_result.html" title="自然风光">自然风光</a></li>
+              <li><a href="search_result.html" title="户外">户外</a></li>
+              <li><a href="search_result.html" title="蜜月">蜜月</a></li>
+              <li><a href="search_result.html" title="境外">境外</a></li>
+              <li><a href="search_result.html" title="潜水">潜水</a></li>
+              <li><a href="search_result.html" title="更多">更多</a></li>
             </ul>
           </div>
           <div class="btns">
-            <p class="publish">发表游记</p>
-            <p class="opinion">意见反馈</p>
+            <p class="publish cursor" title="发表游记">发表游记</p>
+            <p class="opinion cursor" title="意见反馈">意见反馈</p>
           </div>
         </div>
 
         <div class="circum-box min-width">
           <div class="box-title">
-            <h4>玩转周边</h4>
-            <span class="choice-address">北京</span>
-            <a class="more" href="">更多</a>
+            <h4 title="玩转周边">玩转周边</h4>
+            <span class="choice-address cursor" id="currentCity" href="javascript:void(0)" title="选择目的地">北京</span>
+            <!-- <a id="changeCity" href="javascript:void(0);"><span>选择城市</span></a> -->
+            <div id="cityPop" class="pop pop01 citypop">
+              <div class="pop-content">
+                <h3>
+                  <div class="citypop-search">
+                    <i class="icon16 icon16-search2"></i>
+                    <input type="text" value="请输入城市名">
+                    <div class="citypop-ct">
+                      <div class="ntextdicon"><i class="icon12 icon12-exc"></i>对不起，找不到您输入的内容</div>
+                      <div class="zdicon"><i class="icon10 icon10-down3"></i>点击直达</div>
+                      <ul>
+                        <li data-key="1"><a href="####"><span>安庆</span><b>anqing</b></a></li>
+                        <li data-key="2"><a href="####"><span>安阳</span><b>anyang</b></a></li>
+                        <li data-key="3"><a href="####"><span>鞍山</span><b>anshan</b></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="citypop-hotcity">
+                    <a href="####">全国</a>
+                    <a href="####">北京</a>
+                    <a href="####">上海</a>
+                    <a href="####">深圳</a>
+                    <a href="####">广州</a>
+                    <a href="####">杭州</a>
+                    <a href="####">南京</a>
+                  </div>
+                  <a href="javascript:void(0);" title="关闭" class="pop-close"><i class="icon16 icon16-close"></i></a>
+                </h3>
+                <div class="pop-content-info">
+                  <div class="citypop-nb">
+                    <a href="javascript:void(0);">A</a>
+                    <a href="javascript:void(0);">F</a>
+                    <a href="javascript:void(0);">G</a>
+                    <a href="javascript:void(0);">H</a>
+                    <a href="javascript:void(0);">J</a>
+                    <a href="javascript:void(0);">L</a>
+                    <a href="javascript:void(0);">N</a>
+                    <a href="javascript:void(0);">Q</a>
+                    <a href="javascript:void(0);">S</a>
+                    <a href="javascript:void(0);">X</a>
+                    <a href="javascript:void(0);">Y</a>
+                    <a href="javascript:void(0);">Z</a>
+                  </div>
+                  <div class="citypop-scity">
+                    <dl class="dlbg dlbg-top"><dt><span class="tx">直辖市：</span></dt><dd><a href="#">北京</a><a href="#">上海</a><a href="#">天津</a><a href="#" class="current">重庆</a></dd></dl>
+                    <dl><dt><span class="tx">安徽：</span><span class="nu">A</span></dt><dd><a href="#">合肥</a><a href="#">芜湖</a><a href="#">安庆</a><a href="#">阜阳</a></dd></dl>
+                    <dl class="dlbg"><dt><span class="tx">福建：</span><span class="nu">F</span></dt><dd><a href="#">福州</a><a href="#">厦门</a><a href="#">泉州</a></dd></dl>
+                    <dl><dt><span class="tx">广东：</span><span class="nu">G</span></dt><dd><a href="#">广州</a><a href="#">韶关</a><a href="#">深圳</a><a href="#">珠海</a><a href="#">汕头</a><a href="#">佛山</a><a href="#">江门</a><a href="#">惠州</a><a href="#">东莞</a><a href="#">中山</a></dd><dt><span class="tx">广西：</span></dt><dd><a href="#">南宁</a><a href="#">柳州</a><a href="#">桂林</a></dd><dt><span class="tx">贵州：</span></dt><dd><a href="#">贵阳</a><a href="#">遵义</a></dd><dt><span class="tx">甘肃：</span></dt><dd><a href="#">兰州</a></dd></dl>
+                    <dl class="dlbg"><dt><span class="tx">海南：</span><span class="nu">H</span></dt><dd><a href="#">海口</a></dd><dt><span class="tx">河南：</span></dt><dd><a href="#">郑州</a><a href="#">开封</a><a href="#">洛阳</a><a href="#">平顶山</a><a href="#">安阳</a><a href="#">新乡</a><a href="#">焦作</a><a href="#">濮阳</a><a href="#">许昌</a><a href="#">南阳</a><a href="#">商丘</a><a href="#">信阳</a><a href="#">驻马店</a></dd></dl>
+                  </div>
+                </div>
+              </div>
+              <span class="pop-bottom pop-arrow"></span>
+            </div>
+            <a class="more cursor" href="search_result.html" title="更多">更多</a>
           </div>
           <div class="tabs">
-            <ul class="tabs-tit">
+            <ul class="tabs-tit cursor">
               <li>
                 <p>
-                  <span class="big">吃</span>
-                  <span class="small">吃遍周边</span>
+                  <span class="big" title="玩">玩</span>
+                  <span class="small" title="玩遍周边">玩遍周边</span>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span class="big" title="吃">吃</span>
+                  <span class="small" title="吃遍周边">吃遍周边</span>
                 </p>
               </li>
               <li class="active">
                 <p>
-                  <span class="big">住</span>
-                  <span class="small">住遍周边</span>
+                  <span class="big" title="住">住</span>
+                  <span class="small" title="住遍周边">住遍周边</span>
                 </p>
               </li>
               <li>
                 <p>
-                  <span class="big">玩</span>
-                  <span class="small">玩遍周边</span>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <span class="big">购</span>
-                  <span class="small">购遍周边</span>
+                  <span class="big" title="购">购</span>
+                  <span class="small" title="购遍周边">购遍周边</span>
                 </p>
               </li>
             </ul>
             <div class="tabs-con">
+              <p class="nothing hide" title="暂无该地点美食信息">暂无该地点美食信息</p>
               <div class="list">
                 <dl class="list-item">
-                  <dt>
-                    <img src="../images/1.jpg">
-                  </dt>
-                  <dd>
-                    <h4>车史上的5月22日 法拉利首次参加F1赛事</h4>
-                    <p class="con-txt">【汽车之家  车史上的今天】一级方程式锦标赛汽车之家 车史上的今天。一级方程式锦标赛可以说是赛车运动这中的顶级赛事，这项赛事源自1906年举办的法国汽车俱乐部大奖赛。1948年，法国法国汽车俱乐部大奖赛。1948年，法国</p>
-                    <div class="tags-nums">
-                      <ul class="tag-list">
-                        <li class="tag">户外</li>
-                        <li class="tag">境外</li>
-                        <li class="tag">户外</li>
-                        <li class="tag">境外</li>
-                      </ul>
-                      <div class="scan-comment">
-                        <span class="scan">10.92万</span>
-                        <span class="comment">9823</span>
+                  <a href="detail.html">
+                    <dt>
+                      <img src="../images/1.jpg" alt="车史上的5月22日 法拉利首次参加F1赛事">
+                    </dt>
+                    <dd>
+                      <h4 title="车史上的5月22日 法拉利首次参加F1赛事">车史上的5月22日 法拉利首次参加F1赛事</h4>
+                      <p class="con-txt">【汽车之家  车史上的今天】一级方程式锦标赛汽车之家 车史上的今天。一级方程式锦标赛可以说是赛车运动这中的顶级赛事，这项赛事源自1906年举办的法国汽车俱乐部大奖赛。1948年，法国法国汽车俱乐部大奖赛。1948年，法国</p>
+                      <div class="tags-nums">
+                        <ul class="tag-list">
+                          <li class="tag" title="户外">户外</li>
+                          <li class="tag" title="境外">境外</li>
+                          <li class="tag" title="户外">户外</li>
+                          <li class="tag" title="境外">境外</li>
+                        </ul>
+                        <div class="scan-comment">
+                          <span class="comment" title="总评论量9823">9823</span>
+                          <span class="scan" title="总浏览量10.92万">10.92万</span>
+                        </div>
                       </div>
-                    </div>
-                  </dd>
+                    </dd>
+                  </a>
                 </dl>
                 <dl class="list-item">
-                  <dt>
-                    <img src="../images/1.jpg">
-                  </dt>
-                  <dd>
-                    <h4>车史上的5月22日 法拉利首次参加F1赛事</h4>
-                    <p class="con-txt">【汽车之家  车史上的今天】一级方程式锦标赛汽车之家 车史上的今天。一级方程式锦标赛可以说是赛车运动这中的顶级赛事，这项赛事源自1906年举办的法国汽车俱乐部大奖赛。1948年，法国法国汽车俱乐部大奖赛。1948年，法国</p>
-                    <div class="tags-nums">
-                      <ul class="tag-list">
-                        <li class="tag">户外</li>
-                        <li class="tag">境外</li>
-                        <li class="tag">户外</li>
-                        <li class="tag">境外</li>
-                      </ul>
-                      <div class="scan-comment">
-                        <span class="scan">10.92万</span>
-                        <span class="comment">9823</span>
+                  <a href="detail.html">
+                    <dt>
+                      <img src="../images/1.jpg" alt="车史上的5月22日 法拉利首次参加F1赛事">
+                    </dt>
+                    <dd>
+                      <h4 title="车史上的5月22日 法拉利首次参加F1赛事">车史上的5月22日 法拉利首次参加F1赛事</h4>
+                      <p class="con-txt">【汽车之家  车史上的今天】一级方程式锦标赛汽车之家 车史上的今天。一级方程式锦标赛可以说是赛车运动这中的顶级赛事，这项赛事源自1906年举办的法国汽车俱乐部大奖赛。1948年，法国法国汽车俱乐部大奖赛。1948年，法国</p>
+                      <div class="tags-nums">
+                        <ul class="tag-list">
+                          <li class="tag" title="户外">户外</li>
+                          <li class="tag" title="境外">境外</li>
+                          <li class="tag" title="户外">户外</li>
+                          <li class="tag" title="境外">境外</li>
+                        </ul>
+                        <div class="scan-comment">
+                          <span class="comment" title="总评论量9823">9823</span>
+                          <span class="scan" title="总浏览量10.92万">10.92万</span>
+                        </div>
                       </div>
-                    </div>
-                  </dd>
+                    </dd>
+                  </a>
                 </dl>
                 <dl class="list-item">
-                  <dt>
-                    <img src="../images/1.jpg">
-                  </dt>
-                  <dd>
-                    <h4>车史上的5月22日 法拉利首次参加F1赛事</h4>
-                    <p class="con-txt">【汽车之家  车史上的今天】一级方程式锦标赛汽车之家 车史上的今天。一级方程式锦标赛可以说是赛车运动这中的顶级赛事，这项赛事源自1906年举办的法国汽车俱乐部大奖赛。1948年，法国法国汽车俱乐部大奖赛。1948年，法国</p>
-                    <div class="tags-nums">
-                      <ul class="tag-list">
-                        <li class="tag">户外</li>
-                        <li class="tag">境外</li>
-                        <li class="tag">户外</li>
-                        <li class="tag">境外</li>
-                      </ul>
-                      <div class="scan-comment">
-                        <span class="scan">10.92万</span>
-                        <span class="comment">9823</span>
+                  <a href="detail.html">
+                    <dt>
+                      <img src="../images/1.jpg" alt="车史上的5月22日 法拉利首次参加F1赛事">
+                    </dt>
+                    <dd>
+                      <h4 title="车史上的5月22日 法拉利首次参加F1赛事">车史上的5月22日 法拉利首次参加F1赛事</h4>
+                      <p class="con-txt">【汽车之家  车史上的今天】一级方程式锦标赛汽车之家 车史上的今天。一级方程式锦标赛可以说是赛车运动这中的顶级赛事，这项赛事源自1906年举办的法国汽车俱乐部大奖赛。1948年，法国法国汽车俱乐部大奖赛。1948年，法国</p>
+                      <div class="tags-nums">
+                        <ul class="tag-list">
+                          <li class="tag" title="户外">户外</li>
+                          <li class="tag" title="境外">境外</li>
+                          <li class="tag" title="户外">户外</li>
+                          <li class="tag" title="境外">境外</li>
+                        </ul>
+                        <div class="scan-comment">
+                          <span class="comment" title="总评论量9823">9823</span>
+                          <span class="scan" title="总浏览量10.92万">10.92万</span>
+                        </div>
                       </div>
-                    </div>
-                  </dd>
+                    </dd>
+                  </a>
                 </dl>
                 <dl class="list-item">
-                  <dt>
-                    <img src="../images/1.jpg">
-                  </dt>
-                  <dd>
-                    <h4>车史上的5月22日 法拉利首次参加F1赛事</h4>
-                    <p class="con-txt">【汽车之家  车史上的今天】一级方程式锦标赛汽车之家 车史上的今天。一级方程式锦标赛可以说是赛车运动这中的顶级赛事，这项赛事源自1906年举办的法国汽车俱乐部大奖赛。1948年，法国法国汽车俱乐部大奖赛。1948年，法国</p>
-                    <div class="tags-nums">
-                      <ul class="tag-list">
-                        <li class="tag">户外</li>
-                        <li class="tag">境外</li>
-                        <li class="tag">户外</li>
-                        <li class="tag">境外</li>
-                      </ul>
-                      <div class="scan-comment">
-                        <span class="scan">10.92万</span>
-                        <span class="comment">9823</span>
+                  <a href="detail.html">
+                    <dt>
+                      <img src="../images/1.jpg" alt="车史上的5月22日 法拉利首次参加F1赛事">
+                    </dt>
+                    <dd>
+                      <h4 title="车史上的5月22日 法拉利首次参加F1赛事">车史上的5月22日 法拉利首次参加F1赛事</h4>
+                      <p class="con-txt">【汽车之家  车史上的今天】一级方程式锦标赛汽车之家 车史上的今天。一级方程式锦标赛可以说是赛车运动这中的顶级赛事，这项赛事源自1906年举办的法国汽车俱乐部大奖赛。1948年，法国法国汽车俱乐部大奖赛。1948年，法国</p>
+                      <div class="tags-nums">
+                        <ul class="tag-list">
+                          <li class="tag" title="户外">户外</li>
+                          <li class="tag" title="境外">境外</li>
+                          <li class="tag" title="户外">户外</li>
+                          <li class="tag" title="境外">境外</li>
+                        </ul>
+                        <div class="scan-comment">
+                          <span class="comment" title="总评论量9823">9823</span>
+                          <span class="scan" title="总浏览量10.92万">10.92万</span>
+                        </div>
                       </div>
-                    </div>
-                  </dd>
+                    </dd>
+                  </a>
                 </dl>
                 <dl class="list-item">
-                  <dt>
-                    <img src="../images/1.jpg">
-                  </dt>
-                  <dd>
-                    <h4>车史上的5月22日 法拉利首次参加F1赛事</h4>
-                    <p class="con-txt">【汽车之家  车史上的今天】一级方程式锦标赛汽车之家 车史上的今天。一级方程式锦标赛可以说是赛车运动这中的顶级赛事，这项赛事源自1906年举办的法国汽车俱乐部大奖赛。1948年，法国法国汽车俱乐部大奖赛。1948年，法国</p>
-                    <div class="tags-nums">
-                      <ul class="tag-list">
-                        <li class="tag">户外</li>
-                        <li class="tag">境外</li>
-                        <li class="tag">户外</li>
-                        <li class="tag">境外</li>
-                      </ul>
-                      <div class="scan-comment">
-                        <span class="scan">10.92万</span>
-                        <span class="comment">9823</span>
+                  <a href="detail.html">
+                    <dt>
+                      <img src="../images/1.jpg" alt="车史上的5月22日 法拉利首次参加F1赛事">
+                    </dt>
+                    <dd>
+                      <h4 title="车史上的5月22日 法拉利首次参加F1赛事">车史上的5月22日 法拉利首次参加F1赛事</h4>
+                      <p class="con-txt">【汽车之家  车史上的今天】一级方程式锦标赛汽车之家 车史上的今天。一级方程式锦标赛可以说是赛车运动这中的顶级赛事，这项赛事源自1906年举办的法国汽车俱乐部大奖赛。1948年，法国法国汽车俱乐部大奖赛。1948年，法国</p>
+                      <div class="tags-nums">
+                        <ul class="tag-list">
+                          <li class="tag" title="户外">户外</li>
+                          <li class="tag" title="境外">境外</li>
+                          <li class="tag" title="户外">户外</li>
+                          <li class="tag" title="境外">境外</li>
+                        </ul>
+                        <div class="scan-comment">
+                          <span class="comment" title="总评论量9823">9823</span>
+                          <span class="scan" title="总浏览量10.92万">10.92万</span>
+                        </div>
                       </div>
-                    </div>
-                  </dd>
+                    </dd>
+                  </a>
                 </dl>
               </div>
-              <p class="list-btn">更多周边美食，请查看全部</p>
+              <a class="list-btn" href="circum.html" title="更多周边美食，请查看全部">更多周边美食，请查看全部</a>
             </div>
           </div>
         </div>
@@ -254,135 +326,147 @@
         <div class="world-container">
           <div class="world-box min-width">
             <div class="box-title">
-              <h4>玩转世界</h4>
-              <a class="more" href="">更多</a>
+              <h4 title="小编推荐">小编推荐</h4>
+              <a class="more" href="" title="更多">更多</a>
             </div>
             <div class="grid">
               <dl class="grid-item">
-                <dt>
-                  <img src="../images/1.jpg">
-                </dt>
-                <dd>
-                  <h4>之最阿萨大的萨达打底</h4>
-                  <div class="time-nums">
-                    <span class="time">2016.04.23|5天</span>
-                    <div class="scan-comment">
-                      <span class="scan">10.92万</span>
-                      <span class="comment">9823</span>
+                <a href="detail.html">
+                  <dt>
+                    <img src="../images/1.jpg" alt="之最阿萨大的萨达打底">
+                  </dt>
+                  <dd>
+                    <h4 title="之最阿萨大的萨达打底">之最阿萨大的萨达打底</h4>
+                    <div class="time-nums">
+                      <span class="time" title="2016.04.23|5天">2016.04.23&nbsp;|&nbsp;5天</span>
+                      <div class="scan-comment">
+                        <span class="scan" title="总浏览量10.92万">10.92万</span>
+                        <span class="comment" title="总评论量9823">9823</span>
+                      </div>
                     </div>
-                  </div>
-                  <ul class="tag-list">
-                    <li class="tag">户外</li>
-                    <li class="tag">境外</li>
-                    <li class="tag">户外</li>
-                    <li class="tag">境外</li>
-                  </ul>
-                </dd>
+                    <ul class="tag-list">
+                      <li class="tag">户外</li>
+                      <li class="tag">境外</li>
+                      <li class="tag">户外</li>
+                      <li class="tag">境外</li>
+                    </ul>
+                  </dd>
+                </a>
               </dl>
               <dl class="grid-item">
-                <dt>
-                  <img src="../images/1.jpg">
-                </dt>
-                <dd>
-                  <h4>之最阿萨大的萨达打底</h4>
-                  <div class="time-nums">
-                    <span class="time">2016.04.23|5天</span>
-                    <div class="scan-comment">
-                      <span class="scan">10.92万</span>
-                      <span class="comment">9823</span>
+                <a href="detail.html">
+                  <dt>
+                    <img src="../images/1.jpg" alt="之最阿萨大的萨达打底">
+                  </dt>
+                  <dd>
+                    <h4 title="之最阿萨大的萨达打底">之最阿萨大的萨达打底</h4>
+                    <div class="time-nums">
+                      <span class="time" title="2016.04.23|5天">2016.04.23&nbsp;|&nbsp;5天</span>
+                      <div class="scan-comment">
+                        <span class="scan" title="总浏览量10.92万">10.92万</span>
+                        <span class="comment" title="总评论量9823">9823</span>
+                      </div>
                     </div>
-                  </div>
-                  <ul class="tag-list">
-                    <li class="tag">户外</li>
-                    <li class="tag">境外</li>
-                    <li class="tag">户外</li>
-                    <li class="tag">境外</li>
-                  </ul>
-                </dd>
+                    <ul class="tag-list">
+                      <li class="tag">户外</li>
+                      <li class="tag">境外</li>
+                      <li class="tag">户外</li>
+                      <li class="tag">境外</li>
+                    </ul>
+                  </dd>
+                </a>
               </dl>
               <dl class="grid-item">
-                <dt>
-                  <img src="../images/1.jpg">
-                </dt>
-                <dd>
-                  <h4>之最阿萨大的萨达打底</h4>
-                  <div class="time-nums">
-                    <span class="time">2016.04.23|5天</span>
-                    <div class="scan-comment">
-                      <span class="scan">10.92万</span>
-                      <span class="comment">9823</span>
+                <a href="detail.html">
+                  <dt>
+                    <img src="../images/1.jpg" alt="之最阿萨大的萨达打底">
+                  </dt>
+                  <dd>
+                    <h4 title="之最阿萨大的萨达打底">之最阿萨大的萨达打底</h4>
+                    <div class="time-nums">
+                      <span class="time" title="2016.04.23|5天">2016.04.23&nbsp;|&nbsp;5天</span>
+                      <div class="scan-comment">
+                        <span class="scan" title="总浏览量10.92万">10.92万</span>
+                        <span class="comment" title="总评论量9823">9823</span>
+                      </div>
                     </div>
-                  </div>
-                  <ul class="tag-list">
-                    <li class="tag">户外</li>
-                    <li class="tag">境外</li>
-                    <li class="tag">户外</li>
-                    <li class="tag">境外</li>
-                  </ul>
-                </dd>
+                    <ul class="tag-list">
+                      <li class="tag">户外</li>
+                      <li class="tag">境外</li>
+                      <li class="tag">户外</li>
+                      <li class="tag">境外</li>
+                    </ul>
+                  </dd>
+                </a>
               </dl>
               <dl class="grid-item">
-                <dt>
-                  <img src="../images/1.jpg">
-                </dt>
-                <dd>
-                  <h4>之最阿萨大的萨达打底</h4>
-                  <div class="time-nums">
-                    <span class="time">2016.04.23|5天</span>
-                    <div class="scan-comment">
-                      <span class="scan">10.92万</span>
-                      <span class="comment">9823</span>
+                <a href="detail.html">
+                  <dt>
+                    <img src="../images/1.jpg" alt="之最阿萨大的萨达打底">
+                  </dt>
+                  <dd>
+                    <h4 title="之最阿萨大的萨达打底">之最阿萨大的萨达打底</h4>
+                    <div class="time-nums">
+                      <span class="time" title="2016.04.23|5天">2016.04.23&nbsp;|&nbsp;5天</span>
+                      <div class="scan-comment">
+                        <span class="scan" title="总浏览量10.92万">10.92万</span>
+                        <span class="comment" title="总评论量9823">9823</span>
+                      </div>
                     </div>
-                  </div>
-                  <ul class="tag-list">
-                    <li class="tag">户外</li>
-                    <li class="tag">境外</li>
-                    <li class="tag">户外</li>
-                    <li class="tag">境外</li>
-                  </ul>
-                </dd>
+                    <ul class="tag-list">
+                      <li class="tag">户外</li>
+                      <li class="tag">境外</li>
+                      <li class="tag">户外</li>
+                      <li class="tag">境外</li>
+                    </ul>
+                  </dd>
+                </a>
               </dl>
               <dl class="grid-item">
-                <dt>
-                  <img src="../images/1.jpg">
-                </dt>
-                <dd>
-                  <h4>之最阿萨大的萨达打底</h4>
-                  <div class="time-nums">
-                    <span class="time">2016.04.23|5天</span>
-                    <div class="scan-comment">
-                      <span class="scan">10.92万</span>
-                      <span class="comment">9823</span>
+                <a href="detail.html">
+                  <dt>
+                    <img src="../images/1.jpg" alt="之最阿萨大的萨达打底">
+                  </dt>
+                  <dd>
+                    <h4 title="之最阿萨大的萨达打底">之最阿萨大的萨达打底</h4>
+                    <div class="time-nums">
+                      <span class="time" title="2016.04.23|5天">2016.04.23&nbsp;|&nbsp;5天</span>
+                      <div class="scan-comment">
+                        <span class="scan" title="总浏览量10.92万">10.92万</span>
+                        <span class="comment" title="总评论量9823">9823</span>
+                      </div>
                     </div>
-                  </div>
-                  <ul class="tag-list">
-                    <li class="tag">户外</li>
-                    <li class="tag">境外</li>
-                    <li class="tag">户外</li>
-                    <li class="tag">境外</li>
-                  </ul>
-                </dd>
+                    <ul class="tag-list">
+                      <li class="tag">户外</li>
+                      <li class="tag">境外</li>
+                      <li class="tag">户外</li>
+                      <li class="tag">境外</li>
+                    </ul>
+                  </dd>
+                </a>
               </dl>
               <dl class="grid-item">
-                <dt>
-                  <img src="../images/1.jpg">
-                </dt>
-                <dd>
-                  <h4>之最阿萨大的萨达打底</h4>
-                  <div class="time-nums">
-                    <span class="time">2016.04.23|5天</span>
-                    <div class="scan-comment">
-                      <span class="scan">10.92万</span>
-                      <span class="comment">9823</span>
+                <a href="detail.html">
+                  <dt>
+                    <img src="../images/1.jpg" alt="之最阿萨大的萨达打底">
+                  </dt>
+                  <dd>
+                    <h4 title="之最阿萨大的萨达打底">之最阿萨大的萨达打底</h4>
+                    <div class="time-nums">
+                      <span class="time" title="2016.04.23|5天">2016.04.23&nbsp;|&nbsp;5天</span>
+                      <div class="scan-comment">
+                        <span class="scan" title="总浏览量10.92万">10.92万</span>
+                        <span class="comment" title="总评论量9823">9823</span>
+                      </div>
                     </div>
-                  </div>
-                  <ul class="tag-list">
-                    <li class="tag">户外</li>
-                    <li class="tag">境外</li>
-                    <li class="tag">户外</li>
-                    <li class="tag">境外</li>
-                  </ul>
-                </dd>
+                    <ul class="tag-list">
+                      <li class="tag">户外</li>
+                      <li class="tag">境外</li>
+                      <li class="tag">户外</li>
+                      <li class="tag">境外</li>
+                    </ul>
+                  </dd>
+                </a>
               </dl>
             </div>
           </div>
@@ -390,103 +474,142 @@
 
         <div class="best-box min-width">
           <div class="box-title">
-            <h4>精彩游记</h4>
-            <a class="more" href="">更多</a>
+            <h4 title="精彩游记">精彩游记</h4>
+            <a class="more" href="" title="更多">更多</a>
           </div>
           <div class="list">
             <dl class="list-item">
-              <dt>
-                <img src="../images/1.jpg">
-              </dt>
-              <dd>
-                <div class="tit-time">
-                  <h4>车史上的5月22日 法拉利首次参加F1赛事</h4>
-                  <span class="time">1分钟前</span>
-                </div>
-                <ul class="tag-list">
-                  <li class="tag">户外</li>
-                  <li class="tag">境外</li>
-                  <li class="tag">户外</li>
-                  <li class="tag">境外</li>
-                </ul>
-                <p class="con-txt">【汽车之家  车史上的今天】一级方程式锦标赛汽车之家 车史上的今天。一级方程式锦标赛可以说是赛车运动这中的顶级赛事，这项赛事源自1906年举办的法国汽车俱乐部大奖赛。1948年，法国法国汽车俱乐部大奖赛。1948年，法国</p>
-                <div class="tags-nums">
-                  <div class="user">
-                    <img src="../images/1.jpg">
-                    <span>薛之谦</span>
+              <a href="detail.html">
+                <dt>
+                  <img src="../images/1.jpg" alt="车史上的5月22日 法拉利首次参加F1赛事">
+                </dt>
+                <dd>
+                  <div class="tit-time">
+                    <h4 title="车史上的5月22日 法拉利首次参加F1赛事">车史上的5月22日 法拉利首次参加F1赛事</h4>
+                    <span class="time" title="1分钟前">1分钟前</span>
                   </div>
-                  <div class="scan-comment">
-                    <span class="comment">9823</span>
-                    <span class="scan">10.92万</span>
-                    <span>2016.05.23 | 4天</span>
+                  <ul class="tag-list">
+                    <li class="tag" title="户外">户外</li>
+                    <li class="tag" title="境外">境外</li>
+                    <li class="tag" title="户外">户外</li>
+                    <li class="tag" title="境外">境外</li>
+                  </ul>
+                  <p class="con-txt">【汽车之家  车史上的今天】一级方程式锦标赛汽车之家 车史上的今天。一级方程式锦标赛可以说是赛车运动这中的顶级赛事，这项赛事源自1906年举办的法国汽车俱乐部大奖赛。1948年，法国法国汽车俱乐部大奖赛。1948年，法国</p>
+                  <div class="tags-nums">
+                    <div class="user">
+                      <img src="../images/1.jpg">
+                      <span title="薛之谦">薛之谦</span>
+                    </div>
+                    <div class="scan-comment">
+                      <span class="comment" title="总评论量9823">9823</span>
+                      <span class="scan" title="总浏览量10.92万">10.92万</span>
+                      <span class="time" title="2016.05.23 | 4天">2016.05.23&nbsp;|&nbsp;4天</span>
+                    </div>
                   </div>
-                </div>
-              </dd>
+                </dd>
+              </a>
             </dl>
             <dl class="list-item">
-              <dt>
-                <img src="../images/1.jpg">
-              </dt>
-              <dd>
-                <div class="tit-time">
-                  <h4>车史上的5月22日 法拉利首次参加F1赛事</h4>
-                  <span class="time">1分钟前</span>
-                </div>
-                <ul class="tag-list">
-                  <li class="tag">户外</li>
-                  <li class="tag">境外</li>
-                  <li class="tag">户外</li>
-                  <li class="tag">境外</li>
-                </ul>
-                <p class="con-txt">【汽车之家  车史上的今天】一级方程式锦标赛汽车之家 车史上的今天。一级方程式锦标赛可以说是赛车运动这中的顶级赛事，这项赛事源自1906年举办的法国汽车俱乐部大奖赛。1948年，法国法国汽车俱乐部大奖赛。1948年，法国</p>
-                <div class="tags-nums">
-                  <div class="user">
-                    <img src="../images/1.jpg">
-                    <span>薛之谦</span>
+              <a href="detail.html">
+                <dt>
+                  <img src="../images/1.jpg" alt="车史上的5月22日 法拉利首次参加F1赛事">
+                </dt>
+                <dd>
+                  <div class="tit-time">
+                    <h4 title="车史上的5月22日 法拉利首次参加F1赛事">车史上的5月22日 法拉利首次参加F1赛事</h4>
+                    <span class="time" title="1分钟前">1分钟前</span>
                   </div>
-                  <div class="scan-comment">
-                    <span class="comment">9823</span>
-                    <span class="scan">10.92万</span>
-                    <span>2016.05.23 | 4天</span>
+                  <ul class="tag-list">
+                    <li class="tag" title="户外">户外</li>
+                    <li class="tag" title="境外">境外</li>
+                    <li class="tag" title="户外">户外</li>
+                    <li class="tag" title="境外">境外</li>
+                  </ul>
+                  <p class="con-txt">【汽车之家  车史上的今天】一级方程式锦标赛汽车之家 车史上的今天。一级方程式锦标赛可以说是赛车运动这中的顶级赛事，这项赛事源自1906年举办的法国汽车俱乐部大奖赛。1948年，法国法国汽车俱乐部大奖赛。1948年，法国</p>
+                  <div class="tags-nums">
+                    <div class="user">
+                      <img src="../images/1.jpg">
+                      <span title="薛之谦">薛之谦</span>
+                    </div>
+                    <div class="scan-comment">
+                      <span class="comment" title="总评论量9823">9823</span>
+                      <span class="scan" title="总浏览量10.92万">10.92万</span>
+                      <span class="time" title="2016.05.23 | 4天">2016.05.23&nbsp;|&nbsp;4天</span>
+                    </div>
                   </div>
-                </div>
-              </dd>
+                </dd>
+              </a>
             </dl>
             <dl class="list-item">
-              <dt>
-                <img src="../images/1.jpg">
-              </dt>
-              <dd>
-                <div class="tit-time">
-                  <h4>车史上的5月22日 法拉利首次参加F1赛事</h4>
-                  <span class="time">1分钟前</span>
-                </div>
-                <ul class="tag-list">
-                  <li class="tag">户外</li>
-                  <li class="tag">境外</li>
-                  <li class="tag">户外</li>
-                  <li class="tag">境外</li>
-                </ul>
-                <p class="con-txt">【汽车之家  车史上的今天】一级方程式锦标赛汽车之家 车史上的今天。一级方程式锦标赛可以说是赛车运动这中的顶级赛事，这项赛事源自1906年举办的法国汽车俱乐部大奖赛。1948年，法国法国汽车俱乐部大奖赛。1948年，法国</p>
-                <div class="tags-nums">
-                  <div class="user">
-                    <img src="../images/1.jpg">
-                    <span>薛之谦</span>
+              <a href="detail.html">
+                <dt>
+                  <img src="../images/1.jpg" alt="车史上的5月22日 法拉利首次参加F1赛事">
+                </dt>
+                <dd>
+                  <div class="tit-time">
+                    <h4 title="车史上的5月22日 法拉利首次参加F1赛事">车史上的5月22日 法拉利首次参加F1赛事</h4>
+                    <span class="time" title="1分钟前">1分钟前</span>
                   </div>
-                  <div class="scan-comment">
-                    <span class="comment">9823</span>
-                    <span class="scan">10.92万</span>
-                    <span>2016.05.23 | 4天</span>
+                  <ul class="tag-list">
+                    <li class="tag" title="户外">户外</li>
+                    <li class="tag" title="境外">境外</li>
+                    <li class="tag" title="户外">户外</li>
+                    <li class="tag" title="境外">境外</li>
+                  </ul>
+                  <p class="con-txt">【汽车之家  车史上的今天】一级方程式锦标赛汽车之家 车史上的今天。一级方程式锦标赛可以说是赛车运动这中的顶级赛事，这项赛事源自1906年举办的法国汽车俱乐部大奖赛。1948年，法国法国汽车俱乐部大奖赛。1948年，法国</p>
+                  <div class="tags-nums">
+                    <div class="user">
+                      <img src="../images/1.jpg">
+                      <span title="薛之谦">薛之谦</span>
+                    </div>
+                    <div class="scan-comment">
+                      <span class="comment" title="总评论量9823">9823</span>
+                      <span class="scan" title="总浏览量10.92万">10.92万</span>
+                      <span class="time" title="2016.05.23 | 4天">2016.05.23&nbsp;|&nbsp;4天</span>
+                    </div>
                   </div>
-                </div>
-              </dd>
+                </dd>
+              </a>
             </dl>
-            <p class="list-btn">更多周边美食，请查看全部</p>
+            <p class="list-btn cursor" title="更多精彩游记，查看全部">更多精彩游记，点击加载...</p>
+            <!-- 加载更多按钮  点击两次后 显示"更多精彩游记，查看全部" -->
           </div>
         </div>
+
+        <div class="to-top">
+          <ul>
+            <li class="top"></li>
+            <li class="code">
+              <div class="show-code hide">扫码关注游游记公众号</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot min-width">
+        <p>
+          <a href="http://www.autohome.com.cn/about/index.htm" target="_blank">关于我们</a>
+          <a href="http://www.autohome.com.cn/about/lianxi.htm" target="_blank">联系我们</a>
+          <a href="http://special.zhaopin.com/bf/2014/czj041009/sz.html" target="_blank">招贤纳士</a>
+          <span class="fline">|</span>
+          <a class="footios" href="http://www.autohome.com.cn/apps/1.html" target="_blank">iPhone客户端</a>/
+          <a href="http://www.autohome.com.cn/apps/2.html" target="_blank">iPad客户端</a>
+          <a class="footand" href="http://www.autohome.com.cn/apps/3.html" target="_blank">Android客户端</a>
+          <a class="footwp" href="http://www.autohome.com.cn/apps/8.html" target="_blank">WP客户端</a>
+          <a class="footphone" href="http://www.autohome.com.cn/apps/m/" target="_blank">手机版</a>
+          <span class="fline">|</span>
+          <a class="footauto" href="http://e.weibo.com/qichezhijia" target="_blank">汽车之家</a>
+          <span class="fline">|</span>
+          <a href="opinion.html" target="_blank">意见反馈</a>
+        </p>
+        <p>
+          <span class="footarial">© 2004-2016 www.autohome.com.cn All Rights Reserved.</span>汽车之家 版权所有
+        </p>
       </div>
 	  </div>
     <script src="../js/lib/common.js"></script>
 	  <script src="../js/index.js"></script>
+    <script src="../js/lib/citypop.js"></script>
+    <script src="../js/lib/data.js"></script>
+    <script src="../js/lib/main.js"></script>
   </body>
 </html>

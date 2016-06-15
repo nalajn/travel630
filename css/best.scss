@@ -7,7 +7,15 @@
 		display: none;
 	}
 	.main{
-		.best-new{
+		.best-box{
+			.title{
+	    		overflow: hidden;
+	    		font-size: 24px;
+	    		li{
+	    			float: left;
+	    			margin: 50px 14px 21px 0;
+	    		}
+	    	}
 			.list{
 				width: 100%;
 			}

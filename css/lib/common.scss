@@ -18,6 +18,10 @@ $b9: #999999;
 .wrap{
 	font-size: 10px;
     @include box-sizing;
+    .cursor{
+    	cursor: pointer;
+    	cursor: hand;
+    }
     /*头部*/
     .head{
     	width: 100%;
@@ -61,10 +65,11 @@ $b9: #999999;
 			    	position: absolute;
 			    	left: 0;
 			    	z-index: 999;
-			    	width: 200px;
+			    	width: 259px;
 			    	padding: 5px 0;
 			    	@include box-sizing;
 			    	background: #fff;
+			    	border: solid 1px $line;
 			    	li{
 			    		width: 100%;
 			    		padding: 0 10px;
@@ -85,7 +90,7 @@ $b9: #999999;
 		}
 		/*标签选择器*/
 		.tags-search{
-	    	border: solid 1px #ccc;
+	    	border: solid 1px #e4e4e4;
 	    	@include box-sizing;
 	    	.tags-list{
 	    		overflow: hidden;
@@ -98,12 +103,13 @@ $b9: #999999;
 				.tit{
 					float: left;
 				    width: 10%;
-				    line-height: 53px;
+				    line-height: 50px;
 				    padding: 0;
 				    padding-left: 15px;
 					margin: 0;
 				    @include box-sizing;
 					font-size: 14px;
+					font-weight: bold;
 				}
 				.tag-box{
 					float: left;
@@ -112,36 +118,49 @@ $b9: #999999;
 				}
 				.tags-con{
 					overflow: hidden;
-					margin-left: 20px;
-					border-bottom: solid 1px #ccc;
+					margin-left: 18px;
+					border-bottom: solid 1px #e4e4e4;
 				}
 	    		li{
 	    			float: left;
-	    			margin: 14px 0 14px 20px;
+	    			margin: 13px 0 12px 20px;
 					height: 24px;
 					line-height: 24px;
 					padding: 0 10px;
 					@include box-sizing;
 					cursor: pointer;
+					font-size: 14px;
+					color: $b6;
 	    		}
 				.active{
-					border: solid 1px #ccc;
+					border: solid 1px $blue;
 					text-align: center;
 				}
 	    	}
 	    	.selected{
-				border-bottom: solid 1px #ccc;
+	    		height: 55px;
+				border-bottom: solid 1px #e4e4e4;
 				.tags-con{
 					border: 0;
 					li{
+						position: relative;
 						width: 70px;
 						height: 30px;
 						line-height: 30px;
 						padding-right: 20px;
 						@include box-sizing;
-						background: #000;
-						color: #fff;
+						background: $blue;
+						color: $white;
+						font-size: 14px;
 						text-align: center;
+						&:before{
+					        content: 'x';
+					        background: url('../images/icon/close.png') no-repeat;
+					        background-size: 100%;
+						    position: absolute;
+						    top: 0;
+						    right: 10px;
+					    }
 					}
 				}
 	    	}
@@ -149,26 +168,44 @@ $b9: #999999;
 
 		/*玩转周边*/
 		.circum-box{
+			position: relative;
 			padding-bottom: 15px;
+			.pop{
+				top: 68px;
+    			left: 102px;
+			}
 			.tabs{
 				position: relative;
 				.tabs-tit{
 					width: 115px;
-					box-shadow: -1px -1px 4px #aaa, -1px 1px 4px #aaa, 0px 1px 4px #aaa;
+					box-shadow: -1px -1px 4px #aaa, -1px 1px 4px #aaa;
 					li{
 						position: relative;
-						height: 205px;
-						padding: 0 10px;
+						height: 204px;
 						@include box-sizing;
-						background: #fafafa;
-						// p{
-						// 	height: 99.5%;
-						// 	border-bottom: solid 1px #ccc;
-						// }
+						background: $f8;
+						p{
+							height: 100%;
+							margin: 0 10px;
+							@include box-sizing;
+							border-bottom: solid 1px $line;
+						}
 						.big{
+							position: relative;
 	    					display: inline-block;
-							margin: 30px 0 0 25px;
+							margin: 30px 0 0 15px;
 							font-size: 40px;
+							color: $black;
+							&:before{
+						        content: '';
+						        background: url('../images/icon/line.png') no-repeat;
+						        background-size: 100%;
+							    position: absolute;
+							    top: 0;
+							    right: -21px;
+							    width: 40px;
+							    height: 72px;
+						    }
 						}
 						.small{    
 							position: absolute;
@@ -176,40 +213,59 @@ $b9: #999999;
 							display: inline-block;
 							width: 20px;
 							font-size: 20px;
-							color: #595959;
+							color: $b3;
+						}
+
+						&:last-child{
+							p{
+								border: 0;
+							}
 						}
 					}
 					.active{
-						border-top: solid 1px #ccc;
-						border-bottom: solid 1px #ccc;
 						border-right: 0;
-						box-shadow: 0px 1px 4px #fff;
+						box-shadow: 4px 0px 0px #fff;
 						background: #fff;
-						// p{
-						// 	border: 0;
-						// }
+						p{
+							width: 100%;
+							margin: 0;
+						}
+						.big{
+							margin: 30px 0 0 25px;
+						}
 					}
 				}
 				.tabs-con{
 					position: absolute;
 					right: 0;
 					top: 0;
-					width: 87%;
+					width: 865px;
+					.nothing{
+
+					}
 				}
 			}
 		}
 
 		/*玩转世界*/
 		.world-box{
-			
 			.grid{
-				overflow: hidden;
+				float: left;
 				padding-bottom: 10px;
 				.grid-item{
 					float: left;	
-					width: 31.98%;
-					margin: 0 20px 20px 0;
+					width: 316.6px;
+					margin: 0 10px 20px;
 					background: #fff;
+					&:hover{
+						box-shadow: 3px 3px 4px #CCC,-2px 2px 4px #ccc;
+					}
+					&:first-child{
+						margin-left: 0;
+					}
+					&:nth-child(4n){
+						margin-left: 0;
+					}
 					&:nth-child(3n){
 						margin-right: 0;
 					}
@@ -225,28 +281,60 @@ $b9: #999999;
 					dd{
 						overflow: hidden;
 						h4{
-							line-height: 40px;
+							padding: 16px 10px;
+							overflow: hidden;
+						    text-overflow: ellipsis;
+						    white-space: nowrap;
 							font-size: 16px;
+							color: $b3;
 						}
 						.time-nums{
 							overflow: hidden;
-							line-height: 24px;
-							padding: 0 6px 10px;
-							border-bottom: solid 1px #ccc;
+							padding: 0 10px 20px;
+							border-bottom: solid 1px $line;
+							font-size: 12px;
+							color: $b9;
 							.time{
 								float: left;
-								font-size: 12px;
 							}
 							.scan-comment{
 								float: right;
-								font-size: 14px;
+								span{
+									padding-left: 18px;
+									position: relative;
+								}
+								.scan{
+									&:before{
+								        content: '';
+								        background: url('../images/icon/list-zan.png') no-repeat;
+								        background-size: 100%;
+									    position: absolute;
+									    top: 0;
+									    left: 0;
+									    width: 12px;
+									    height: 13px;
+								    }
+								}
 								.comment{
-									margin-left: 16px;
+									margin-left: 18px;
+									&:before{
+								        content: '';
+								        background: url('../images/icon/list-comment.png') no-repeat;
+								        background-size: 100%;
+									    position: absolute;
+									    top: 14%;
+									    left: 0;
+									    width: 13px;
+									    height: 12px;
+								    }
 								}
 							}
 						}
 						.tag-list{
-							padding: 0 6px;
+							padding: 10px;
+    						height: 55px;
+    						@include box-sizing;
+    						margin-top: 0;
 						}
 					}
 				}
@@ -259,7 +347,7 @@ $b9: #999999;
 				.list-item{
 					overflow: hidden;
 					@include box-sizing;
-					padding: 30px 0 15px 0;
+					padding: 30px 0;
 					&:first-child{
 						padding-top: 0;
 					}
@@ -268,9 +356,9 @@ $b9: #999999;
 					}
 					dt{
 						overflow: hidden;	
-						width: 155px;
-						height: 120px;
-						margin-right: 14px;
+						width: 180px;
+						height: 135px;
+						margin-right: 16px;
 						border: solid 1px #aaa;
 						img{
 							width: 100%;
@@ -279,23 +367,31 @@ $b9: #999999;
 						}
 					}
 					dd{
-						width: 82.5%;
+						width: 80%;
 						font-size: 14px;
 						.tit-time{
 							overflow: hidden;
-							line-height: 30px;
 							h4{
 								float: left;
 								width: 85%;
-								font-size: 18px;
+								margin: 0;
+								line-height: normal;
+								&:hover{
+									font-weight: bold;
+									color: $blue;
+								}
 							}
 							.time{
 								float: right;
+								font-size: 12px;
+    							color: #999;
 							}
 						}
 						.tag-list{
 							overflow: hidden;
 							float: none;
+							padding: 10px 0;
+    						margin: 0;
 						}
 						.con-txt{
 							line-height: 20px;
@@ -304,10 +400,11 @@ $b9: #999999;
 							display: -webkit-box;
 							-webkit-line-clamp: 2;
 							-webkit-box-orient: vertical;
+							font-size: 14px;
+							color: $b6;
 						}
 						.tags-nums{
-							overflow: hidden;
-							line-height: 50px;
+							margin-top: 10px;
 						}
 						.user{
 							float: left;
@@ -315,15 +412,53 @@ $b9: #999999;
 							img{
 								width: 20px;
 								height: 20px;
-								margin-right: 14px;
+								margin-right: 12px;
 								border-radius: 50%;
 							}
 						}
 						.scan-comment{
 							float: right;
 							width: 40%;
+							padding-top: 6px;
 							span{
 								float: right;
+								position: relative;
+							}
+							.time{
+								&:before{
+							        content: '';
+							        background: url('../images/icon/list-time.png') no-repeat;
+							        background-size: 100%;
+								    position: absolute;
+								    top: 6%;
+								    left: 0;
+								    width: 12px;
+								    height: 13px;
+							    }
+							}
+							.scan{
+								&:before{
+							        content: '';
+							        background: url('../images/icon/list-zan.png') no-repeat;
+							        background-size: 100%;
+								    position: absolute;
+								    top: 0;
+								    left: 0;
+								    width: 12px;
+								    height: 13px;
+							    }
+							}
+							.comment{
+								&:before{
+							        content: '';
+							        background: url('../images/icon/list-comment.png') no-repeat;
+							        background-size: 100%;
+								    position: absolute;
+								    top: 17%;
+								    left: 0;
+								    width: 13px;
+								    height: 13px;
+							    }
 							}
 							.scan,.comment{
 								margin-left: 19px;
@@ -341,7 +476,7 @@ $b9: #999999;
 	    		font-size: 24px;
 	    		li{
 	    			float: left;
-	    			margin: 50px 14px 21px 0;
+	    			margin: 20px 14px 20px 0;
 	    		}
 	    	}
 	    	.list{
@@ -355,37 +490,47 @@ $b9: #999999;
 
 
 		/*列表 标签在下边*/
-		.list{
-			border-bottom: solid 1px #ccc;
-		}
 		.list-item{
 			overflow: hidden;
 			@include box-sizing;
 			padding: 15px 0;
-			border-bottom: solid 1px #ccc;
+			border-bottom: solid 1px $line;
 			&:first-child{
 				padding-top: 0;
+			}
+			a{
+				color: $b3;
 			}
 			dt,dd{
 				float: left;
 			}
 			dt{
 				overflow: hidden;	
-				width: 155px;
+				width: 160px;
 				height: 120px;
+				@include box-sizing;
 				margin-right: 14px;
 				border: solid 1px #aaa;
 				img{
 					width: 100%;
 					height: 100%;
 					padding: 1px;
+					@include box-sizing;
 				}
 			}
 			dd{
-				width: 82.7%;
+				width: 82%;
 				font-size: 14px;
 				h4{
+					margin: 6px 0 10px;
 					font-size: 18px;
+					font-weight: 200;
+					cursor: pointer;
+					cursor: hand;
+					&:hover{
+						color: $blue;
+						font-weight: bold;
+					}
 				}
 				.con-txt{
 					line-height: 20px;
@@ -397,13 +542,45 @@ $b9: #999999;
 				}
 				.tags-nums{
 					overflow: hidden;
-					line-height: 50px;
 				}
 				.scan-comment{
 					float: right;
-					width: 15%;
+					width: 18%;
+					padding-top: 21px;
+					font-size: 12px;
+					color: $b9;
+					span{
+						position: relative;
+						float: right;
+						padding-left: 16px;
+					}
 					.comment{
-						margin-left: 16px;
+						margin-left: 18px;
+					}
+					.scan{
+						&:before{
+					        content: '';
+					        background: url('../images/icon/list-zan.png') no-repeat;
+					        background-size: 100%;
+						    position: absolute;
+						    top: 0;
+						    left: 0;
+						    width: 12px;
+						    height: 13px;
+					    }
+					}
+					.comment{
+						margin-left: 18px;
+						&:before{
+					        content: '';
+					        background: url('../images/icon/list-comment.png') no-repeat;
+					        background-size: 100%;
+						    position: absolute;
+						    top: 14%;
+						    left: 0;
+						    width: 13px;
+						    height: 12px;
+					    }
 					}
 				}
 			}
@@ -413,11 +590,22 @@ $b9: #999999;
 		/*带logo的搜索框*/
 		.logo_search{
 			overflow: hidden;
-			border-bottom: solid 1px #ccc;
+			border-bottom: solid 1px $line;
 			.logo{
+				position: relative;
 				float: left;
-				margin: 70px 0 0 160px;
 				font-size: 18px;
+				width: 40%;
+				height: 125px;
+				&:before{
+			        content: '';
+			        background: url('../images/icon/logo.png') no-repeat;
+				    position: absolute;
+				    top: 25px;
+				    left: 0;
+				    width: 100%;
+				    height: 112px;
+				}
 			}
 			.search-box{
 				overflow: hidden;
@@ -460,6 +648,12 @@ $b9: #999999;
 						li{
 							float: left;
 							margin-right: 20px;
+							a{
+								color: $b3;
+								&:hover{
+									color: $blue;
+								}
+							}
 						}
 						.active{
 							color: #1a8ced;
@@ -493,12 +687,15 @@ $b9: #999999;
 			height: 44px;
 			line-height: 44px;
 			font-size: 16px;
-			color: #666666;
+			color: $b9;
 			li{
 				float: left;
+				&:first-child{
+					color: $b6;
+				}
 			}
 			a{
-				color: #666666;
+				color: $b9;
 			}
 		}
 
@@ -520,7 +717,7 @@ $b9: #999999;
 				color: $b9;
 				&:before{
 			        content: '';
-			        background: url('../images/icon/down.png') no-repeat;
+			        //background: url('../images/icon/down.png') no-repeat;
 			        background-size: 100%;
 				    position: absolute;
 				    top: 24%;
@@ -530,24 +727,36 @@ $b9: #999999;
 			    }
 			}
 			.more{
+				position: relative;
 				float: right;
 				margin-top: 40px;
+				padding-right: 15px;
 				font-size: 16px;
-				color: #797979;
+				color: $b6;
+				&:before{
+			        content: '';
+			        background: url('../images/icon/more.png') no-repeat;
+			        background-size: 100%;
+				    position: absolute;
+				    top: 8%;
+				    right: 0;
+				    width: 9px;
+				    height: 17px;
+			    }
 			}
 		}
 
 		/*横向排列标签*/
 		.tag-list{
 			float: left;
-			width: 85%;
-			margin: 13px 0;
+			width: 80%;
+			margin-top: 12px;
 			font-size: 12px;
 			li{
 				float: left;
-				line-height: 24px;
-			    height: 24px;
-			    padding: 0 5px;
+				line-height: 25px;
+			    height: 25px;
+			    padding: 0 8px;
 				@include box-sizing;
 				border-radius: 2px;
 				margin-right: 10px;
@@ -559,12 +768,71 @@ $b9: #999999;
 		
 		/*查看更多按钮*/
 		.list-btn{
+			display: block;
+			position: relative;
 			margin-top: 16px;
 		    line-height: 60px;
-		    border: solid 1px #ccc;
+		    border: solid 1px $line;
 			text-align: center;
 		    font-size: 16px;
+		    color: $b3;
+		    &:before{
+		        content: '';
+		        background: url('../images/icon/more.png') no-repeat;
+		        background-size: 100%;
+			    position: absolute;
+			    top: 38%;
+			    left: 62%;
+			    width: 9px;
+			    height: 17px;
+		    }
+		    &:hover{
+		    	background: $f8;
+		    }
 		}
+    }
+    .foot{
+    	width: 990px;
+	    margin: 10px auto 0 auto;
+	    padding: 7px 0 10px 0;
+	    border-top: 3px solid #3b5998;
+	    text-align: center;
+	    color: #7c7c7c;
+	    font-size: 12px;
+	    p{
+	    	line-height: 24px;
+		    margin: 0;
+		    padding: 0;
+		    a{
+		    	display: inline-block;
+    			margin: 0 9px;
+    			&:visited{
+    			    color: #7c7c7c;
+    				text-decoration: none;
+    			}
+		    }
+		    .footios, .footand, .footwp, .footphone, .footauto {
+			    display: inline-block;
+			    padding-left: 19px;
+			    background: url('../images/icon/footicon.png') no-repeat;
+			}
+			.footios {
+			    background-position: 0 3px;
+			}
+			.footand {
+			    background-position: 0 -27px;
+			}
+			.footwp {
+			    background-position: 0 -57px;
+			}
+			.footphone {
+			    background-position: 0 -87px;
+			}
+			.footauto {
+			    padding: 0 22px 0 21px;
+			    background-position: 0 -117px;
+			}
+	    }
     }
 }
 
