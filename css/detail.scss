@@ -6,23 +6,21 @@
 	.hide{
 		display: none;
 	}
-
+	.main{
+		overflow: hidden;
+	}
+	.crumbs-white{
+		line-height: 30px;
+		font-size: 12px;
+		color: #000;
+		a{
+			color: #000;
+		}
+	}
 	.detail-head{
 		position: relative;
 		height: 410px;
 		background: #f4f4f4;
-		.crumbs-white{
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 99;
-			line-height: 30px;
-			font-size: 12px;
-			color: #000;
-			a{
-				color: #000;
-			}
-		}
 		.theme-img{
 			position: absolute;
 			top: 0;
@@ -60,12 +58,14 @@
     				width: 40%;
 					.user-info{
 						padding: 30px 0 0 20px;
+						color: $b3;
 						.user-name{
-
+							margin-right: 20px;
+							font-size: 18px;
 						}
 						.browse{
-
-						}
+							font-size: 12px;
+						}	
 					}
 					.tag-list{
 						margin: 10px 0 0 20px;
@@ -111,7 +111,7 @@
 			width: 670px;
 			.title{
     			margin: 26px 0;
-				font-size: 24px;
+				font-size: 20px;
 			}
 			.basic-info{
 				width: 657px;
@@ -132,7 +132,7 @@
 					overflow: hidden;
 					padding-top: 50px;
 					.day-tit{
-						padding-bottom: 16px;
+						padding-bottom: 40px;
 						text-align: center;
 						font-size: 30px;
 					}
@@ -141,12 +141,12 @@
 						margin-top: 22px;
 						.journey-tit{
 							font-size: 20px;
-							color: #f38b55;
-							margin-bottom: 24px;
+							color: #f1762c;
+							margin-bottom: 26px;
 						}
 						.article-txt{
 							line-height: 26px;
-							padding: 24px 0 8px;
+							padding-bottom: 26px;
 							font-size: 16px;
 						}
 						.article-img{
@@ -217,7 +217,7 @@
 			}
 			.menu{
 				margin-left: 16px;
-				border-left: solid 1px #ccc;
+				border-left: solid 1px #ddd;
 				p{
 					margin-left: 14px;
 					line-height: 40px;
@@ -225,7 +225,7 @@
 				.item-tit{
 					position: relative;
 					font-size: 16px;
-					color: #353535;
+					color: $b3;
 					&:before{
 						content: '';
 					    position: absolute;
@@ -235,12 +235,12 @@
 					    height: 8px;
 					    background: #868686;
 					    border-radius: 50%;
-					    border: solid 2px #fff;
+					    border: solid 2px $white;
 					}
 				}
 				.item-txt{
 					font-size: 14px;
-					color: #797979;
+					color: $b9;
 					i{
 					    margin-right: 4px;
 						letter-spacing: 2px;
@@ -249,7 +249,7 @@
 				}
 				.active{
 					position: relative;
-					color: #f1752b;
+					color: #f1752c;
 					&:before{
 						content: '';
 						background: url('../images/icons/menu-active.png');
@@ -290,6 +290,7 @@
 				width: 654px;
 				.grid-item{
 					width: 48.4%;
+					margin: 0;
 					&:nth-child(odd){
 						margin: 0 20px 20px 0;
 					}
@@ -414,9 +415,16 @@
 							width: 634px;
 							margin-top: 20px;
     						text-align: right;
+    						font-size: 12px;
+    						color: $b6;
+							a{
+								padding-right: 10px;
+								border-right: solid 1px #ccc;
+								color: $b6;
+							}
     						span{
-    							&:first-child{
-    								padding-right: 10px;
+    							&:nth-child(2){
+    								padding: 0 10px;
     								border-right: solid 1px #ccc;
     							}
     							&:last-child{

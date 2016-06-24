@@ -786,118 +786,163 @@ a {
         background-position: 0 -117px; }
 
 .wrap {
-  overflow: hidden;
-  /*意见反馈*/
-  /*回复列表*/ }
+  overflow: hidden; }
   .wrap .hide {
     display: none; }
-  .wrap .opinion-box {
-    padding-top: 60px; }
-    .wrap .opinion-box .opinion-tit {
-      line-height: 44px;
-      font-size: 30px;
-      color: #000000; }
-    .wrap .opinion-box .opinion-sec {
-      line-height: 38px;
+  .wrap .main {
+    width: 990px;
+    margin: 0 auto;
+    padding: 11px 0 0 20px;
+    font-size: 12px;
+    color: #333; }
+    .wrap .main .title {
       font-size: 18px;
-      color: #666666; }
-    .wrap .opinion-box textarea {
-      width: 100%;
-      height: 300px;
-      margin: 20px 0;
-      border: solid 1px #1a8ced;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      box-shadow: -1px -1px 4px #aaa,1px 1px 4px #aaa; }
-    .wrap .opinion-box .emoji-btn {
+      margin: 12px 0 19px 0;
+      font-size: 12px;
+      color: #333; }
+    .wrap .main .tabs-tit {
       overflow: hidden;
-      padding-left: 10px;
-      font-size: 14px; }
-      .wrap .opinion-box .emoji-btn .emoji {
-        position: relative;
+      border-bottom: solid 1px #ccd3e4;
+      cursor: pointer;
+      cursor: hand; }
+      .wrap .main .tabs-tit li {
         float: left;
-        margin-top: 4px;
-        padding-left: 20px;
-        color: #1a8ced; }
-        .wrap .opinion-box .emoji-btn .emoji:before {
-          content: '';
-          background: url("../images/icon/opinion-emoji.png") no-repeat;
-          background-size: 100%;
-          position: absolute;
-          top: 12%;
-          left: 0;
-          width: 14px;
-          height: 14px; }
-      .wrap .opinion-box .emoji-btn .btn {
-        float: right;
-        width: 100px;
-        height: 40px;
-        line-height: 40px;
-        background: #1a8ced;
+        width: 80px;
+        line-height: 25px;
+        margin-right: 2px;
+        border: solid 1px #e5e5e5;
+        border-bottom: 0;
+        border-radius: 2px 2px 0 0;
+        background: #f9f9f9;
         text-align: center;
-        color: #fff; }
-  .wrap .comment-list {
-    padding-top: 80px; }
-    .wrap .comment-list .comment-tit {
+        color: #3b5998; }
+        .wrap .main .tabs-tit li:hover {
+          text-decoration: underline; }
+      .wrap .main .tabs-tit .active {
+        background: #3b5998;
+        color: #fff;
+        font-weight: bold; }
+    .wrap .main .tabs-con .con-tit {
       overflow: hidden;
-      padding-bottom: 20px;
-      border-bottom: solid 1px #e7e7e7;
-      font-size: 24px; }
-      .wrap .comment-list .comment-tit li {
+      line-height: 40px;
+      border-bottom: solid 1px #f7f7f7;
+      margin-bottom: 20px;
+      cursor: pointer;
+      cursor: hand;
+      font-weight: bold; }
+      .wrap .main .tabs-con .con-tit li {
         float: left;
-        margin-right: 16px; }
-      .wrap .comment-list .comment-tit .active:after {
-        content: '';
-        background: url("../images/icon/border-bottom.png") no-repeat;
-        background-size: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0; }
-    .wrap .comment-list .comment-content {
-      overflow: hidden;
-      width: 654px;
-      padding: 30px 0 20px 18px;
-      border-bottom: solid 1px #ccc; }
-      .wrap .comment-list .comment-content dt, .wrap .comment-list .comment-content dd {
+        width: 75px;
+        margin: 0 10px 0 15px; }
+        .wrap .main .tabs-con .con-tit li:last-child {
+          margin-left: 0; }
+      .wrap .main .tabs-con .con-tit .active {
+        color: #3b5998; }
+        .wrap .main .tabs-con .con-tit .active:hover {
+          text-decoration: underline; }
+    .wrap .main .tabs-con .list {
+      overflow: hidden; }
+      .wrap .main .tabs-con .list .item {
+        float: left;
+        width: 260px;
+        margin: 0 20px 40px 0; }
+        .wrap .main .tabs-con .list .item:nth-child(3n) {
+          margin-right: 0; }
+        .wrap .main .tabs-con .list .item dt {
+          height: 195px; }
+          .wrap .main .tabs-con .list .item dt img {
+            width: 100%;
+            height: 100%; }
+        .wrap .main .tabs-con .list .item dd {
+          font-size: 12px;
+          color: #999; }
+          .wrap .main .tabs-con .list .item dd h4 {
+            margin: 20px 0 12px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 12px;
+            color: #333; }
+          .wrap .main .tabs-con .list .item dd .time, .wrap .main .tabs-con .list .item dd .zan {
+            float: left; }
+          .wrap .main .tabs-con .list .item dd .time {
+            margin-right: 20px; }
+          .wrap .main .tabs-con .list .item dd .zan {
+            position: relative;
+            padding-left: 18px; }
+            .wrap .main .tabs-con .list .item dd .zan:before {
+              content: '';
+              background: url("../images/icon/list-zan.png") no-repeat;
+              background-size: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 12px;
+              height: 13px; }
+          .wrap .main .tabs-con .list .item dd .view {
+            float: right;
+            position: relative;
+            padding-left: 18px; }
+            .wrap .main .tabs-con .list .item dd .view:before {
+              content: '';
+              background: url("../images/icon/list-comment.png") no-repeat;
+              background-size: 100%;
+              position: absolute;
+              top: 14%;
+              left: 0;
+              width: 13px;
+              height: 12px; }
+          .wrap .main .tabs-con .list .item dd .help {
+            position: relative;
+            display: block;
+            margin-top: 10px;
+            padding-left: 23px;
+            color: #7692cd; }
+            .wrap .main .tabs-con .list .item dd .help:before {
+              content: '';
+              background: url("../images/icon/help.png") no-repeat;
+              background-size: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 18px;
+              height: 14px; }
+          .wrap .main .tabs-con .list .item dd p {
+            margin-top: 12px;
+            overflow: hidden;
+            line-height: 20px;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical; }
+    .wrap .main .reply .list .item {
+      width: 100%;
+      margin-bottom: 20px; }
+      .wrap .main .reply .list .item dt, .wrap .main .reply .list .item dd {
         float: left; }
-      .wrap .comment-list .comment-content dt {
-        width: 48px;
-        height: 48px;
-        margin-right: 12px; }
-        .wrap .comment-list .comment-content dt img {
+      .wrap .main .reply .list .item dt {
+        width: 50px;
+        height: 50px;
+        margin-right: 20px; }
+        .wrap .main .reply .list .item dt img {
           width: 100%;
           height: 100%; }
-      .wrap .comment-list .comment-content dd {
-        width: 590px; }
-        .wrap .comment-list .comment-content dd .title, .wrap .comment-list .comment-content dd .time-floor {
-          float: left; }
-        .wrap .comment-list .comment-content dd .title {
-          width: 78%;
-          margin-bottom: 18px;
-          font-size: 16px; }
-        .wrap .comment-list .comment-content dd .time-floor {
-          font-size: 12px;
-          color: #999999; }
-        .wrap .comment-list .comment-content dd .content {
-          margin-top: 23px;
-          background: #f4f4f4; }
-          .wrap .comment-list .comment-content dd .content .user, .wrap .comment-list .comment-content dd .content .article {
-            overflow: hidden;
-            padding: 10px 13px; }
-          .wrap .comment-list .comment-content dd .content .user .user-tit em {
-            margin-right: 12px; }
-          .wrap .comment-list .comment-content dd .content .user .user-txt {
-            margin-top: 10px;
-            line-height: 25px; }
-      .wrap .comment-list .comment-content .comment-box {
-        width: 634px; }
-      .wrap .comment-list .comment-content .reply {
-        width: 634px;
-        margin-top: 20px;
-        text-align: right; }
-        .wrap .comment-list .comment-content .reply span:first-child {
-          padding-right: 10px;
-          border-right: solid 1px #ccc; }
-        .wrap .comment-list .comment-content .reply span:last-child {
-          padding-left: 10px; }
+      .wrap .main .reply .list .item dd {
+        overflow: hidden;
+        width: 462px;
+        padding: 13px 15px 18px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: #f1f1f1; }
+        .wrap .main .reply .list .item dd .check {
+          float: right;
+          color: #3b5998; }
+          .wrap .main .reply .list .item dd .check:hover {
+            text-decoration: underline;
+            color: #d60000;
+            font-weight: bold; }
+        .wrap .main .reply .list .item dd h4 {
+          margin: 0; }
+        .wrap .main .reply .list .item dd .con {
+          color: #333; }

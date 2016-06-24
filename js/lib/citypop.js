@@ -434,7 +434,7 @@
         rowHtml += '<dd>';
         var city = province.City;
         for (k = 0; k < city.length; k++) {
-          rowHtml += '<a target="_self" href="javascript:void(0);" data-key="' + city[k].Id + '"  data-info="[' + city[k].Id + ', ' + city[k].OldCityId + ', \'' + city[k].Name + '\', \'' + city[k].Pinyin + '\']">' + city[k].Name + '</a>';
+          rowHtml += '<a target="_self" href="javascript:void(0);" data-key="' + city[k].Id + '"  data-info="[' + city[k].Id + ', ' + city[k].lon + ', ' + city[k].lan + ', ' + city[k].OldCityId + ', \'' + city[k].Name + '\', \'' + city[k].Pinyin + '\']">' + city[k].Name + '</a>';
         }
         rowHtml += '</dd>';
         fcSpan = '';

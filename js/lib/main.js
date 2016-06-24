@@ -47,10 +47,13 @@ var Cookie = {
 
 var City = {
   cookieName: 'cookieCityId',
+  cookieLongitude: 'cookieLongitude',
+  cookieLatitude: 'cookieLatitude',
   cityCode: null,
   cityName: null,
   areaJson: null,
   init: function() {
+    var that = this;
     City.areaJson = window.areaJson;
 
     var cityCode = City.cityCode = City.getCityCode();
@@ -59,6 +62,8 @@ var City = {
     // 初始化当前城市
     $('#currentCity').html(cityName);
     $('#currentCity').attr('href', '#' + cityCode);
+    $('#currentCity').attr('data-longitude',Cookie.read(that.cookieLongitude));
+    $('#currentCity').attr('data-latitude',Cookie.read(that.cookieLatitude));
 
     // 初始化城市浮层
     City.initCityPop();
@@ -69,18 +74,37 @@ var City = {
       data: City.areaJson,
       cityId: City.cityCode,
       sumbit: function(cityInfo) {
-        console.log(cityInfo); // [110100, 646, "北京", "beijing"]
+        //console.log(cityInfo); // [110100, 经度, 纬度, 646, "北京", "beijing"]
 
-        $('#currentCity').text(cityInfo[2])
+        $('#currentCity').text(cityInfo[4])
+          .attr('data-longitude',cityInfo[1])
+          .attr('data-latitude',cityInfo[2])
           .attr('data-Id',cityInfo[0])
-          .attr('data-OldId',cityInfo[1])
-          .attr('data-pin',cityInfo[3])
+          .attr('data-OldId',cityInfo[3])
+          .attr('data-pin',cityInfo[5]);
+
+        /*执行筛选*/
+        var longitude = $('.choice-address').attr('data-longitude'),//经度
+            latitude = $('.choice-address').attr('data-latitude'),//纬度
+            behavior = $('.tabs-tit li.active .big').text(),//行为
+            result_lon = longitude.substr(0,longitude.indexOf('.'))+longitude.substr(longitude.indexOf('.'),7)*1000000,
+            result_lat = latitude.substr(0,latitude.indexOf('.'))+latitude.substr(latitude.indexOf('.'),7)*1000000;
+
+        switch (behavior){ 
+          case "玩" : behavior = "06"; break; 
+          case "吃" : behavior = "02"; break; 
+          case "住" : behavior = "03"; break; 
+          case "购" : behavior = "04"; break;
+          default : behavior = "06"; break; 
+        } 
+        console.log(result_lon,result_lat,behavior)
+
 
         // Hide CityPop
         this.hide();
 
         // Update cookie
-        City.rewriteCityCode(cityInfo[0]);
+        City.rewriteCityCode(cityInfo[0],cityInfo[1],cityInfo[2]);
 
         // Reload page
         //window.location.reload();
@@ -121,12 +145,15 @@ var City = {
     }
     return cname;
   },
-  rewriteCityCode: function(cityid) {
+  rewriteCityCode: function(cityid,longitude,latitude) {
     var that = this;
     Cookie.del(that.cookieName);
     // TODO 必须有 domain 设置
     // Cookie.write(that.cookieName, cityid, {expireHours: 3600 * 24 * 10, domain: '.autohome.com.cn'});
+    // Cookie.write(that.cookieName, cityid, {expireHours: 3600 * 24 * 10});
     Cookie.write(that.cookieName, cityid, {expireHours: 3600 * 24 * 10});
+    Cookie.write(that.cookieLongitude, longitude, {expireHours: 3600 * 24 * 10});
+    Cookie.write(that.cookieLatitude, latitude, {expireHours: 3600 * 24 * 10});
   }
 };
 

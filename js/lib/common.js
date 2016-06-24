@@ -18,6 +18,24 @@
     $('.tabs-tit .active').prev()
     .find('p').css({'width':'100%','margin':'0'})
     .find('.big').css({'margin':'30px 0 0 25px'});
+
+    var longitude = $('.choice-address').attr('data-longitude'),//经度
+        latitude = $('.choice-address').attr('data-latitude'),//纬度
+        behavior = $('.tabs-tit li.active .big').text(),//行为
+        result_lon = longitude.substr(0,longitude.indexOf('.'))+longitude.substr(longitude.indexOf('.'),7)*1000000,
+        result_lat = latitude.substr(0,latitude.indexOf('.'))+latitude.substr(latitude.indexOf('.'),7)*1000000;
+
+      switch (behavior){ 
+        case "玩" : behavior = "06"; break; 
+        case "吃" : behavior = "02"; break; 
+        case "住" : behavior = "03"; break; 
+        case "购" : behavior = "04"; break;
+        default : behavior = "06"; break; 
+      } 
+
+
+    console.log(result_lon,result_lat,behavior)
+
   });
   
   

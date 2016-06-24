@@ -249,6 +249,10 @@ $b9: #999999;
 
 		/*玩转世界*/
 		.world-box{
+			overflow: hidden;
+			width: 990px;
+			margin: 0 auto;
+			padding: 0 15px;
 			.grid{
 				float: left;
 				padding-bottom: 10px;
@@ -257,8 +261,11 @@ $b9: #999999;
 					width: 316.6px;
 					margin: 0 10px 20px;
 					background: #fff;
+					a{
+						text-decoration: none;
+					}
 					&:hover{
-						box-shadow: 3px 3px 4px #CCC,-2px 2px 4px #ccc;
+						box-shadow: 4px 0px 10px #CCC,-4px 0px 10px #ccc;
 					}
 					&:first-child{
 						margin-left: 0;
@@ -281,8 +288,10 @@ $b9: #999999;
 					dd{
 						overflow: hidden;
 						h4{
+							height: 56px;
 							padding: 16px 10px;
 							overflow: hidden;
+							@include box-sizing;
 						    text-overflow: ellipsis;
 						    white-space: nowrap;
 							font-size: 16px;
@@ -331,10 +340,11 @@ $b9: #999999;
 							}
 						}
 						.tag-list{
-							padding: 10px;
-    						height: 55px;
+							overflow: hidden;
+							margin: 10px;
+    						height: 25px;
+    						line-height: 25px;
     						@include box-sizing;
-    						margin-top: 0;
 						}
 					}
 				}
@@ -394,12 +404,13 @@ $b9: #999999;
     						margin: 0;
 						}
 						.con-txt{
+							height: 40px;
 							line-height: 20px;
 							overflow : hidden;
-							text-overflow: ellipsis;
-							display: -webkit-box;
-							-webkit-line-clamp: 2;
-							-webkit-box-orient: vertical;
+							// text-overflow: ellipsis;
+							// display: -webkit-box;
+							// -webkit-line-clamp: 2;
+							// -webkit-box-orient: vertical;
 							font-size: 14px;
 							color: $b6;
 						}
@@ -749,7 +760,9 @@ $b9: #999999;
 		/*横向排列标签*/
 		.tag-list{
 			float: left;
+			overflow: hidden;
 			width: 80%;
+			height: 25px;
 			margin-top: 12px;
 			font-size: 12px;
 			li{
@@ -806,8 +819,13 @@ $b9: #999999;
 		    a{
 		    	display: inline-block;
     			margin: 0 9px;
+    			color: #7c7c7c;
     			&:visited{
     			    color: #7c7c7c;
+    				text-decoration: none;
+    			}
+    			&:hover{
+    				color: #d60000;
     				text-decoration: none;
     			}
 		    }
