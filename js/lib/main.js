@@ -49,6 +49,7 @@ var City = {
   cookieName: 'cookieCityId',
   cookieLongitude: 'cookieLongitude',
   cookieLatitude: 'cookieLatitude',
+  cookiePin:'cookiePin',
   cityCode: null,
   cityName: null,
   areaJson: null,
@@ -64,12 +65,19 @@ var City = {
     $('#currentCity').attr('href', '#' + cityCode);
     $('#currentCity').attr('data-longitude',Cookie.read(that.cookieLongitude));
     $('#currentCity').attr('data-latitude',Cookie.read(that.cookieLatitude));
+    $('#currentCity').attr('data-pin',Cookie.read(that.cookiePin));
 
     // 初始化城市浮层
     City.initCityPop();
   },
   initCityPop: function() {
     $('#cityPop').citypop({
+      // 热门城市: 北京, 上海, 深圳, 广州, 杭州, 南京
+      hot: [110100, 310100, 440300, 440100, 330100, 320100],
+      // 直辖市: 北京, 上海, 天津, 重庆
+      zx: [110100, 310100, 120100, 500100],
+      // 不出现在字母列表里的省份
+      no: [110000, 310000, 120000, 500000, 710000, 810000, 820000],
       trigger: '#currentCity',
       data: City.areaJson,
       cityId: City.cityCode,
@@ -97,19 +105,25 @@ var City = {
           case "购" : behavior = "04"; break;
           default : behavior = "06"; break; 
         } 
-        console.log(result_lon,result_lat,behavior)
+
 
 
         // Hide CityPop
         this.hide();
 
         // Update cookie
-        City.rewriteCityCode(cityInfo[0],cityInfo[1],cityInfo[2]);
+        City.rewriteCityCode(cityInfo[0],cityInfo[1],cityInfo[2],cityInfo[5]);
 
         // Reload page
         //window.location.reload();
         // or
         // ajaxUpdateSomething();
+
+        indexCircumInit(result_lat,result_lon,behavior);
+
+        $(".weather-address .city").html(cityInfo[4]);
+        $(".weather-address .e-city").html(cityInfo[5]);
+        $("#citynamet").html(cityInfo[4]);
       }
     });
   },
@@ -123,10 +137,25 @@ var City = {
 
     return cityId;
   },
+  getUrlParam: function(name, url) {
+    var search = url || document.location.search;
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+    var r = search.substr(1).match(reg);  //匹配目标参数
+    if (r!=null) {
+      return unescape(r[2]);
+    }
+    else{
+      return null;
+    }
+  },
   getCityName: function() {
     var that = this;
     var cityId = that.getCityCode();
-    var cname = '全国';
+    var cityname = that.getUrlParam('cityname');
+    //cityname = getIpPlace();
+    cityname = cityname?(cityname!='null'?decodeURI(cityname):''):'';
+    var cname = cityname?(cityname!='null'?decodeURI(cityname):"全国"):"全国";
+
     var province;
     var city;
     var i;
@@ -145,7 +174,7 @@ var City = {
     }
     return cname;
   },
-  rewriteCityCode: function(cityid,longitude,latitude) {
+  rewriteCityCode: function(cityid,longitude,latitude,pin) {
     var that = this;
     Cookie.del(that.cookieName);
     // TODO 必须有 domain 设置
@@ -154,6 +183,7 @@ var City = {
     Cookie.write(that.cookieName, cityid, {expireHours: 3600 * 24 * 10});
     Cookie.write(that.cookieLongitude, longitude, {expireHours: 3600 * 24 * 10});
     Cookie.write(that.cookieLatitude, latitude, {expireHours: 3600 * 24 * 10});
+    Cookie.write(that.cookiePin, pin, {expireHours: 3600 * 24 * 10});
   }
 };
 

@@ -404,6 +404,7 @@
       hotCityHtml += '<a target="_self" href="javascript:void(0);" '
         + 'data-key="' + hotCity[i].Id + '" '
         + 'data-info="[' + hotCity[i].Id + ', ' + hotCity[i].OldCityId + ', \'' + hotCity[i].Name + '\', \'' + hotCity[i].Pinyin + '\']">' + hotCity[i].Name + '</a>';
+        //+ 'data-info="[' + hotCity[i].Id + ', ' + hotCity[i].lon + ', ' + hotCity[i].lan + ', ' + hotCity[i].OldCityId + ', \'' + hotCity[i].Name + '\', \'' + hotCity[i].Pinyin + '\']"' + hotCity[i].Name + '</a>';
     }
 
     // 生成直辖市内容

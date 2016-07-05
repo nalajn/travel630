@@ -65,7 +65,7 @@ $b9: #999999;
 			    	position: absolute;
 			    	left: 0;
 			    	z-index: 999;
-			    	width: 259px;
+			    	width: 272px;
 			    	padding: 5px 0;
 			    	@include box-sizing;
 			    	background: #fff;
@@ -78,6 +78,10 @@ $b9: #999999;
 			    		&:hover{
 			    			background: #f8f8f8;
 			    		}
+			    		a{
+			    			width: initial;
+			    			color: #1a8ced;
+			    		}
 			    	}
 			    }
    			}
@@ -87,6 +91,9 @@ $b9: #999999;
 		.min-width{
 			width: 990px;
 			margin: 0 auto;
+		}
+		.nothing{
+			font-size: 14px;
 		}
 		/*标签选择器*/
 		.tags-search{
@@ -144,7 +151,6 @@ $b9: #999999;
 					border: 0;
 					li{
 						position: relative;
-						width: 70px;
 						height: 30px;
 						line-height: 30px;
 						padding-right: 20px;
@@ -154,12 +160,14 @@ $b9: #999999;
 						font-size: 14px;
 						text-align: center;
 						&:before{
-					        content: 'x';
+					        content: '';
 					        background: url('../images/icon/close.png') no-repeat;
 					        background-size: 100%;
 						    position: absolute;
-						    top: 0;
+						    top: 36%;
 						    right: 10px;
+						    width: 8px;
+						    height: 8px;
 					    }
 					}
 				}
@@ -178,7 +186,7 @@ $b9: #999999;
 				position: relative;
 				.tabs-tit{
 					width: 115px;
-					box-shadow: -1px -1px 4px #aaa, -1px 1px 4px #aaa;
+					box-shadow: -3px -1px 10px #aaa, 0px 0px 10px #aaa;
 					li{
 						position: relative;
 						height: 204px;
@@ -201,8 +209,8 @@ $b9: #999999;
 						        background: url('../images/icon/line.png') no-repeat;
 						        background-size: 100%;
 							    position: absolute;
-							    top: 0;
-							    right: -21px;
+							    top: 12px;
+							    right: -20px;
 							    width: 40px;
 							    height: 72px;
 						    }
@@ -212,6 +220,7 @@ $b9: #999999;
 	    					top: 40%;
 							display: inline-block;
 							width: 20px;
+							line-height: 22px;
 							font-size: 20px;
 							color: $b3;
 						}
@@ -224,7 +233,7 @@ $b9: #999999;
 					}
 					.active{
 						border-right: 0;
-						box-shadow: 4px 0px 0px #fff;
+						box-shadow: 10px 0px 0px #fff;
 						background: #fff;
 						p{
 							width: 100%;
@@ -240,8 +249,26 @@ $b9: #999999;
 					right: 0;
 					top: 0;
 					width: 865px;
+					height: 100%;
+					.list-btn{
+						position: absolute;
+						bottom: 0;
+						width: 100%;
+					    &:before{
+					    	content: '';
+					        background: url('../images/icon/more.png') no-repeat;
+					        background-size: 100%;
+						    position: absolute;
+						    top: 37%;
+						    right: 39%;
+						    width: 9px;
+						    height: 17px;
+					    }
+					}
 					.nothing{
-
+						height: 816px;
+						line-height: 816px;
+						text-align: center;
 					}
 				}
 			}
@@ -289,7 +316,7 @@ $b9: #999999;
 						overflow: hidden;
 						h4{
 							height: 56px;
-							padding: 16px 10px;
+							padding: 16px 10px 11px;
 							overflow: hidden;
 							@include box-sizing;
 						    text-overflow: ellipsis;
@@ -299,7 +326,7 @@ $b9: #999999;
 						}
 						.time-nums{
 							overflow: hidden;
-							padding: 0 10px 20px;
+							padding: 0 10px 10px;
 							border-bottom: solid 1px $line;
 							font-size: 12px;
 							color: $b9;
@@ -309,10 +336,12 @@ $b9: #999999;
 							.scan-comment{
 								float: right;
 								span{
+									float: right;
 									padding-left: 18px;
 									position: relative;
 								}
 								.scan{
+									margin-left: 18px;
 									&:before{
 								        content: '';
 								        background: url('../images/icon/list-zan.png') no-repeat;
@@ -325,7 +354,6 @@ $b9: #999999;
 								    }
 								}
 								.comment{
-									margin-left: 18px;
 									&:before{
 								        content: '';
 								        background: url('../images/icon/list-comment.png') no-repeat;
@@ -341,6 +369,7 @@ $b9: #999999;
 						}
 						.tag-list{
 							overflow: hidden;
+							width: 100%;
 							margin: 10px;
     						height: 25px;
     						line-height: 25px;
@@ -384,7 +413,7 @@ $b9: #999999;
 							h4{
 								float: left;
 								width: 85%;
-								margin: 0;
+								margin: -1px 0;
 								line-height: normal;
 								&:hover{
 									font-weight: bold;
@@ -393,6 +422,7 @@ $b9: #999999;
 							}
 							.time{
 								float: right;
+								margin-top: 3px;
 								font-size: 12px;
     							color: #999;
 							}
@@ -400,11 +430,11 @@ $b9: #999999;
 						.tag-list{
 							overflow: hidden;
 							float: none;
-							padding: 10px 0;
+							padding: 12px 0;
     						margin: 0;
 						}
 						.con-txt{
-							height: 40px;
+							height: 38px;
 							line-height: 20px;
 							overflow : hidden;
 							// text-overflow: ellipsis;
@@ -415,10 +445,11 @@ $b9: #999999;
 							color: $b6;
 						}
 						.tags-nums{
-							margin-top: 10px;
+							margin-top: 3px;
 						}
 						.user{
 							float: left;
+							margin-top: 3px;
 							width: 60%;
 							img{
 								width: 20px;
@@ -430,9 +461,10 @@ $b9: #999999;
 						.scan-comment{
 							float: right;
 							width: 40%;
-							padding-top: 6px;
+							padding-top: 11px;
 							span{
 								float: right;
+								line-height: 13px;
 								position: relative;
 							}
 							.time{
@@ -477,6 +509,11 @@ $b9: #999999;
 						}
 					}
 				}
+				.list-btn{
+					&:before{
+						left: 61.5%;
+					}
+				}
 			}
 		}
 
@@ -488,6 +525,10 @@ $b9: #999999;
 	    		li{
 	    			float: left;
 	    			margin: 20px 14px 20px 0;
+	    			color: $b9;
+	    		}
+	    		.active{
+					color: $b3;
 	    		}
 	    	}
 	    	.list{
@@ -538,18 +579,21 @@ $b9: #999999;
 					font-weight: 200;
 					cursor: pointer;
 					cursor: hand;
+					color: $b3;
 					&:hover{
 						color: $blue;
 						font-weight: bold;
 					}
 				}
 				.con-txt{
+					height: 38px;
 					line-height: 20px;
 					overflow : hidden;
 					text-overflow: ellipsis;
 					display: -webkit-box;
 					-webkit-line-clamp: 2;
 					-webkit-box-orient: vertical;
+					color: $b6;
 				}
 				.tags-nums{
 					overflow: hidden;
@@ -565,10 +609,8 @@ $b9: #999999;
 						float: right;
 						padding-left: 16px;
 					}
-					.comment{
-						margin-left: 18px;
-					}
 					.scan{
+						margin-left: 18px;
 						&:before{
 					        content: '';
 					        background: url('../images/icon/list-zan.png') no-repeat;
@@ -581,7 +623,6 @@ $b9: #999999;
 					    }
 					}
 					.comment{
-						margin-left: 18px;
 						&:before{
 					        content: '';
 					        background: url('../images/icon/list-comment.png') no-repeat;
@@ -621,7 +662,7 @@ $b9: #999999;
 			.search-box{
 				overflow: hidden;
 			    float: right;
-			    width: 55%;
+			    width: 555px;
 			    @include box-sizing;
 				.search-main{
 					float: left;
@@ -629,33 +670,37 @@ $b9: #999999;
 					.search-input-btn{
 						overflow: hidden;
 					    width: 100%;
-					    line-height: 49px;
-					    margin-top: 10px;
+					    line-height: 40px;
+					    margin-top: 36px;
 						.search-input{
 							float: left;
-							width: 85%;
-		    				height: 47px;
+							width: 495px;
+		    				height: 40px;
+		    				padding: 0 10px;
+		    				@include box-sizing;
 							border: solid 1px #1a8ced;
 							border-right: 0;
 							border-radius: 4px 0 0 4px;
-							color: #ccc;
-							font-size: 20px;	
+							color: #aaa;
+							font-size: 16px;	
 						}
 						.search-btn{
 							float: left;
-							width: 70px;
+							width: 60px;
 							border-radius: 0 4px 4px 0;
 							background: #1a8ced;
 							text-align: center;
-							font-size: 18px;
+							font-size: 14px;
 							color: #fff;
 						}
 					}
 					.tags{
 						overflow: hidden;
-						height: 66px;
-						line-height: 66px;
-						font-size: 16px;
+						height: 45px;
+						line-height: 45px;
+						margin-bottom: 20px;
+						font-size: 12px;
+						color: $b3;
 						li{
 							float: left;
 							margin-right: 20px;
@@ -697,7 +742,7 @@ $b9: #999999;
 			overflow: hidden;
 			height: 44px;
 			line-height: 44px;
-			font-size: 16px;
+			font-size: 14px;
 			color: $b9;
 			li{
 				float: left;
@@ -725,7 +770,7 @@ $b9: #999999;
 				float: left;
 				margin-top: 40px;
 				font-size: 14px;
-				color: $b9;
+				color: $b6;
 				&:before{
 			        content: '';
 			        //background: url('../images/icon/down.png') no-repeat;
@@ -741,7 +786,7 @@ $b9: #999999;
 				position: relative;
 				float: right;
 				margin-top: 40px;
-				padding-right: 15px;
+				padding-right: 13px;
 				font-size: 16px;
 				color: $b6;
 				&:before{
@@ -749,7 +794,7 @@ $b9: #999999;
 			        background: url('../images/icon/more.png') no-repeat;
 			        background-size: 100%;
 				    position: absolute;
-				    top: 8%;
+				    top: 18%;
 				    right: 0;
 				    width: 9px;
 				    height: 17px;
@@ -789,18 +834,20 @@ $b9: #999999;
 			text-align: center;
 		    font-size: 16px;
 		    color: $b3;
-		    &:before{
+		    &:hover{
+		    	background: $f8;
+		    }
+		}
+		.active-more{
+			&:before{
 		        content: '';
 		        background: url('../images/icon/more.png') no-repeat;
 		        background-size: 100%;
 			    position: absolute;
-			    top: 38%;
+			    top: 35%;
 			    left: 62%;
 			    width: 9px;
 			    height: 17px;
-		    }
-		    &:hover{
-		    	background: $f8;
 		    }
 		}
     }

@@ -74,10 +74,18 @@
           <h4 class="opinion-tit" title="欢迎反馈问题，您的意见和建议将会是我们最大的动力！">欢迎反馈问题，您的意见和建议将会是我们最大的动力！</h4>
           <h5 class="opinion-sec" title="我们会把反馈的结果以站内短消息形式发送给您，请及时关注站内短消息。">我们会把反馈的结果以站内短消息形式发送给您，请及时关注站内短消息。</h5>
           <textarea palcehold="汽车之家温馨提示"></textarea>
+          <div class="txt-num">还可以输入<em>5000</em>字</div>
           <ul class="emoji-btn">
             <li class="emoji" title="图片">图片</li>
             <li class="btn" title="评论">评论</li>
           </ul>
+          <div class="upload-img hide">
+            <p class="emoji" title="图片">图片</p>
+            <input class="hide" id="upload_file" multiple="multiple" type="file" name="file">
+            <ul class="img-list">
+              <li class="add"></li>
+            </ul>
+          </div>
         </div>
 
         <div class="comment-list min-width">
@@ -128,6 +136,7 @@
         </p>
       </div>
 	  </div>
+    <script src="../js/ajaxfileupload.js"></script>
     <script src="../js/lib/common.js"></script>
 	  <script src="../js/opinion.js"></script>
   </body>

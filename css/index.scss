@@ -34,13 +34,14 @@
 			}
 			.slider-title{
 				position: absolute;
-			    bottom: 29px;
+			    bottom: 23px;
 			    right: 20px;
 				color: $f8;
 				.slider-txt{
 				    font-size: 22px;
 				}
 				.num{
+					margin-bottom: -18px;
 					font-size: 24px;
 					text-align: right;
 					span{
@@ -129,7 +130,7 @@
 				}
 				.tags{
 					overflow: hidden;
-					padding: 25px 0;
+					padding: 21px 0;
 					font-size: 16px;
 					cursor: pointer;
 					cursor: hand;
@@ -158,6 +159,12 @@
 					border-radius: 4px;
 					padding-left: 50px;
 					@include box-sizing;
+					a{
+						display: block;
+						width: 100%;
+						height: 100%;
+						color: #fff;
+					}
 				}
 				.publish{
 					background: $orange;
@@ -207,13 +214,15 @@
 		    right: 150px;
 		    width: 50px;
 		    height: 100px;
+		    cursor: pointer;
+		    cursor: hand;
 		    li{
 		    	width: 50px;
 		    	height: 50px;
 		    	border: solid 1px $line;
-		    	&:first-child{
-		    		border-bottom: 0;
-		    	}
+		    	// &:first-child{
+		    	// 	border-bottom: 0;
+		    	// }
 		    }
 		    .top{
 		    	&:before{
@@ -221,16 +230,16 @@
 			        background: url('../images/icon/top.png') no-repeat;
 			        background-size: 100%;
 				    position: absolute;
-				    top: 0;
-				    left: 0;
-				    width: 52px;
-				    height: 52px;
+				    top: 15%;
+				    left: 15%;
+				    width: 35px;
+				    height: 20px;
 			    }
 			    &:hover{
 			    	&:before{
 			    		content: '返回顶部';
 				        background-size: 100%;
-				        background: $b9;
+				        background: $blue;
 					    position: absolute;
 					    top: 0;
 					    left: 0;
@@ -239,24 +248,44 @@
 					    height: 52px;
 					    @include box-sizing;
 					    line-height: 20px;
-					    font-size: 18px;
+					    font-size: 14px;
 					    text-align: center;
-					    color: $b6;
+					    color: $white;
 			    	}
 			    }
 		    }
 		    .code{
 				position: relative;
+				&:before{
+			        content: '';
+			        background: url('../images/icon/wei.png') no-repeat;
+			        background-size: 100%;
+				    position: absolute;
+				    top: 0;
+				    left: 0;
+				    width: 100%;
+				    height: 100%;
+			    }
 				.show-code{
 					position: absolute;
 					top: -52px;
 				    left: 54px;
 				    width: 74px;
-				    height: 103px;    
+				    height: 103px; 
+				    line-height: 15px;   
 				    padding: 136% 5px 0;
 				    @include box-sizing;
 				    border: solid 1px $line;
-
+					&:before{
+				        content: '';
+				        background: url('../images/icon/wei.png') no-repeat;
+				        background-size: 100%;
+					    position: absolute;
+					    top: 3px;
+					    left: 3px;
+					    width: 90%;
+					    height: 100%;
+				    }
 				}
 		    }
 		}

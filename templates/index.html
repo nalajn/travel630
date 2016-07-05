@@ -10,8 +10,7 @@
     <meta content="telephone=no" name="format-detection">
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" type="../css/lib/flexslider.css" href="">
-    <script src="../js/lib/jquery-2.1.4.js"></script>
-    <script src="../js/lib/jquery.flexslider-min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="http://s.autoimg.cn/com/co.ashx?path=|as|css-3.1.0|global|autoshow.css,|as|css-3.1.0|public|icon.css,|as|css-3.1.0|public|pop.css,|as|css-3.1.0|public|citypop.css">
   </head>
@@ -35,12 +34,12 @@
             <li class="msg">
               <span>消息</span>
               <ul class="msg-con hide">
-                <li>查看论坛回复</li>
-                <li>查看评论回复</li>
-                <li>查看私信</li>
-                <li>查看通知</li>
-                <li>查看粉丝</li>
-                <li>查看订单</li>
+                <li><a href="">查看论坛回复</a></li>
+                <li><a href="">查看评论回复</a></li>
+                <li><a href=""><a href=""><a href="">查看私信</a></li>
+                <li><a href=""><a href="">查看通知</a></li>
+                <li><a href="">查看粉丝</a></li>
+                <li><a href="">查看订单</a></li>
               </ul>
             </li>
           </ul>
@@ -89,7 +88,7 @@
         <div class="search-box min-width">
           <div class="search-main">
             <div class="search-input-btn">
-              <input class="search-input" type="text" placehold="请输入游记名/目的地">
+              <input class="search-input" id="address" type="text" placehold="请输入游记名/目的地">
               <span class="search-btn cursor" title="搜索">搜索</span>
             </div>
             <ul class="tags">
@@ -108,7 +107,7 @@
           </div>
           <div class="btns">
             <p class="publish cursor" title="发表游记">发表游记</p>
-            <p class="opinion cursor" title="意见反馈">意见反馈</p>
+            <p class="opinion cursor" title="意见反馈"><a href="">意见反馈</a></p>
           </div>
         </div>
 
@@ -200,8 +199,11 @@
               </li>
             </ul>
             <div class="tabs-con">
-              <p class="nothing hide" title="暂无该地点美食信息">暂无该地点美食信息</p>
+              <p class="nothing hide" title="暂无该地点美食信息">
+                <img src="../images/nothing.png">
+              </p>
               <div class="list">
+                
                 <dl class="list-item">
                   <a href="detail.html">
                     <dt>
@@ -218,8 +220,8 @@
                           <li class="tag" title="境外">境外</li>
                         </ul>
                         <div class="scan-comment">
-                          <span class="comment" title="总评论量9823">9823</span>
                           <span class="scan" title="总浏览量10.92万">10.92万</span>
+                          <span class="comment" title="总评论量9823">9823</span>
                         </div>
                       </div>
                     </dd>
@@ -241,8 +243,8 @@
                           <li class="tag" title="境外">境外</li>
                         </ul>
                         <div class="scan-comment">
-                          <span class="comment" title="总评论量9823">9823</span>
                           <span class="scan" title="总浏览量10.92万">10.92万</span>
+                          <span class="comment" title="总评论量9823">9823</span>
                         </div>
                       </div>
                     </dd>
@@ -264,8 +266,8 @@
                           <li class="tag" title="境外">境外</li>
                         </ul>
                         <div class="scan-comment">
-                          <span class="comment" title="总评论量9823">9823</span>
                           <span class="scan" title="总浏览量10.92万">10.92万</span>
+                          <span class="comment" title="总评论量9823">9823</span>
                         </div>
                       </div>
                     </dd>
@@ -287,38 +289,15 @@
                           <li class="tag" title="境外">境外</li>
                         </ul>
                         <div class="scan-comment">
-                          <span class="comment" title="总评论量9823">9823</span>
                           <span class="scan" title="总浏览量10.92万">10.92万</span>
-                        </div>
-                      </div>
-                    </dd>
-                  </a>
-                </dl>
-                <dl class="list-item">
-                  <a href="detail.html">
-                    <dt>
-                      <img src="../images/1.jpg" alt="车史上的5月22日 法拉利首次参加F1赛事">
-                    </dt>
-                    <dd>
-                      <h4 title="车史上的5月22日 法拉利首次参加F1赛事">车史上的5月22日 法拉利首次参加F1赛事</h4>
-                      <div class="con-txt">【汽车之家  车史上的今天】一级方程式锦标赛汽车之家 车史上的今天。一级方程式锦标赛可以说是赛车运动这中的顶级赛事，这项赛事源自1906年举办的法国汽车俱乐部大奖赛。1948年，法国法国汽车俱乐部大奖赛。1948年，法国</div>
-                      <div class="tags-nums">
-                        <ul class="tag-list">
-                          <li class="tag" title="户外">户外</li>
-                          <li class="tag" title="境外">境外</li>
-                          <li class="tag" title="户外">户外</li>
-                          <li class="tag" title="境外">境外</li>
-                        </ul>
-                        <div class="scan-comment">
                           <span class="comment" title="总评论量9823">9823</span>
-                          <span class="scan" title="总浏览量10.92万">10.92万</span>
                         </div>
                       </div>
                     </dd>
                   </a>
                 </dl>
               </div>
-              <a class="list-btn" href="circum.html" title="更多周边美食，请查看全部">更多周边美食，请查看全部</a>
+              <a class="list-btn" href="circum.html" title="更多信息，请查看全部">更多信息，请查看全部</a>
             </div>
           </div>
         </div>
@@ -571,17 +550,17 @@
                 </dd>
               </a>
             </dl>
-            <p class="list-btn cursor" title="更多精彩游记，查看全部">更多精彩游记，点击加载...</p>
+            <p class="list-btn cursor active-more" title="更多精彩游记，查看全部">更多精彩游记，请点击加载...</p>
             <!-- 加载更多按钮  点击两次后 显示"更多精彩游记，查看全部" -->
           </div>
         </div>
 
         <div class="to-top">
           <ul>
-            <li class="top"></li>
-            <li class="code">
+            <li class="top hide"></li>
+            <!-- <li class="code">
               <div class="show-code hide">扫码关注游游记公众号</div>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -606,6 +585,10 @@
         </p>
       </div>
 	  </div>
+    <script type="text/javascript" src="../js/lib/jquery-1.11.1.min.js"></script>
+    <script src="../js/lib/jquery.ui.js"></script>
+    <script src="../js/lib/address.js"></script>
+    <script src="../js/lib/jquery.flexslider-min.js"></script>
     <script src="../js/lib/common.js"></script>
 	  <script src="../js/index.js"></script>
     <script src="../js/lib/citypop.js"></script>
