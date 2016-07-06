@@ -1199,9 +1199,23 @@ a {
         margin: 32px 0 18px; }
       .wrap .detail-container .menu-box .chapter-box {
         position: relative;
-        overflow: auto;
-        width: 290px;
-        height: 500px; }
+        overflow: hidden;
+        width: 290px; }
+        .wrap .detail-container .menu-box .chapter-box .scrollbar {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 5px;
+          height: 100px;
+          background-color: #d6d6d6;
+          border-radius: 10px;
+          cursor: pointer; }
+      .wrap .detail-container .menu-box .contentHolder {
+        position: relative;
+        overflow: hidden;
+        margin: 0px auto;
+        padding: 0px;
+        width: 290px; }
       .wrap .detail-container .menu-box .menu {
         margin-left: 16px;
         border-left: solid 1px #ccc; }
@@ -1256,8 +1270,15 @@ a {
               right: -14px; }
     .wrap .detail-container .menu-fixed {
       position: fixed;
-      bottom: 15%;
-      right: 206px; }
+      top: 0;
+      bottom: 0;
+      margin-left: 670px; }
+    @media screen and (min-width: 1600px) {
+      .wrap .detail-container .menu-fixed {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        margin-left: 670px; } }
   .wrap .correlation-container {
     padding-bottom: 40px;
     background: #f8f8f8; }

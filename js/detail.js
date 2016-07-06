@@ -7,11 +7,28 @@ $('.share-num').click(function(){
 	}
 })
 
+//滚动条
+$('.chapter-box').mouseover(function(){
+	$('.scrollbar').removeClass('hide');
+});
+$('.chapter-box').mouseout(function(){
+	$('.scrollbar').addClass('hide');
+});
+
+//滚动条
+jQuery(document).ready(function ($) {
+    "use strict";
+    $('#Default').perfectScrollbar();
+    $('#SuppressScrollX').perfectScrollbar({suppressScrollX: true});
+    $('#SuppressScrollY').perfectScrollbar({suppressScrollY: true});
+});
+
 //目录
+$('.chapter-box').height($(window).height()*0.7);
 var win_top,item_top,next_top,id;
 $(window).scroll(function () {
 	win_top = $(window).scrollTop();
-	if(win_top > 800){
+	if(win_top > 632){
 		$('.menu-box').addClass('menu-fixed');
 	}else{
 		$('.menu-box').removeClass('menu-fixed');
@@ -26,6 +43,7 @@ $(window).scroll(function () {
 				if($(this).attr('href').slice(1) == id){
 					$('.menu .item-tit,.menu .item-txt').removeClass('active');
 					$(this).parent().addClass('active');
+					$('.chapter-box').scrollTop($(this).position().top);
 				}
 			})
 		}

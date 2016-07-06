@@ -12,6 +12,7 @@
     <script src="../js/lib/jquery-2.1.4.js"></script>
     <script src="../js/lib/jquery.flexslider-min.js"></script>
     <link rel="stylesheet" href="../css/detail.css">
+    <link href="../css/lib/perfect-scrollbar.css" rel="stylesheet">
   </head>
   <body>
   	<div class="wrap">
@@ -220,8 +221,9 @@
                 <p class="item-txt"><i>-----</i>吉百利巧克力工厂</p>
               </li>
             </ul> -->
-            <div class="chapter-box">
-              <ul class="menu">
+            <div class="chapter-box contentHolder" id="SuppressScrollX">
+              <!-- <div class="scrollbar hide"></div> -->
+              <ul class="menu content">
                 <li class="day1">
                   <p class="item-tit active">
                     <i class="chapter-icon"></i>
@@ -268,7 +270,31 @@
                 </li>
                 <li class="day4">
                   <p class="item-tit"><a href="#day4">Day4</a></p>
+                  <p class="item-txt">
+                    <a href="#day4journey1">
+                      <i>-----</i><span>世界上最陡的街道-鲍德温街</span>
+                    </a></p>
+                  <p class="item-txt">
+                    <a href="#day4journey2">
+                      <i>-----</i><span>世界上最陡的街道-鲍德温街</span>
+                    </a>
+                  </p>
+                </li>
+                <li class="day5">
+                  <p class="item-tit"><a href="#day5">Day5</a></p>
                   <p class="item-txt"><i>-----</i>世界上最陡的街道-鲍德温街</p>
+                </li>
+                <li class="day6">
+                  <p class="item-tit"><a href="#day6">Day6</a></p>
+                  <p class="item-txt">
+                    <a href="#day6journey1">
+                      <i>-----</i><span>世界上最陡的街道-鲍德温街</span>
+                    </a></p>
+                  <p class="item-txt">
+                    <a href="#day6journey2">
+                      <i>-----</i><span>世界上最陡的街道-鲍德温街</span>
+                    </a>
+                  </p>
                 </li>
               </ul>
               <!-- <a href="#" class="chapter-icon"></a> -->
@@ -392,11 +418,11 @@
                 </div>
               </div>
               <div class="comment-list">
-                <ul class="comment-tit">
+                <!-- <ul class="comment-tit">
                   <li>最新评论</li>
-                  <!-- <li>最热评论</li> -->
-                </ul>
-                <dl class="comment-content">
+                  <li>最热评论</li>
+                </ul> -->
+                <!-- <dl class="comment-content">
                   <dt>
                     <img src="../images/1.jpg">
                   </dt>
@@ -456,7 +482,10 @@
                     <span>回复</span>
                     <span>赞同（0）</span>
                   </dd>
-                </dl>
+                </dl> -->
+                <div class="rev_post" id="QuickReply"></div>
+                <div class="rev_con" id="AutoBlogReplyList"></div>
+                <div class="bsmapa" id="PageBottom"><div class="smapage" id="pager2"></div></div>
               </div>
             </div>
           </div>
@@ -485,6 +514,11 @@
 	  </div>
     <script src="../js/lib/common.js"></script>
 	  <script src="../js/detail.js"></script>
+    <script src="http://x.autoimg.cn/club/v1Content/js/md5.js"></script>
+    <script src="../js/lib/reply.js"></script>
+    <script src="../js/lib/comment.js"></script>
+    <script src="../js/lib/jquery.mousewheel.js"></script>
+    <script src="../js/lib/perfect-scrollbar.js"></script>
     <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
   </body>
 </html>

@@ -456,10 +456,28 @@
 			}
 			.chapter-box {
 				position: relative;
-			    overflow: auto;
+				overflow: hidden;
 			    width: 290px;
-			    height: 500px;
+			    .scrollbar{
+			    	position: absolute;
+				    right: 0;
+				    top: 0;
+				    width: 5px;
+				    height: 100px;
+				    background-color: #d6d6d6;
+				    border-radius: 10px;
+				    cursor: pointer;
+			    }
 			}
+
+			.contentHolder { 
+				position:relative; 
+				overflow: hidden;
+				margin:0px auto; 
+				padding:0px; 
+				width: 290px;   
+			}
+
 			.menu{
 			    margin-left: 16px;
 			    border-left: solid 1px #ccc;
@@ -558,8 +576,17 @@
 		}
 		.menu-fixed{
 		    position: fixed;
-		    bottom: 15%;
-			right: 206px;
+		    top: 0;
+		    bottom: 0;
+			margin-left: 670px;
+		}
+		@media screen and (min-width:1600px){
+			.menu-fixed{
+			    position: fixed;
+			    top: 0;
+		    	bottom: 0;
+				margin-left: 670px;
+			}
 		}
 	}
 
