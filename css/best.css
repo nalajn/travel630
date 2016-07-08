@@ -194,14 +194,11 @@ a {
           border: 0; }
         .wrap .main .tags-search .tags-list .tit {
           float: left;
-          width: 10%;
+          width: 83px;
           line-height: 50px;
           padding: 0;
           padding-left: 15px;
           margin: 0;
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
           font-size: 14px;
           font-weight: bold; }
         .wrap .main .tags-search .tags-list .tag-box {
@@ -340,9 +337,14 @@ a {
       width: 990px;
       margin: 0 auto;
       padding: 0 15px; }
+      .wrap .main .world-box .grid-box {
+        overflow: hidden;
+        width: 990px; }
       .wrap .main .world-box .grid {
         float: left;
-        padding-bottom: 10px; }
+        width: 1010px;
+        padding-bottom: 10px;
+        margin-left: -10px; }
         .wrap .main .world-box .grid .grid-item {
           float: left;
           width: 316.6px;
@@ -352,12 +354,6 @@ a {
             text-decoration: none; }
           .wrap .main .world-box .grid .grid-item:hover {
             box-shadow: 4px 0px 10px #CCC,-4px 0px 10px #ccc; }
-          .wrap .main .world-box .grid .grid-item:first-child {
-            margin-left: 0; }
-          .wrap .main .world-box .grid .grid-item:nth-child(4n) {
-            margin-left: 0; }
-          .wrap .main .world-box .grid .grid-item:nth-child(3n) {
-            margin-right: 0; }
           .wrap .main .world-box .grid .grid-item dt {
             overflow: hidden;
             width: 100%;
@@ -399,24 +395,24 @@ a {
                     background: url("../images/icon/list-zan.png") no-repeat;
                     background-size: 100%;
                     position: absolute;
-                    top: 0;
+                    top: -2;
                     left: 0;
                     width: 12px;
-                    height: 13px; }
+                    height: 15px; }
                 .wrap .main .world-box .grid .grid-item dd .time-nums .scan-comment .comment:before {
                   content: '';
                   background: url("../images/icon/list-comment.png") no-repeat;
-                  background-size: 100%;
+                  background-size: 80%;
                   position: absolute;
-                  top: 14%;
+                  top: 16%;
                   left: 0;
-                  width: 13px;
+                  width: 16px;
                   height: 12px; }
             .wrap .main .world-box .grid .grid-item dd .tag-list {
               overflow: hidden;
               width: 100%;
               margin: 10px;
-              height: 25px;
+              height: 27px;
               line-height: 25px;
               -webkit-box-sizing: border-box;
               -moz-box-sizing: border-box;
@@ -492,30 +488,30 @@ a {
           .wrap .main .best-box .list .list-item dd .scan-comment .time:before {
             content: '';
             background: url("../images/icon/list-time.png") no-repeat;
-            background-size: 100%;
+            background-size: 80%;
             position: absolute;
-            top: 6%;
+            top: 3%;
             left: 0;
-            width: 12px;
-            height: 13px; }
+            width: 14px;
+            height: 12px; }
           .wrap .main .best-box .list .list-item dd .scan-comment .scan:before {
             content: '';
             background: url("../images/icon/list-zan.png") no-repeat;
             background-size: 100%;
             position: absolute;
-            top: 0;
+            top: -2px;
             left: 0;
             width: 12px;
-            height: 13px; }
+            height: 15px; }
           .wrap .main .best-box .list .list-item dd .scan-comment .comment:before {
             content: '';
             background: url("../images/icon/list-comment.png") no-repeat;
-            background-size: 100%;
+            background-size: 80%;
             position: absolute;
-            top: 17%;
+            top: 16%;
             left: 0;
-            width: 13px;
-            height: 13px; }
+            width: 16px;
+            height: 12px; }
           .wrap .main .best-box .list .list-item dd .scan-comment .scan, .wrap .main .best-box .list .list-item dd .scan-comment .comment {
             margin-left: 19px; }
     .wrap .main .best-box .list .list-btn:before {
@@ -548,11 +544,8 @@ a {
         float: left; }
       .wrap .main .list-item dt {
         overflow: hidden;
-        width: 160px;
+        width: 158px;
         height: 120px;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
         margin-right: 14px;
         border: solid 1px #aaa; }
         .wrap .main .list-item dt img {
@@ -603,21 +596,20 @@ a {
               background: url("../images/icon/list-zan.png") no-repeat;
               background-size: 100%;
               position: absolute;
-              top: 0;
+              top: -2px;
               left: 0;
               width: 12px;
-              height: 13px; }
+              height: 15px; }
           .wrap .main .list-item dd .scan-comment .comment:before {
             content: '';
             background: url("../images/icon/list-comment.png") no-repeat;
-            background-size: 100%;
+            background-size: 80%;
             position: absolute;
-            top: 14%;
+            top: 16%;
             left: 0;
-            width: 13px;
+            width: 16px;
             height: 12px; }
     .wrap .main .logo_search {
-      overflow: hidden;
       border-bottom: solid 1px #e7e7e7; }
       .wrap .main .logo_search .logo {
         position: relative;
@@ -650,12 +642,9 @@ a {
             margin-top: 36px; }
             .wrap .main .logo_search .search-box .search-main .search-input-btn .search-input {
               float: left;
-              width: 495px;
-              height: 40px;
+              width: 474px;
+              height: 38px;
               padding: 0 10px;
-              -webkit-box-sizing: border-box;
-              -moz-box-sizing: border-box;
-              box-sizing: border-box;
               border: solid 1px #1a8ced;
               border-right: 0;
               border-radius: 4px 0 0 4px;
@@ -753,7 +742,7 @@ a {
       float: left;
       overflow: hidden;
       width: 80%;
-      height: 25px;
+      height: 27px;
       margin-top: 12px;
       font-size: 12px; }
       .wrap .main .tag-list li {
@@ -834,6 +823,34 @@ a {
   .wrap .main .best-box .title {
     overflow: hidden;
     font-size: 24px; }
+    .wrap .main .best-box .title ul {
+      float: left; }
+    .wrap .main .best-box .title .publish {
+      float: right;
+      position: relative;
+      width: 140px;
+      height: 50px;
+      line-height: 50px;
+      margin-top: 40px;
+      border-radius: 4px;
+      padding-left: 50px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      background: #999999;
+      font-size: 18px;
+      color: #ffffff; }
+      .wrap .main .best-box .title .publish:hover {
+        background: #f1762b; }
+      .wrap .main .best-box .title .publish:before {
+        content: '';
+        background: url("../images/icon/search-1.png") no-repeat;
+        background-size: 100%;
+        position: absolute;
+        top: 22%;
+        left: 15px;
+        width: 28px;
+        height: 28px; }
     .wrap .main .best-box .title li {
       float: left;
       margin: 50px 14px 21px 0;

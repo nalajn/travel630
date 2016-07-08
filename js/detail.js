@@ -29,9 +29,9 @@ var win_top,item_top,next_top,id;
 $(window).scroll(function () {
 	win_top = $(window).scrollTop();
 	if(win_top > 632){
-		$('.menu-box').addClass('menu-fixed');
+		$('.menu-box').addClass('menu-fixed').addClass('ie');
 	}else{
-		$('.menu-box').removeClass('menu-fixed');
+		$('.menu-box').removeClass('menu-fixed').removeClass('ie');
 	}
 
 	$('.journey-box .day-tit,.journey-box .journey').each(function(){

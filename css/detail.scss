@@ -6,9 +6,9 @@
 	.hide{
 		display: none;
 	}
-	.main{
-		overflow: hidden;
-	}
+	// .main{
+	// 	overflow: hidden;
+	// }
 	.crumbs-white{
 		line-height: 30px;
 		font-size: 12px;
@@ -77,6 +77,8 @@
     			color: #fff;
 			}
 			.user-con{
+				overflow: hidden;
+				height: 95.77px;
 				.user-tags{
 					float: left;
     				width: 40%;
@@ -104,9 +106,9 @@
 						position: relative;
 						float: left;
 						width: 100px;
-						height: 80px;
+						height: 60px;
 						padding-top: 20px;
-						@include box-sizing;
+						// @include box-sizing;
 						border-left: solid 1px #ddd;
 						cursor: pointer;
 						line-height: 80px;
@@ -214,6 +216,7 @@
     			@include box-sizing;
     			padding: 0 20px;
     			background: #fafafa;
+    			font-size: 12px;
 				li{
 					position: relative;
 					float: left;
@@ -305,21 +308,21 @@
 							        background: url('../images/icon/list-zan.png') no-repeat;
 							        background-size: 100%;
 								    position: absolute;
-								    top: 0;
+								    top: -2px;
 								    left: 0;
 								    width: 12px;
-								    height: 13px;
+								    height: 15px;
 							    }
 							}
 							.comment{
 								&:before{
 							        content: '';
 							        background: url('../images/icon/list-comment.png') no-repeat;
-							        background-size: 100%;
+							        background-size: 80%;
 								    position: absolute;
-								    top: 14%;
+								    top: 16%;
 								    left: 0;
-								    width: 13px;
+								    width: 16px;
 								    height: 12px;
 							    }
 							}
@@ -373,11 +376,11 @@
 			    	li{
 			    		position: relative;
 			    		float: left;	
-			    		width: 57px;
+			    		width: 27px;
 			    		height: 24px;
 			    		line-height: 24px;
-			    		padding-left: 18px;
-			    		@include box-sizing;
+			    		padding: 0 5px 0 23px;
+			    		// @include box-sizing;
 			    		border: solid 1px #ccc;
 			    		border-radius: 4px;
 			    		color: $b9;
@@ -446,9 +449,9 @@
 		}
 		.menu-box{
 			float: right;	
-			width: 320px;
+			width: 290px;
 			padding-left: 30px;
-			@include box-sizing;
+			// @include box-sizing;
 			font-size: 20px;
 			.title{
 				margin: 32px 0 18px;
@@ -579,6 +582,16 @@
 		    bottom: 0;
 			margin-left: 670px;
 		}
+		.ie{   
+	        _position: absolute;  
+	        _clear: both;   
+	        _top:expression(eval(document.compatMode &&   
+	               document.compatMode=='CSS1Compat') ?   
+	               documentElement.scrollTop   
+	               +(documentElement.clientHeight-this.clientHeight) - 1   
+	               : document.body.scrollTop   
+	               +(document.body.clientHeight-this.clientHeight) - 1); 
+		}
 		@media screen and (min-width:1600px){
 			.menu-fixed{
 			    position: fixed;
@@ -605,16 +618,19 @@
 					width: initial;
 				}
 			}
-			.grid{
+			.grid-box{
+				overflow: hidden;
 				width: 654px;
-				.grid-item{
-					width: 48.4%;
-					margin: 0;
-					&:nth-child(odd){
-						margin: 0 20px 20px 0;
-					}
-					&:nth-child(even){
-						margin-right: 0;
+				.grid{
+					width: 672px;
+					.grid-item{
+						width: 316px;
+						// &:nth-child(odd){
+						// 	margin: 0 20px 20px 0;
+						// }
+						// &:nth-child(even){
+						// 	margin-right: 0;
+						// }
 					}
 				}
 			}
@@ -623,6 +639,7 @@
 	
 	.comment-container{
 		.comment-con{
+			overflow: hidden;
 			width: 990px;
 			margin: 0 auto;
 			padding-top: 70px;
@@ -636,6 +653,7 @@
 					margin-bottom: 14px;
 					border: solid 1px $b3;
 					padding: 8px;
+					padding-bottom: 30px;
 					@include box-sizing;
 					color: $b9;
 					font-size:12px; 
@@ -646,8 +664,8 @@
 				}
 				.txt-num{
 					position: absolute;
-				    right: 10px;
-				    top: 88px;
+				    right: 20px;
+				    top: 90px;
 				    font-size: 14px;
 				    color: $b9;
 				    em{
@@ -663,17 +681,17 @@
 					.emoji{
 						position: relative;
 						float: left;
-						padding: 10px 0 0 18px;
+						padding: 10px 0 0 20px;
 						color: #1a8ced;
 						&:before{
 							content: '';
 		                    background: url("../images/icon/detail-comment.png") no-repeat;
-		                  	background-size: 100%;
+		                  	background-size: 90%;
 		                  	position: absolute;
-		                  	top: 42%;
+		                  	top: 40%;
 						    left: 0;
-						    width: 14px;
-						    height: 14px;
+						    width: 18px;
+						    height: 18px;
 						}
 					}
 					.btn{

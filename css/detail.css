@@ -194,14 +194,11 @@ a {
           border: 0; }
         .wrap .main .tags-search .tags-list .tit {
           float: left;
-          width: 10%;
+          width: 83px;
           line-height: 50px;
           padding: 0;
           padding-left: 15px;
           margin: 0;
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
           font-size: 14px;
           font-weight: bold; }
         .wrap .main .tags-search .tags-list .tag-box {
@@ -340,9 +337,14 @@ a {
       width: 990px;
       margin: 0 auto;
       padding: 0 15px; }
+      .wrap .main .world-box .grid-box {
+        overflow: hidden;
+        width: 990px; }
       .wrap .main .world-box .grid {
         float: left;
-        padding-bottom: 10px; }
+        width: 1010px;
+        padding-bottom: 10px;
+        margin-left: -10px; }
         .wrap .main .world-box .grid .grid-item {
           float: left;
           width: 316.6px;
@@ -352,12 +354,6 @@ a {
             text-decoration: none; }
           .wrap .main .world-box .grid .grid-item:hover {
             box-shadow: 4px 0px 10px #CCC,-4px 0px 10px #ccc; }
-          .wrap .main .world-box .grid .grid-item:first-child {
-            margin-left: 0; }
-          .wrap .main .world-box .grid .grid-item:nth-child(4n) {
-            margin-left: 0; }
-          .wrap .main .world-box .grid .grid-item:nth-child(3n) {
-            margin-right: 0; }
           .wrap .main .world-box .grid .grid-item dt {
             overflow: hidden;
             width: 100%;
@@ -399,24 +395,24 @@ a {
                     background: url("../images/icon/list-zan.png") no-repeat;
                     background-size: 100%;
                     position: absolute;
-                    top: 0;
+                    top: -2;
                     left: 0;
                     width: 12px;
-                    height: 13px; }
+                    height: 15px; }
                 .wrap .main .world-box .grid .grid-item dd .time-nums .scan-comment .comment:before {
                   content: '';
                   background: url("../images/icon/list-comment.png") no-repeat;
-                  background-size: 100%;
+                  background-size: 80%;
                   position: absolute;
-                  top: 14%;
+                  top: 16%;
                   left: 0;
-                  width: 13px;
+                  width: 16px;
                   height: 12px; }
             .wrap .main .world-box .grid .grid-item dd .tag-list {
               overflow: hidden;
               width: 100%;
               margin: 10px;
-              height: 25px;
+              height: 27px;
               line-height: 25px;
               -webkit-box-sizing: border-box;
               -moz-box-sizing: border-box;
@@ -492,30 +488,30 @@ a {
           .wrap .main .best-box .list .list-item dd .scan-comment .time:before {
             content: '';
             background: url("../images/icon/list-time.png") no-repeat;
-            background-size: 100%;
+            background-size: 80%;
             position: absolute;
-            top: 6%;
+            top: 3%;
             left: 0;
-            width: 12px;
-            height: 13px; }
+            width: 14px;
+            height: 12px; }
           .wrap .main .best-box .list .list-item dd .scan-comment .scan:before {
             content: '';
             background: url("../images/icon/list-zan.png") no-repeat;
             background-size: 100%;
             position: absolute;
-            top: 0;
+            top: -2px;
             left: 0;
             width: 12px;
-            height: 13px; }
+            height: 15px; }
           .wrap .main .best-box .list .list-item dd .scan-comment .comment:before {
             content: '';
             background: url("../images/icon/list-comment.png") no-repeat;
-            background-size: 100%;
+            background-size: 80%;
             position: absolute;
-            top: 17%;
+            top: 16%;
             left: 0;
-            width: 13px;
-            height: 13px; }
+            width: 16px;
+            height: 12px; }
           .wrap .main .best-box .list .list-item dd .scan-comment .scan, .wrap .main .best-box .list .list-item dd .scan-comment .comment {
             margin-left: 19px; }
     .wrap .main .best-box .list .list-btn:before {
@@ -548,11 +544,8 @@ a {
         float: left; }
       .wrap .main .list-item dt {
         overflow: hidden;
-        width: 160px;
+        width: 158px;
         height: 120px;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
         margin-right: 14px;
         border: solid 1px #aaa; }
         .wrap .main .list-item dt img {
@@ -603,21 +596,20 @@ a {
               background: url("../images/icon/list-zan.png") no-repeat;
               background-size: 100%;
               position: absolute;
-              top: 0;
+              top: -2px;
               left: 0;
               width: 12px;
-              height: 13px; }
+              height: 15px; }
           .wrap .main .list-item dd .scan-comment .comment:before {
             content: '';
             background: url("../images/icon/list-comment.png") no-repeat;
-            background-size: 100%;
+            background-size: 80%;
             position: absolute;
-            top: 14%;
+            top: 16%;
             left: 0;
-            width: 13px;
+            width: 16px;
             height: 12px; }
     .wrap .main .logo_search {
-      overflow: hidden;
       border-bottom: solid 1px #e7e7e7; }
       .wrap .main .logo_search .logo {
         position: relative;
@@ -650,12 +642,9 @@ a {
             margin-top: 36px; }
             .wrap .main .logo_search .search-box .search-main .search-input-btn .search-input {
               float: left;
-              width: 495px;
-              height: 40px;
+              width: 474px;
+              height: 38px;
               padding: 0 10px;
-              -webkit-box-sizing: border-box;
-              -moz-box-sizing: border-box;
-              box-sizing: border-box;
               border: solid 1px #1a8ced;
               border-right: 0;
               border-radius: 4px 0 0 4px;
@@ -753,7 +742,7 @@ a {
       float: left;
       overflow: hidden;
       width: 80%;
-      height: 25px;
+      height: 27px;
       margin-top: 12px;
       font-size: 12px; }
       .wrap .main .tag-list li {
@@ -831,8 +820,6 @@ a {
   overflow: hidden; }
   .wrap .hide {
     display: none; }
-  .wrap .main {
-    overflow: hidden; }
   .wrap .crumbs-white {
     line-height: 30px;
     font-size: 12px;
@@ -891,63 +878,63 @@ a {
         margin: 20px 0 0 20px;
         font-size: 22px;
         color: #fff; }
-      .wrap .detail-head dd .user-con .user-tags {
-        float: left;
-        width: 40%; }
-        .wrap .detail-head dd .user-con .user-tags .user-info {
-          padding: 30px 0 0 20px;
-          color: #333333; }
-          .wrap .detail-head dd .user-con .user-tags .user-info .user-name {
-            margin-right: 20px;
-            font-size: 18px; }
-          .wrap .detail-head dd .user-con .user-tags .user-info .browse {
-            font-size: 12px; }
-        .wrap .detail-head dd .user-con .user-tags .tag-list {
-          margin: 10px 0 0 20px; }
-      .wrap .detail-head dd .user-con .nums {
-        float: right;
+      .wrap .detail-head dd .user-con {
         overflow: hidden;
-        padding-top: 20px;
-        font-size: 14px; }
-        .wrap .detail-head dd .user-con .nums li {
-          position: relative;
+        height: 95.77px; }
+        .wrap .detail-head dd .user-con .user-tags {
           float: left;
-          width: 100px;
-          height: 80px;
+          width: 40%; }
+          .wrap .detail-head dd .user-con .user-tags .user-info {
+            padding: 30px 0 0 20px;
+            color: #333333; }
+            .wrap .detail-head dd .user-con .user-tags .user-info .user-name {
+              margin-right: 20px;
+              font-size: 18px; }
+            .wrap .detail-head dd .user-con .user-tags .user-info .browse {
+              font-size: 12px; }
+          .wrap .detail-head dd .user-con .user-tags .tag-list {
+            margin: 10px 0 0 20px; }
+        .wrap .detail-head dd .user-con .nums {
+          float: right;
+          overflow: hidden;
           padding-top: 20px;
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
-          border-left: solid 1px #ddd;
-          cursor: pointer;
-          line-height: 80px;
-          text-align: center; }
-          .wrap .detail-head dd .user-con .nums li:last-child {
-            border-right: solid 1px #e7e7e7; }
-          .wrap .detail-head dd .user-con .nums li:hover {
-            background: #ddd; }
-        .wrap .detail-head dd .user-con .nums .zan-num {
-          position: relative; }
-          .wrap .detail-head dd .user-con .nums .zan-num:before {
-            content: '';
-            background: url("../images/icon/detail-zan.png") no-repeat;
-            background-size: 100%;
-            position: absolute;
-            top: 22%;
-            left: 36%;
-            width: 24px;
-            height: 26px; }
-          .wrap .detail-head dd .user-con .nums .zan-num em {
-            position: absolute;
-            top: -9px;
-            right: 30%;
-            width: 15px;
-            height: 15px;
-            color: #fff; }
-          .wrap .detail-head dd .user-con .nums .zan-num .move {
-            animation: mymove 2s infinite normal forwards;
-            -moz-animation: mymove 2s infinite normal forwards;
-            animation-iteration-count: 1; }
+          font-size: 14px; }
+          .wrap .detail-head dd .user-con .nums li {
+            position: relative;
+            float: left;
+            width: 100px;
+            height: 60px;
+            padding-top: 20px;
+            border-left: solid 1px #ddd;
+            cursor: pointer;
+            line-height: 80px;
+            text-align: center; }
+            .wrap .detail-head dd .user-con .nums li:last-child {
+              border-right: solid 1px #e7e7e7; }
+            .wrap .detail-head dd .user-con .nums li:hover {
+              background: #ddd; }
+          .wrap .detail-head dd .user-con .nums .zan-num {
+            position: relative; }
+            .wrap .detail-head dd .user-con .nums .zan-num:before {
+              content: '';
+              background: url("../images/icon/detail-zan.png") no-repeat;
+              background-size: 100%;
+              position: absolute;
+              top: 22%;
+              left: 36%;
+              width: 24px;
+              height: 26px; }
+            .wrap .detail-head dd .user-con .nums .zan-num em {
+              position: absolute;
+              top: -9px;
+              right: 30%;
+              width: 15px;
+              height: 15px;
+              color: #fff; }
+            .wrap .detail-head dd .user-con .nums .zan-num .move {
+              animation: mymove 2s infinite normal forwards;
+              -moz-animation: mymove 2s infinite normal forwards;
+              animation-iteration-count: 1; }
 
 @keyframes mymove {
   0% {
@@ -956,38 +943,38 @@ a {
   100% {
     top: -30px;
     opacity: 0; } }
-        .wrap .detail-head dd .user-con .nums .collect-num:before {
-          content: '';
-          background: url("../images/icon/detail-fav.png") no-repeat;
-          background-size: 100%;
+          .wrap .detail-head dd .user-con .nums .collect-num:before {
+            content: '';
+            background: url("../images/icon/detail-fav.png") no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: 22%;
+            left: 36%;
+            width: 24px;
+            height: 26px; }
+          .wrap .detail-head dd .user-con .nums .browse-num:before {
+            content: '';
+            background: url("../images/icon/detail-com.png") no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: 22%;
+            left: 36%;
+            width: 24px;
+            height: 26px; }
+          .wrap .detail-head dd .user-con .nums .share-num:before {
+            content: '';
+            background: url("../images/icon/detail-share.png") no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: 22%;
+            left: 36%;
+            width: 24px;
+            height: 26px; }
+        .wrap .detail-head dd .user-con .share-box {
           position: absolute;
-          top: 22%;
-          left: 36%;
-          width: 24px;
-          height: 26px; }
-        .wrap .detail-head dd .user-con .nums .browse-num:before {
-          content: '';
-          background: url("../images/icon/detail-com.png") no-repeat;
-          background-size: 100%;
-          position: absolute;
-          top: 22%;
-          left: 36%;
-          width: 24px;
-          height: 26px; }
-        .wrap .detail-head dd .user-con .nums .share-num:before {
-          content: '';
-          background: url("../images/icon/detail-share.png") no-repeat;
-          background-size: 100%;
-          position: absolute;
-          top: 22%;
-          left: 36%;
-          width: 24px;
-          height: 26px; }
-      .wrap .detail-head dd .user-con .share-box {
-        position: absolute;
-        right: -7px;
-        bottom: -46px;
-        width: 15%; }
+          right: -7px;
+          bottom: -46px;
+          width: 15%; }
   .wrap .detail-container {
     overflow: hidden; }
     .wrap .detail-container .article {
@@ -1002,7 +989,8 @@ a {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         padding: 0 20px;
-        background: #fafafa; }
+        background: #fafafa;
+        font-size: 12px; }
         .wrap .detail-container .article .basic-info li {
           position: relative;
           float: left;
@@ -1075,18 +1063,18 @@ a {
                 background: url("../images/icon/list-zan.png") no-repeat;
                 background-size: 100%;
                 position: absolute;
-                top: 0;
+                top: -2px;
                 left: 0;
                 width: 12px;
-                height: 13px; }
+                height: 15px; }
               .wrap .detail-container .article .journey-box .day .journey .article-option .comment:before {
                 content: '';
                 background: url("../images/icon/list-comment.png") no-repeat;
-                background-size: 100%;
+                background-size: 80%;
                 position: absolute;
-                top: 14%;
+                top: 16%;
                 left: 0;
-                width: 13px;
+                width: 16px;
                 height: 12px; }
       .wrap .detail-container .article .options-box {
         width: 125px;
@@ -1131,13 +1119,10 @@ a {
           .wrap .detail-container .article .options-box .collect-share li {
             position: relative;
             float: left;
-            width: 57px;
+            width: 27px;
             height: 24px;
             line-height: 24px;
-            padding-left: 18px;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
+            padding: 0 5px 0 23px;
             border: solid 1px #ccc;
             border-radius: 4px;
             color: #999999;
@@ -1188,11 +1173,8 @@ a {
             height: 15px; }
     .wrap .detail-container .menu-box {
       float: right;
-      width: 320px;
+      width: 290px;
       padding-left: 30px;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
       font-size: 20px; }
       .wrap .detail-container .menu-box .title {
         margin: 32px 0 18px; }
@@ -1272,6 +1254,10 @@ a {
       top: 0;
       bottom: 0;
       margin-left: 670px; }
+    .wrap .detail-container .ie {
+      _position: absolute;
+      _clear: both;
+      _top: expression(eval(document.compatMode &&    document.compatMode=='CSS1Compat') ?    documentElement.scrollTop    +(documentElement.clientHeight-this.clientHeight) - 1    : document.body.scrollTop    +(document.body.clientHeight-this.clientHeight) - 1); }
     @media screen and (min-width: 1600px) {
       .wrap .detail-container .menu-fixed {
         position: fixed;
@@ -1291,16 +1277,15 @@ a {
         height: 86px; }
         .wrap .correlation-container .world-box .box-title h4 {
           width: initial; }
-      .wrap .correlation-container .world-box .grid {
+      .wrap .correlation-container .world-box .grid-box {
+        overflow: hidden;
         width: 654px; }
-        .wrap .correlation-container .world-box .grid .grid-item {
-          width: 48.4%;
-          margin: 0; }
-          .wrap .correlation-container .world-box .grid .grid-item:nth-child(odd) {
-            margin: 0 20px 20px 0; }
-          .wrap .correlation-container .world-box .grid .grid-item:nth-child(even) {
-            margin-right: 0; }
+        .wrap .correlation-container .world-box .grid-box .grid {
+          width: 672px; }
+          .wrap .correlation-container .world-box .grid-box .grid .grid-item {
+            width: 316px; }
   .wrap .comment-container .comment-con {
+    overflow: hidden;
     width: 990px;
     margin: 0 auto;
     padding-top: 70px; }
@@ -1314,6 +1299,7 @@ a {
         margin-bottom: 14px;
         border: solid 1px #333333;
         padding: 8px;
+        padding-bottom: 30px;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -1324,8 +1310,8 @@ a {
           box-shadow: -1px -1px 10px #ccc,1px 1px 10px #ccc; }
       .wrap .comment-container .comment-con .comment-box .txt-num {
         position: absolute;
-        right: 10px;
-        top: 88px;
+        right: 20px;
+        top: 90px;
         font-size: 14px;
         color: #999999; }
         .wrap .comment-container .comment-con .comment-box .txt-num em {
@@ -1339,17 +1325,17 @@ a {
         .wrap .comment-container .comment-con .comment-box .emoji-btn .emoji {
           position: relative;
           float: left;
-          padding: 10px 0 0 18px;
+          padding: 10px 0 0 20px;
           color: #1a8ced; }
           .wrap .comment-container .comment-con .comment-box .emoji-btn .emoji:before {
             content: '';
             background: url("../images/icon/detail-comment.png") no-repeat;
-            background-size: 100%;
+            background-size: 90%;
             position: absolute;
-            top: 42%;
+            top: 40%;
             left: 0;
-            width: 14px;
-            height: 14px; }
+            width: 18px;
+            height: 18px; }
         .wrap .comment-container .comment-con .comment-box .emoji-btn .btn {
           float: right;
           width: 100px;

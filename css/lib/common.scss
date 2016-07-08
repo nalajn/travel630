@@ -109,12 +109,12 @@ $b9: #999999;
 				}
 				.tit{
 					float: left;
-				    width: 10%;
+				    width: 83px;
 				    line-height: 50px;
 				    padding: 0;
 				    padding-left: 15px;
 					margin: 0;
-				    @include box-sizing;
+				    // @include box-sizing;
 					font-size: 14px;
 					font-weight: bold;
 				}
@@ -280,9 +280,15 @@ $b9: #999999;
 			width: 990px;
 			margin: 0 auto;
 			padding: 0 15px;
+			.grid-box{
+				overflow: hidden;
+				width: 990px;
+			}
 			.grid{
 				float: left;
+				width: 1010px;
 				padding-bottom: 10px;
+    			margin-left: -10px;
 				.grid-item{
 					float: left;	
 					width: 316.6px;
@@ -294,15 +300,15 @@ $b9: #999999;
 					&:hover{
 						box-shadow: 4px 0px 10px #CCC,-4px 0px 10px #ccc;
 					}
-					&:first-child{
-						margin-left: 0;
-					}
-					&:nth-child(4n){
-						margin-left: 0;
-					}
-					&:nth-child(3n){
-						margin-right: 0;
-					}
+					// &:first-child{
+					// 	margin-left: 0;
+					// }
+					// &:nth-child(4n){
+					// 	margin-left: 0;
+					// }
+					// &:nth-child(3n){
+					// 	margin-right: 0;
+					// }
 					dt{
 						overflow: hidden;
 						width: 100%;
@@ -347,21 +353,21 @@ $b9: #999999;
 								        background: url('../images/icon/list-zan.png') no-repeat;
 								        background-size: 100%;
 									    position: absolute;
-									    top: 0;
+									    top: -2;
 									    left: 0;
 									    width: 12px;
-									    height: 13px;
+									    height: 15px;
 								    }
 								}
 								.comment{
 									&:before{
 								        content: '';
 								        background: url('../images/icon/list-comment.png') no-repeat;
-								        background-size: 100%;
+								        background-size: 80%;
 									    position: absolute;
-									    top: 14%;
+									    top: 16%;
 									    left: 0;
-									    width: 13px;
+									    width: 16px;
 									    height: 12px;
 								    }
 								}
@@ -371,7 +377,7 @@ $b9: #999999;
 							overflow: hidden;
 							width: 100%;
 							margin: 10px;
-    						height: 25px;
+    						height: 27px;
     						line-height: 25px;
     						@include box-sizing;
 						}
@@ -471,12 +477,12 @@ $b9: #999999;
 								&:before{
 							        content: '';
 							        background: url('../images/icon/list-time.png') no-repeat;
-							        background-size: 100%;
+							        background-size: 80%;
 								    position: absolute;
-								    top: 6%;
+								    top: 3%;
 								    left: 0;
-								    width: 12px;
-								    height: 13px;
+								    width: 14px;
+								    height: 12px;
 							    }
 							}
 							.scan{
@@ -485,22 +491,22 @@ $b9: #999999;
 							        background: url('../images/icon/list-zan.png') no-repeat;
 							        background-size: 100%;
 								    position: absolute;
-								    top: 0;
+								    top: -2px;
 								    left: 0;
 								    width: 12px;
-								    height: 13px;
+								    height: 15px;
 							    }
 							}
 							.comment{
 								&:before{
 							        content: '';
 							        background: url('../images/icon/list-comment.png') no-repeat;
-							        background-size: 100%;
+							        background-size: 80%;
 								    position: absolute;
-								    top: 17%;
+								    top: 16%;
 								    left: 0;
-								    width: 13px;
-								    height: 13px;
+								    width: 16px;
+								    height: 12px;
 							    }
 							}
 							.scan,.comment{
@@ -558,9 +564,9 @@ $b9: #999999;
 			}
 			dt{
 				overflow: hidden;	
-				width: 160px;
+				width: 158px;
 				height: 120px;
-				@include box-sizing;
+				// @include box-sizing;
 				margin-right: 14px;
 				border: solid 1px #aaa;
 				img{
@@ -616,21 +622,21 @@ $b9: #999999;
 					        background: url('../images/icon/list-zan.png') no-repeat;
 					        background-size: 100%;
 						    position: absolute;
-						    top: 0;
+						    top: -2px;
 						    left: 0;
 						    width: 12px;
-						    height: 13px;
+						    height: 15px;
 					    }
 					}
 					.comment{
 						&:before{
 					        content: '';
 					        background: url('../images/icon/list-comment.png') no-repeat;
-					        background-size: 100%;
+					        background-size: 80%;
 						    position: absolute;
-						    top: 14%;
+						    top: 16%;
 						    left: 0;
-						    width: 13px;
+						    width: 16px;
 						    height: 12px;
 					    }
 					}
@@ -641,7 +647,7 @@ $b9: #999999;
 
 		/*带logo的搜索框*/
 		.logo_search{
-			overflow: hidden;
+			// overflow: hidden;
 			border-bottom: solid 1px $line;
 			.logo{
 				position: relative;
@@ -674,10 +680,10 @@ $b9: #999999;
 					    margin-top: 36px;
 						.search-input{
 							float: left;
-							width: 495px;
-		    				height: 40px;
+							width: 474px;
+		    				height: 38px;
 		    				padding: 0 10px;
-		    				@include box-sizing;
+		    				// @include box-sizing;
 							border: solid 1px #1a8ced;
 							border-right: 0;
 							border-radius: 4px 0 0 4px;
@@ -807,7 +813,7 @@ $b9: #999999;
 			float: left;
 			overflow: hidden;
 			width: 80%;
-			height: 25px;
+			height: 27px;
 			margin-top: 12px;
 			font-size: 12px;
 			li{
