@@ -7,6 +7,26 @@
   })
 
 
+  //控制图片显示大小
+  $('.list .list-item,.grid-box .grid-item').each(function(){
+    var width = $(this).find('img').width(),
+        height = $(this).find('img').height(),
+        left = -(width/2-158/2),
+        top = -(height/2-120/2);
+    /*中线外扩*/
+    // $(this).find('dt img').css('marginLeft',left);
+    // $(this).find('dt img').css('marginTop',top);
+    
+    /*横图height100%,纵图width100%*/
+    if(width / height > 1){
+      $(this).find('dt img').css('height','100%');
+    }else{
+      $(this).find('dt img').css('width','100%');
+    }
+
+  })
+
+
   /*玩转周边*/
   $('.tabs-tit .active').prev()
     .find('p').css({'width':'100%','margin':'0'})

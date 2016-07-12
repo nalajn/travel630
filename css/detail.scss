@@ -156,10 +156,34 @@
 				            }
 				        }
 					}
+					.zan-num.active{
+						&:before{
+							content: '';
+		                    background: url("../images/icon/detail-zan-active.png") no-repeat;
+		                  	background-size: 100%;
+		                  	position: absolute;
+		                  	top: 22%;
+						    left: 36%;
+						    width: 24px;
+						    height: 26px;
+						}
+					}
 					.collect-num{
 						&:before{
 							content: '';
 		                    background: url("../images/icon/detail-fav.png") no-repeat;
+		                  	background-size: 100%;
+		                  	position: absolute;
+		                  	top: 22%;
+						    left: 36%;
+						    width: 24px;
+						    height: 26px;
+						}
+					}
+					.collect-num.active{
+						&:before{
+							content: '';
+		                    background: url("../images/icon/detail-fav-active.png") no-repeat;
 		                  	background-size: 100%;
 		                  	position: absolute;
 		                  	top: 22%;

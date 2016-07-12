@@ -5,6 +5,7 @@ $(".flexslider").flexslider({
 	animationSpeed: 400, //滚动时间ms
 });
 
+
 //返回顶部
 $(window).scroll(function () {
 	win_top = $(window).scrollTop();

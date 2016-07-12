@@ -238,8 +238,25 @@ $(window).scroll(function () {
 
 //点赞
 $('.options-box,.user-con').on('click','.zan,.zan-num',function(){
-	if(!$(this).hasClass('move')){
-		$(this).find('em').removeClass('hide').addClass('move');
+	if(!$(this).hasClass('active')){
+		$(this).addClass('active').find('em').removeClass('hide').addClass('move').text('+1');
+		setTimeout(function(){
+			$('.user-con .zan-num em').removeClass('move').addClass('hide');
+		},500);
+	}else{
+		$(this).removeClass('active').find('em').removeClass('hide').addClass('move').text('-1');
+		setTimeout(function(){
+			$('.user-con .zan-num em').removeClass('move').addClass('hide');
+		},500);
+	}
+});
+
+//收藏
+$('.user-con').on('click','.collect-num',function(){
+	if(!$(this).hasClass('active')){
+		$(this).addClass('active');
+	}else{
+		$(this).removeClass('active');
 	}
 });
 
@@ -334,6 +351,7 @@ $(".flexslider").flexslider({
 	slideshowSpeed: 3000, //展示时间间隔ms
 	animationSpeed: 400, //滚动时间ms
 });
+
 
 //返回顶部
 $(window).scroll(function () {
